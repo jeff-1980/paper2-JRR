@@ -1,0 +1,49 @@
+\section{Interval reliability under sensor degradation}\label{sec:reliability}
+\subsection{Clean baseline}
+Table~\ref{tab:clean} summarises clean-input results under fair calibration, recomputed through the same code path and mean processing as the stress tests; the full table is in Supplement S2. Clean coverage lies between \JCleanCovAll{} across mechanisms, backbones and sub-datasets. Relative to the v1.8 benchmark (all means clipped), this lowers PICP in \JCleanAllShiftNchg{} of \JCleanAllShiftN{} cells by at most \JCleanAllShiftMax{} points. Coverage rankings among single-model mechanisms do not transfer between backbones. The deep ensemble has the lowest interval score in all \JEnsBestISeight{} backbone--sub-dataset combinations, but this is an in-sample observation on one ensemble per combination: a paired comparison against independently seeded ensembles favours the ensemble in point estimate on \NIndepPosN{} sub-datasets and excludes zero on \NIndepSigN. The baseline therefore establishes that clean intervals are credible, not which mechanism is best.
+
+\begin{table}[!t]
+\caption{Clean-input interval benchmark under fair calibration, recomputed with the stress-test processing of the predicted mean, terminal unit, mean of five seeds. Coverage is the range of PICP over the four sub-datasets; MPIW (cycles) and interval score IS (lower is better) are means over the four sub-datasets. The ensemble is a single $M=5$ estimate.}
+\label{tab:clean}
+\centering\small
+\begin{tabular}{lccc|ccc}
+\toprule
+ & \multicolumn{3}{c|}{LSTM} & \multicolumn{3}{c}{Transformer} \\
+Mechanism & PICP & MPIW & IS & PICP & MPIW & IS \\
+\midrule
+\tabin{tables/jrr_tab_clean.tex}\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Direction and size of coverage failures}
+Figure~\ref{fig:foob} plots the coverage of the heteroscedastic head against $f_{\mathrm{oob}}$ for the four families. On six-condition sub-datasets every family loses coverage as $f_{\mathrm{oob}}$ rises, but not at the same rate. At a matched $f_{\mathrm{oob}}$ of 10\% on FD002, coverage (LSTM to Transformer, interpolated between measured levels) is \JMatchDrift{} under drift, \JMatchGain{} under gain, \JMatchNoise{} under additive noise and \JMatchBias{} under bias; on FD004 the matched values are \JMatchFDfourNoise{} (noise), \JMatchFDfourBias{} (bias) and \JMatchFDfourGain{} (gain), and the drift curve ends at 9.2\% so it has no 10\% value. The out-of-range share therefore does not order the damage across families. At equal nominal amplitude (5\% of range) both drift and bias collapse coverage on six-condition data: \JDriftCovTwoSix{} (FD002) and \JDriftCovFourSix{} (FD004) for drift, \JBiasCovSix{} for bias, against clean values of \JCleanCovSix.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\textwidth]{figures/fig2.pdf}
+\caption{Coverage of the 90\% interval (heteroscedastic head) against the fraction of out-of-range normalised sensor inputs, five perturbation levels per curve (0.1 to 5\%; noise, bias and drift as a share of the training range, gain as a share of the reading), mean of five models and, for noise, bias and gain, five realisations. Top: six-condition sub-datasets; bottom: single-condition sub-datasets (zero excursion is drawn at the left edge of the axis). The dotted line marks the 10\% excursion used for comparison in the text.}
+\label{fig:foob}
+\end{figure}
+
+On single-condition sub-datasets $f_{\mathrm{oob}}$ misses the failure in one direction and flags it in the other. Drift at 5\% lowers coverage from \JCleanCovOne{} to \JDriftCovOne{} on FD001 and from \JCleanCovThree{} to \JDriftCovThree{} on FD003 while $f_{\mathrm{oob}}$ stays below $\JDriftFoobSingleMax$, because windows near end of life already lie inside the training range and a ramp does not push them out. Gain errors, in contrast, move \JGainSingleFoob\% of inputs out of range at the lowest level and collapse coverage (\JGainSinglePICP), so here the excursion does flag the failure. We read $f_{\mathrm{oob}}$ as neither necessary nor sufficient for coverage loss. It relates to coverage within a family but cannot stand in for a family-specific assessment. The earlier crossover summary is replaced by this matched comparison because \JLCcells{} of \JLCtotal{} of its cells were left-censored (Supplement S3).
+
+\subsection{Direction of the shift sets the side of the error}\label{sec:coherent}
+The drift ramp is positive on every channel, while bias has a random sign per channel. Table~\ref{tab:coh} shows what a constant offset does. A constant $+5\%$ offset on every sensor channel reproduces the six-condition damage of the ramp: coverage is \JCohPosPICPSix{} against \JCohRampPICPSix{} for the ramp, and premature triggers at $L=20$ are \JCohPosPremSix\% against \JCohRampPremSix\% of evaluated engines (FD002 \JCohPosPremFDtwo\% against \JCohRampPremFDtwo\%; FD004 \JCohPosPremFDfour\% against \JCohRampPremFDfour\%), with no unrecognised need (at most \JCohPosUnrecSixMax\%). On these data the temporal ramp is therefore not needed to reproduce the damage. The mirror-image constant $-5\%$ offset leaves premature triggers at most \JCohNegPremSixMax\% but produces unrecognised needs in \JCohNegUnrecSix\% of evaluated engines (FD002 \JCohNegUnrecFDtwo\%; FD004 \JCohNegUnrecFDfour\%). Random-sign bias of the same magnitude is much less damaging on FD002 (coverage \NBiasEqL{} LSTM, \NBiasEqT{} Transformer, against \JCohPosPICPFDtwo{} for the constant positive offset), so sign coherence, not magnitude alone, sets the damage. On single-condition sub-datasets the ramp is more damaging than the constant offset (coverage \JCohRampPICPOne{} against \JCohPosPICPOne{} on FD001; \JCohRampPICPThree{} against \JCohPosPICPThree{} on FD003). The ramp and the constant offset differ in shape, in mean offset over the window and in distance from the training windows, and these were not separated, so we call this waveform sensitivity and do not attribute it to temporal order. Only three sign patterns (all positive, all negative, random) were tested; which channels carry the effect was not identified.
+
+\begin{table}[!t]
+\caption{Sign-coherent shift control, heteroscedastic head, 5\% of range, mean of five models: PICP / premature (\%) / unrecognised (\%) at $L=20$. Ramp: the drift family; constant: the same offset on every sensor channel and step. Exploratory, inference only.}
+\label{tab:coh}
+\centering\footnotesize
+\begin{tabular}{lcccc}
+\toprule
+ & Clean PICP & Ramp (+) & Constant $+5\%$ & Constant $-5\%$ \\
+\midrule
+\tabin{tables/jrr_tab_coh.tex}\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Waveform controls}\label{sec:controls}
+Controls from the earlier analysis vary the waveform of the 5\% shift on FD001 and FD002 for both backbones (released result files; Supplement S5). On FD001 a shuffled ramp (same values, random order) leaves coverage at \JWFoneShuf{} against \JWFoneClean{} clean, whereas the ramp gives \JWFoneRamp{}, the reversed ramp \JWFoneRev{} and a per-trajectory ramp \JWFoneCont. On FD002 shuffling spares neither backbone: coverage is \JWFtwoShufL{} (LSTM) and \JWFtwoShufT{} (Transformer) against \NRampL{} and \NRampT{} for the ramp; a reversed ramp leaves \NRevL{} and \NRevT, and fixing the last $k$ steps of the shuffled ramp gives \NFixEndOneL{} ($k=1$) and \NFixEndFiveL{} ($k=5$) for the LSTM and \NFixEndT{} for the Transformer. The evidence thus supports damage that depends on waveform and end-of-window offset, differently by dataset and backbone: shuffling spares both backbones on FD001, the LSTM only partly on FD002 and the Transformer not at all. These controls change end value, energy and order together; they do not identify temporal order as the mechanism or show that the models read a trend as degradation.
+
+\subsection{Additive noise: mean and scale contributions}\label{sec:noise}
+Supporting result, bounded claim. A four-way frozen-output decomposition under additive noise (mean and scale outputs each taken from the clean or perturbed condition, where the heteroscedastic head has lost ten points of coverage) attributes the loss predominantly to the mean output. In all 16 backbone--sub-dataset--mechanism cells the pooled point estimate of the mean effect exceeds the scale effect in magnitude under both decomposition orders, and a per-seed paired bootstrap excludes zero in \NCITot{} of 32 order-specific cells. The sign of the scale effect depends on the order: read with the mean varied first the learned scale helps in \NHelpA{} cells, read with the scale varied first it is harmful in all 16. There is no order-independent evidence that the learned scale helps, and the interaction between mean and scale is positive in all 16 cells. This concerns additive noise at one operating point; Section~\ref{sec:swap} performs its own swap for bias and drift.

@@ -1,0 +1,605 @@
+{
+ "note": "Reference metadata for the JRR manuscript: from paper/refs.bib (v1.8) and Crossref (accessed 2026-10-12). peng2019 year corrected to the volume year 2020.",
+ "refs": {
+  "saxena2008": {
+   "authors": [
+    [
+     "Saxena",
+     "A"
+    ],
+    [
+     "Goebel",
+     "K"
+    ],
+    [
+     "Simon",
+     "D"
+    ],
+    [
+     "Eklund",
+     "N"
+    ]
+   ],
+   "title": "Damage propagation modeling for aircraft engine run-to-failure simulation",
+   "journal": "Proc 1st Int Conf Prognostics Health Manag (PHM)",
+   "year": "2008",
+   "volume": "",
+   "issue": "",
+   "pages": "1–9",
+   "doi": "",
+   "kind": "inproceedings",
+   "verification": "no DOI in source bib; not machine-checked"
+  },
+  "peng2019": {
+   "authors": [
+    [
+     "Peng",
+     "W"
+    ],
+    [
+     "Ye",
+     "Z S"
+    ],
+    [
+     "Chen",
+     "N"
+    ]
+   ],
+   "title": "Bayesian deep-learning-based health prognostics toward prognostics uncertainty",
+   "journal": "IEEE Trans Ind Electron",
+   "year": "2020",
+   "volume": "67",
+   "issue": "",
+   "pages": "2283–2293",
+   "doi": "10.1109/TIE.2019.2907440",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "basora2025": {
+   "authors": [
+    [
+     "Basora",
+     "L"
+    ],
+    [
+     "Viens",
+     "A"
+    ],
+    [
+     "Chao",
+     "M A"
+    ],
+    [
+     "Olive",
+     "X"
+    ]
+   ],
+   "title": "A benchmark on uncertainty quantification for deep learning prognostics",
+   "journal": "Reliab Eng Syst Saf",
+   "year": "2025",
+   "volume": "253",
+   "issue": "",
+   "pages": "110513",
+   "doi": "10.1016/j.ress.2024.110513",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "zhan2024": {
+   "authors": [
+    [
+     "Zhan",
+     "Y"
+    ],
+    [
+     "Kong",
+     "Z"
+    ],
+    [
+     "Wang",
+     "Z"
+    ],
+    [
+     "Jin",
+     "X"
+    ],
+    [
+     "Xu",
+     "Z"
+    ]
+   ],
+   "title": "Remaining useful life prediction with uncertainty quantification based on multi-distribution fusion structure",
+   "journal": "Reliab Eng Syst Saf",
+   "year": "2024",
+   "volume": "251",
+   "issue": "",
+   "pages": "110383",
+   "doi": "10.1016/j.ress.2024.110383",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "piao2025": {
+   "authors": [
+    [
+     "Piao",
+     "Shiyuan"
+    ],
+    [
+     "Huang",
+     "Ruyi"
+    ],
+    [
+     "Tsung",
+     "Fugee"
+    ]
+   ],
+   "title": "CRULP: Reliable RUL Estimation Inspired by Conformal Prediction",
+   "journal": "IEEE Trans. Instrum. Meas.",
+   "year": "2025",
+   "volume": "74",
+   "issue": "",
+   "pages": "1–11",
+   "doi": "10.1109/tim.2024.3522678",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "mao2024": {
+   "authors": [
+    [
+     "Mao",
+     "Song"
+    ],
+    [
+     "Li",
+     "Xiaofeng"
+    ],
+    [
+     "Zhao",
+     "Boyang"
+    ]
+   ],
+   "title": "Remaining useful life prediction based on time-series features and conformalized quantile regression",
+   "journal": "Meas. Sci. Technol.",
+   "year": "2024",
+   "volume": "35",
+   "issue": "",
+   "pages": "126113",
+   "doi": "10.1088/1361-6501/ad762c",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "hachem2024": {
+   "authors": [
+    [
+     "Hachem",
+     "Hassan"
+    ],
+    [
+     "Vu",
+     "Hai Canh"
+    ],
+    [
+     "Fouladirad",
+     "Mitra"
+    ]
+   ],
+   "title": "Different methods for RUL prediction considering sensor degradation",
+   "journal": "Reliab. Eng. Syst. Saf.",
+   "year": "2024",
+   "volume": "243",
+   "issue": "",
+   "pages": "109897",
+   "doi": "10.1016/j.ress.2023.109897",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "nix1994": {
+   "authors": [
+    [
+     "Nix",
+     "D A"
+    ],
+    [
+     "Weigend",
+     "A S"
+    ]
+   ],
+   "title": "Estimating the mean and variance of the target probability distribution",
+   "journal": "Proc IEEE Int Conf Neural Networks (ICNN)",
+   "year": "1994",
+   "volume": "",
+   "issue": "",
+   "pages": "55–60",
+   "doi": "10.1109/ICNN.1994.374138",
+   "kind": "inproceedings",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "gal2016": {
+   "authors": [
+    [
+     "Gal",
+     "Y"
+    ],
+    [
+     "Ghahramani",
+     "Z"
+    ]
+   ],
+   "title": "Dropout as a Bayesian approximation: representing model uncertainty in deep learning",
+   "journal": "Proc Int Conf Mach Learn (ICML)",
+   "year": "2016",
+   "volume": "48",
+   "issue": "",
+   "pages": "1050–1059",
+   "doi": "",
+   "kind": "inproceedings",
+   "verification": "no DOI in source bib; not machine-checked"
+  },
+  "lakshminarayanan2017": {
+   "authors": [
+    [
+     "Lakshminarayanan",
+     "B"
+    ],
+    [
+     "Pritzel",
+     "A"
+    ],
+    [
+     "Blundell",
+     "C"
+    ]
+   ],
+   "title": "Simple and scalable predictive uncertainty estimation using deep ensembles",
+   "journal": "Adv Neural Inf Process Syst",
+   "year": "2017",
+   "volume": "30",
+   "issue": "",
+   "pages": "",
+   "doi": "",
+   "kind": "inproceedings",
+   "verification": "no DOI in source bib; not machine-checked"
+  },
+  "kendall2017": {
+   "authors": [
+    [
+     "Kendall",
+     "A"
+    ],
+    [
+     "Gal",
+     "Y"
+    ]
+   ],
+   "title": "What uncertainties do we need in Bayesian deep learning for computer vision?",
+   "journal": "Adv Neural Inf Process Syst",
+   "year": "2017",
+   "volume": "30",
+   "issue": "",
+   "pages": "",
+   "doi": "",
+   "kind": "inproceedings",
+   "verification": "no DOI in source bib; not machine-checked"
+  },
+  "barber2023": {
+   "authors": [
+    [
+     "Barber",
+     "Rina Foygel"
+    ],
+    [
+     "Candès",
+     "Emmanuel J."
+    ],
+    [
+     "Ramdas",
+     "Aaditya"
+    ],
+    [
+     "Tibshirani",
+     "Ryan J."
+    ]
+   ],
+   "title": "Conformal prediction beyond exchangeability",
+   "journal": "Ann Stat",
+   "year": "2023",
+   "volume": "51",
+   "issue": "",
+   "pages": "816–845",
+   "doi": "",
+   "kind": "article",
+   "verification": "no DOI in source bib; not machine-checked"
+  },
+  "shamim2026": {
+   "authors": [
+    [
+     "Shamim",
+     "MMR"
+    ],
+    [
+     "Nuruzzaman",
+     "M"
+    ],
+    [
+     "Ferdus",
+     "Z"
+    ],
+    [
+     "et al.",
+     ""
+    ]
+   ],
+   "title": "Leakage-robust evaluation and data-scale sensitivity of attention-enhanced multi-task learning for joint fault diagnosis and remaining useful life estimation",
+   "journal": "arXiv preprint (not peer reviewed)",
+   "year": "2026",
+   "volume": "",
+   "issue": "",
+   "pages": "arXiv:2607.16493",
+   "doi": "",
+   "kind": "preprint",
+   "verification": "arXiv abstract page read 2026-10-12; preprint"
+  },
+  "ruvaifa2026": {
+   "authors": [
+    [
+     "Ruvaifa",
+     "Mohammad"
+    ],
+    [
+     "et al.",
+     ""
+    ]
+   ],
+   "title": "Evaluating the impact of data preprocessing on deep neural architectures for remaining useful life estimation of turbofan engines",
+   "journal": "Array",
+   "year": "2026",
+   "volume": "",
+   "issue": "",
+   "pages": "",
+   "doi": "10.1016/j.array.2026.100919",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "gneiting2007": {
+   "authors": [
+    [
+     "Gneiting",
+     "T"
+    ],
+    [
+     "Raftery",
+     "A E"
+    ]
+   ],
+   "title": "Strictly proper scoring rules, prediction, and estimation",
+   "journal": "J Am Stat Assoc",
+   "year": "2007",
+   "volume": "102",
+   "issue": "",
+   "pages": "359–378",
+   "doi": "10.1198/016214506000001437",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "chao2021": {
+   "authors": [
+    [
+     "Chao",
+     "M A"
+    ],
+    [
+     "Kulkarni",
+     "C"
+    ],
+    [
+     "Goebel",
+     "K"
+    ],
+    [
+     "Fink",
+     "O"
+    ]
+   ],
+   "title": "Aircraft Engine Run-to-Failure Dataset under Real Flight Conditions for Prognostics and Diagnostics",
+   "journal": "Data",
+   "year": "2021",
+   "volume": "6",
+   "issue": "",
+   "pages": "5",
+   "doi": "10.3390/data6010005",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "xu2021": {
+   "authors": [
+    [
+     "Xu",
+     "Zhaoyi"
+    ],
+    [
+     "Guo",
+     "Yanjie"
+    ],
+    [
+     "Saleh",
+     "Joseph Homer"
+    ]
+   ],
+   "title": "Accurate Remaining Useful Life Prediction With Uncertainty Quantification: A Deep Learning and Nonstationary Gaussian Process Approach",
+   "journal": "IEEE Trans Reliab",
+   "year": "2022",
+   "volume": "71",
+   "issue": "1",
+   "pages": "443–456",
+   "doi": "10.1109/tr.2021.3124944",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "xu2026": {
+   "authors": [
+    [
+     "Xu",
+     "Weijun"
+    ],
+    [
+     "Gao",
+     "Shuang"
+    ],
+    [
+     "Wang",
+     "Zongyao"
+    ],
+    [
+     "Zio",
+     "Enrico"
+    ]
+   ],
+   "title": "A novel uncertainty-aware framework for remaining useful life prediction integrating uncertainty quantification and calibration",
+   "journal": "Reliab Eng Syst Saf",
+   "year": "2026",
+   "volume": "275",
+   "issue": "",
+   "pages": "112763",
+   "doi": "10.1016/j.ress.2026.112763",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "xu2023": {
+   "authors": [
+    [
+     "Li",
+     "Xiang"
+    ],
+    [
+     "Xu",
+     "Yixiao"
+    ],
+    [
+     "Li",
+     "Naipeng"
+    ],
+    [
+     "Yang",
+     "Bin"
+    ],
+    [
+     "Lei",
+     "Yaguo"
+    ]
+   ],
+   "title": "Remaining Useful Life Prediction With Partial Sensor Malfunctions Using Deep Adversarial Networks",
+   "journal": "IEEE/CAA J Autom Sinica",
+   "year": "2023",
+   "volume": "10",
+   "issue": "1",
+   "pages": "121–134",
+   "doi": "10.1109/jas.2022.105935",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "tang2026": {
+   "authors": [
+    [
+     "Tang",
+     "Dongdong"
+    ]
+   ],
+   "title": "A deep learning framework for remaining useful life prediction of turbofan engines with partial sensor failure",
+   "journal": "PLoS One",
+   "year": "2026",
+   "volume": "21",
+   "issue": "4",
+   "pages": "e0347312",
+   "doi": "10.1371/journal.pone.0347312",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "kim2020": {
+   "authors": [
+    [
+     "Kim",
+     "Minhee"
+    ],
+    [
+     "Liu",
+     "Kaibo"
+    ]
+   ],
+   "title": "A Bayesian deep learning framework for interval estimation of remaining useful life in complex systems by incorporating general degradation characteristics",
+   "journal": "IISE Trans",
+   "year": "2020",
+   "volume": "53",
+   "issue": "3",
+   "pages": "326–340",
+   "doi": "10.1080/24725854.2020.1766729",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "lee2022": {
+   "authors": [
+    [
+     "Lee",
+     "Juseong"
+    ],
+    [
+     "Mitici",
+     "Mihaela"
+    ]
+   ],
+   "title": "Deep reinforcement learning for predictive aircraft maintenance using probabilistic Remaining-Useful-Life prognostics",
+   "journal": "Reliab Eng Syst Saf",
+   "year": "2023",
+   "volume": "230",
+   "issue": "",
+   "pages": "108908",
+   "doi": "10.1016/j.ress.2022.108908",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "zhu2025": {
+   "authors": [
+    [
+     "Zhu",
+     "Zhengbo"
+    ],
+    [
+     "Wang",
+     "Lubing"
+    ],
+    [
+     "Chen",
+     "Mingchih"
+    ],
+    [
+     "Zhao",
+     "Xufeng"
+    ]
+   ],
+   "title": "Predictive Maintenance Strategies for Aero‐Engines Considering Remaining Useful Life Prediction Interval",
+   "journal": "Qual Reliab Eng Int",
+   "year": "2025",
+   "volume": "41",
+   "issue": "8",
+   "pages": "3350–3359",
+   "doi": "10.1002/qre.70043",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  },
+  "alomari2026": {
+   "authors": [
+    [
+     "Alomari",
+     "Khaled Mohammad"
+    ]
+   ],
+   "title": "A Unified Uncertainty-Aware Multi-Task Framework for Robust Remaining Useful Life Prediction Under Distribution Shift",
+   "journal": "IEEE Access",
+   "year": "2026",
+   "volume": "14",
+   "issue": "",
+   "pages": "60940–60962",
+   "doi": "10.1109/access.2026.3685622",
+   "kind": "article",
+   "verification": "DOI resolved at Crossref; title matched (2026-10-12)"
+  }
+ }
+}

@@ -1,0 +1,1420 @@
+{
+  "FD003": {
+    "NLL": {
+      "0.1": {
+        "rmse": {
+          "grand_mean": 13.995991372850622,
+          "grand_std": 1.617877953036015,
+          "model_marginal_mean": 13.99599137285062,
+          "model_marginal_std": 1.7722422642021978,
+          "trial_marginal_mean": 13.99599137285062,
+          "trial_marginal_std": 0.00701195067212682
+        },
+        "picp": {
+          "grand_mean": 0.8563999999999998,
+          "grand_std": 0.04508140784551137,
+          "model_marginal_mean": 0.8564,
+          "model_marginal_std": 0.04926256184974551,
+          "trial_marginal_mean": 0.8564,
+          "trial_marginal_std": 0.0008944271909998669
+        },
+        "mpiw": {
+          "grand_mean": 37.0697592163086,
+          "grand_std": 1.7581080300928649,
+          "model_marginal_mean": 37.06975921630859,
+          "model_marginal_std": 1.9254708108395187,
+          "trial_marginal_mean": 37.0697592163086,
+          "trial_marginal_std": 0.03742402771288564
+        },
+        "ece": {
+          "grand_mean": 0.039642105263157895,
+          "grand_std": 0.014816295837534306,
+          "model_marginal_mean": 0.03964210526315789,
+          "model_marginal_std": 0.0161381844465205,
+          "trial_marginal_mean": 0.039642105263157895,
+          "trial_marginal_std": 0.0004184127771442505
+        },
+        "sigma_mean": {
+          "grand_mean": 11.267405090332032,
+          "grand_std": 0.5343791853894404,
+          "model_marginal_mean": 11.26740509033203,
+          "model_marginal_std": 0.5852493113301792,
+          "trial_marginal_mean": 11.26740509033203,
+          "trial_marginal_std": 0.011375231668740117
+        }
+      },
+      "0.5": {
+        "rmse": {
+          "grand_mean": 14.097912283237843,
+          "grand_std": 1.5932154310640265,
+          "model_marginal_mean": 14.097912283237843,
+          "model_marginal_std": 1.737865419545259,
+          "trial_marginal_mean": 14.097912283237847,
+          "trial_marginal_std": 0.14787647684624455
+        },
+        "picp": {
+          "grand_mean": 0.8508,
+          "grand_std": 0.044527145278657455,
+          "model_marginal_mean": 0.8508000000000001,
+          "model_marginal_std": 0.04761512364784953,
+          "trial_marginal_mean": 0.8508000000000001,
+          "trial_marginal_std": 0.0055856960175075755
+        },
+        "mpiw": {
+          "grand_mean": 37.022061614990236,
+          "grand_std": 1.7672880707751455,
+          "model_marginal_mean": 37.02206161499024,
+          "model_marginal_std": 1.9299042484473352,
+          "trial_marginal_mean": 37.02206161499023,
+          "trial_marginal_std": 0.13846610180141727
+        },
+        "ece": {
+          "grand_mean": 0.03858947368421053,
+          "grand_std": 0.012697852458731411,
+          "model_marginal_mean": 0.03858947368421053,
+          "model_marginal_std": 0.013507072119075854,
+          "trial_marginal_mean": 0.03858947368421053,
+          "trial_marginal_std": 0.000810594665607513
+        },
+        "sigma_mean": {
+          "grand_mean": 11.252907638549805,
+          "grand_std": 0.5371696085198477,
+          "model_marginal_mean": 11.252907638549805,
+          "model_marginal_std": 0.5865970030690226,
+          "trial_marginal_mean": 11.252907638549805,
+          "trial_marginal_std": 0.04208722902529831
+        }
+      },
+      "1": {
+        "rmse": {
+          "grand_mean": 14.246790378741359,
+          "grand_std": 1.607567712129084,
+          "model_marginal_mean": 14.246790378741357,
+          "model_marginal_std": 1.7485893210455372,
+          "trial_marginal_mean": 14.246790378741357,
+          "trial_marginal_std": 0.14266902362782474
+        },
+        "picp": {
+          "grand_mean": 0.8452,
+          "grand_std": 0.0392767955244145,
+          "model_marginal_mean": 0.8452,
+          "model_marginal_std": 0.04021442527253128,
+          "trial_marginal_mean": 0.8452,
+          "trial_marginal_std": 0.004816637831516955
+        },
+        "mpiw": {
+          "grand_mean": 36.976448669433594,
+          "grand_std": 1.7684111264228852,
+          "model_marginal_mean": 36.976448669433594,
+          "model_marginal_std": 1.9245178971348478,
+          "trial_marginal_mean": 36.976448669433594,
+          "trial_marginal_std": 0.1898579782157203
+        },
+        "ece": {
+          "grand_mean": 0.03871578947368422,
+          "grand_std": 0.011832432696924114,
+          "model_marginal_mean": 0.03871578947368422,
+          "model_marginal_std": 0.010662383720012967,
+          "trial_marginal_mean": 0.03871578947368422,
+          "trial_marginal_std": 0.0025464113034456446
+        },
+        "sigma_mean": {
+          "grand_mean": 11.2390433883667,
+          "grand_std": 0.5375110520008289,
+          "model_marginal_mean": 11.2390433883667,
+          "model_marginal_std": 0.5849599631804736,
+          "trial_marginal_mean": 11.2390433883667,
+          "trial_marginal_std": 0.0577071619012454
+        }
+      },
+      "2": {
+        "rmse": {
+          "grand_mean": 14.353820907826243,
+          "grand_std": 1.5518966078370775,
+          "model_marginal_mean": 14.353820907826242,
+          "model_marginal_std": 1.6462579726634226,
+          "trial_marginal_mean": 14.353820907826243,
+          "trial_marginal_std": 0.3771756055757743
+        },
+        "picp": {
+          "grand_mean": 0.8472,
+          "grand_std": 0.04036500134192162,
+          "model_marginal_mean": 0.8472,
+          "model_marginal_std": 0.03913055072446599,
+          "trial_marginal_mean": 0.8472000000000002,
+          "trial_marginal_std": 0.014184498581197668
+        },
+        "mpiw": {
+          "grand_mean": 36.90140609741211,
+          "grand_std": 1.734094478006211,
+          "model_marginal_mean": 36.90140609741211,
+          "model_marginal_std": 1.8503913156626357,
+          "trial_marginal_mean": 36.90140609741211,
+          "trial_marginal_std": 0.34400693094117174
+        },
+        "ece": {
+          "grand_mean": 0.037705263157894756,
+          "grand_std": 0.012282155302449946,
+          "model_marginal_mean": 0.037705263157894756,
+          "model_marginal_std": 0.006221845171709124,
+          "trial_marginal_mean": 0.037705263157894756,
+          "trial_marginal_std": 0.0026140468620952186
+        },
+        "sigma_mean": {
+          "grand_mean": 11.216233673095703,
+          "grand_std": 0.5270803426214302,
+          "model_marginal_mean": 11.216233673095704,
+          "model_marginal_std": 0.5624288780825563,
+          "trial_marginal_mean": 11.216233673095703,
+          "trial_marginal_std": 0.1045615443555379
+        }
+      },
+      "5": {
+        "rmse": {
+          "grand_mean": 17.866040942442616,
+          "grand_std": 0.7476581806695992,
+          "model_marginal_mean": 17.866040942442616,
+          "model_marginal_std": 0.40208046371455436,
+          "trial_marginal_mean": 17.866040942442616,
+          "trial_marginal_std": 0.530384293449035
+        },
+        "picp": {
+          "grand_mean": 0.7676,
+          "grand_std": 0.02773084924772411,
+          "model_marginal_mean": 0.7676000000000001,
+          "model_marginal_std": 0.011610340218959988,
+          "trial_marginal_mean": 0.7676000000000002,
+          "trial_marginal_std": 0.019204166214652457
+        },
+        "mpiw": {
+          "grand_mean": 36.18019927978516,
+          "grand_std": 2.1913833253416257,
+          "model_marginal_mean": 36.18019927978516,
+          "model_marginal_std": 2.0515396048066132,
+          "trial_marginal_mean": 36.18019927978516,
+          "trial_marginal_std": 1.0253764734488566
+        },
+        "ece": {
+          "grand_mean": 0.0702947368421053,
+          "grand_std": 0.02411598627654464,
+          "model_marginal_mean": 0.0702947368421053,
+          "model_marginal_std": 0.0218170941137418,
+          "trial_marginal_mean": 0.0702947368421053,
+          "trial_marginal_std": 0.009985418732212372
+        },
+        "sigma_mean": {
+          "grand_mean": 10.997022171020507,
+          "grand_std": 0.6660739269546888,
+          "model_marginal_mean": 10.99702217102051,
+          "model_marginal_std": 0.6235681571192845,
+          "trial_marginal_mean": 10.997022171020507,
+          "trial_marginal_std": 0.3116647534465488
+        }
+      }
+    },
+    "MC_Dropout_fixed": {
+      "0.1": {
+        "rmse": {
+          "grand_mean": 14.61955601945225,
+          "grand_std": 1.0040805251393903,
+          "model_marginal_mean": 14.61955601945225,
+          "model_marginal_std": 1.0962257844819825,
+          "trial_marginal_mean": 14.61955601945225,
+          "trial_marginal_std": 0.03842309617635702
+        },
+        "picp": {
+          "grand_mean": 0.8932000000000001,
+          "grand_std": 0.01625833119767628,
+          "model_marginal_mean": 0.8931999999999999,
+          "model_marginal_std": 0.01658915308266221,
+          "trial_marginal_mean": 0.8932,
+          "trial_marginal_std": 0.001095445115010313
+        },
+        "mpiw": {
+          "grand_mean": 49.19283355712891,
+          "grand_std": 4.699284718126006,
+          "model_marginal_mean": 49.19283355712891,
+          "model_marginal_std": 5.147514997893551,
+          "trial_marginal_mean": 49.19283355712891,
+          "trial_marginal_std": 0.031059744375565468
+        },
+        "ece": {
+          "grand_mean": 0.11351578947368418,
+          "grand_std": 0.020317607408890225,
+          "model_marginal_mean": 0.1135157894736842,
+          "model_marginal_std": 0.022074615345669773,
+          "trial_marginal_mean": 0.1135157894736842,
+          "trial_marginal_std": 0.0010672666825799102
+        },
+        "sigma_mean": {
+          "grand_mean": 14.952229080200196,
+          "grand_std": 1.4283537384750156,
+          "model_marginal_mean": 14.952229080200198,
+          "model_marginal_std": 1.564593918123409,
+          "trial_marginal_mean": 14.952229080200194,
+          "trial_marginal_std": 0.009440795843445373
+        }
+      },
+      "0.5": {
+        "rmse": {
+          "grand_mean": 14.709489025001567,
+          "grand_std": 0.9832919214797413,
+          "model_marginal_mean": 14.70948902500157,
+          "model_marginal_std": 1.062015688234385,
+          "trial_marginal_mean": 14.70948902500157,
+          "trial_marginal_std": 0.14547660956439765
+        },
+        "picp": {
+          "grand_mean": 0.8908,
+          "grand_std": 0.01913112646970901,
+          "model_marginal_mean": 0.8908000000000001,
+          "model_marginal_std": 0.01808867048735202,
+          "trial_marginal_mean": 0.8908000000000001,
+          "trial_marginal_std": 0.0076941536246685335
+        },
+        "mpiw": {
+          "grand_mean": 49.18524398803711,
+          "grand_std": 4.705612969472446,
+          "model_marginal_mean": 49.185243988037115,
+          "model_marginal_std": 5.154416049929953,
+          "trial_marginal_mean": 49.18524398803711,
+          "trial_marginal_std": 0.011868940236299443
+        },
+        "ece": {
+          "grand_mean": 0.11132631578947366,
+          "grand_std": 0.022146536239451873,
+          "model_marginal_mean": 0.11132631578947368,
+          "model_marginal_std": 0.023843627231543155,
+          "trial_marginal_mean": 0.11132631578947365,
+          "trial_marginal_std": 0.0018011999693648333
+        },
+        "sigma_mean": {
+          "grand_mean": 14.949922904968261,
+          "grand_std": 1.4302780589563404,
+          "model_marginal_mean": 14.949922904968261,
+          "model_marginal_std": 1.5666924242003477,
+          "trial_marginal_mean": 14.949922904968261,
+          "trial_marginal_std": 0.00360756956673561
+        }
+      },
+      "1": {
+        "rmse": {
+          "grand_mean": 14.78870264325854,
+          "grand_std": 1.0188724291072984,
+          "model_marginal_mean": 14.78870264325854,
+          "model_marginal_std": 1.0842857297335091,
+          "trial_marginal_mean": 14.78870264325854,
+          "trial_marginal_std": 0.19709269658329603
+        },
+        "picp": {
+          "grand_mean": 0.8916000000000001,
+          "grand_std": 0.02134635019544717,
+          "model_marginal_mean": 0.8916000000000001,
+          "model_marginal_std": 0.019768662069042504,
+          "trial_marginal_mean": 0.8916000000000001,
+          "trial_marginal_std": 0.007127411872482172
+        },
+        "mpiw": {
+          "grand_mean": 49.18547332763672,
+          "grand_std": 4.7103069729644504,
+          "model_marginal_mean": 49.18547332763673,
+          "model_marginal_std": 5.159334431030632,
+          "trial_marginal_mean": 49.18547332763672,
+          "trial_marginal_std": 0.05677916524887623
+        },
+        "ece": {
+          "grand_mean": 0.11039999999999997,
+          "grand_std": 0.022441202542655317,
+          "model_marginal_mean": 0.11039999999999998,
+          "model_marginal_std": 0.023389085221085994,
+          "trial_marginal_mean": 0.11039999999999998,
+          "trial_marginal_std": 0.004151827685513196
+        },
+        "sigma_mean": {
+          "grand_mean": 14.949991874694824,
+          "grand_std": 1.4317052313066725,
+          "model_marginal_mean": 14.949991874694826,
+          "model_marginal_std": 1.5681878415055157,
+          "trial_marginal_mean": 14.949991874694826,
+          "trial_marginal_std": 0.017257701451852875
+        }
+      },
+      "2": {
+        "rmse": {
+          "grand_mean": 14.981316048674387,
+          "grand_std": 1.0346751124988274,
+          "model_marginal_mean": 14.981316048674387,
+          "model_marginal_std": 1.0272590184017862,
+          "trial_marginal_mean": 14.981316048674387,
+          "trial_marginal_std": 0.33836244386118697
+        },
+        "picp": {
+          "grand_mean": 0.8848,
+          "grand_std": 0.027404379212089467,
+          "model_marginal_mean": 0.8847999999999999,
+          "model_marginal_std": 0.022609732417700097,
+          "trial_marginal_mean": 0.8848,
+          "trial_marginal_std": 0.013971399357258435
+        },
+        "mpiw": {
+          "grand_mean": 49.1989712524414,
+          "grand_std": 4.700608413811014,
+          "model_marginal_mean": 49.19897125244141,
+          "model_marginal_std": 5.149076151305469,
+          "trial_marginal_mean": 49.1989712524414,
+          "trial_marginal_std": 0.03134979303432752
+        },
+        "ece": {
+          "grand_mean": 0.10673684210526314,
+          "grand_std": 0.022706424585379425,
+          "model_marginal_mean": 0.10673684210526313,
+          "model_marginal_std": 0.021298693599149942,
+          "trial_marginal_mean": 0.10673684210526316,
+          "trial_marginal_std": 0.007610315204176848
+        },
+        "sigma_mean": {
+          "grand_mean": 14.954094734191894,
+          "grand_std": 1.4287561245510512,
+          "model_marginal_mean": 14.954094734191894,
+          "model_marginal_std": 1.565068484839688,
+          "trial_marginal_mean": 14.954094734191894,
+          "trial_marginal_std": 0.009528297071109394
+        }
+      },
+      "5": {
+        "rmse": {
+          "grand_mean": 18.15210137727414,
+          "grand_std": 1.0547796127321813,
+          "model_marginal_mean": 18.152101377274136,
+          "model_marginal_std": 0.8867319253175935,
+          "trial_marginal_mean": 18.152101377274136,
+          "trial_marginal_std": 0.5066089893530554
+        },
+        "picp": {
+          "grand_mean": 0.8219999999999998,
+          "grand_std": 0.04,
+          "model_marginal_mean": 0.8219999999999998,
+          "model_marginal_std": 0.035298725189445546,
+          "trial_marginal_mean": 0.8219999999999998,
+          "trial_marginal_std": 0.012328828005937946
+        },
+        "mpiw": {
+          "grand_mean": 49.18138336181641,
+          "grand_std": 4.714594791875337,
+          "model_marginal_mean": 49.1813833618164,
+          "model_marginal_std": 5.16404248125131,
+          "trial_marginal_mean": 49.18138336181641,
+          "trial_marginal_std": 0.05259888008456449
+        },
+        "ece": {
+          "grand_mean": 0.08018947368421055,
+          "grand_std": 0.019467092293504025,
+          "model_marginal_mean": 0.08018947368421053,
+          "model_marginal_std": 0.015969395938738543,
+          "trial_marginal_mean": 0.08018947368421053,
+          "trial_marginal_std": 0.008067375563121768
+        },
+        "sigma_mean": {
+          "grand_mean": 14.948749389648437,
+          "grand_std": 1.433007884929373,
+          "model_marginal_mean": 14.948749389648437,
+          "model_marginal_std": 1.5696181563097893,
+          "trial_marginal_mean": 14.948749389648437,
+          "trial_marginal_std": 0.01598796220577266
+        }
+      }
+    },
+    "Deep_Ensemble": {
+      "0.1": {
+        "rmse": {
+          "mean": 13.123302261001692,
+          "std": 0.004507992739924724,
+          "n_trials": 5
+        },
+        "picp": {
+          "mean": 0.9099999999999999,
+          "std": 1.2412670766236366e-16,
+          "n_trials": 5
+        },
+        "mpiw": {
+          "mean": 40.684973907470706,
+          "std": 0.045127575164769264,
+          "n_trials": 5
+        },
+        "ece": {
+          "mean": 0.07989473684210521,
+          "std": 0.0009415023063156994,
+          "n_trials": 5
+        },
+        "sigma_mean": {
+          "mean": 12.366253852844238,
+          "std": 0.013716203275802223,
+          "n_trials": 5
+        }
+      },
+      "0.5": {
+        "rmse": {
+          "mean": 13.218192980620069,
+          "std": 0.16538690114648844,
+          "n_trials": 5
+        },
+        "picp": {
+          "mean": 0.906,
+          "std": 0.0054772255750516665,
+          "n_trials": 5
+        },
+        "mpiw": {
+          "mean": 40.65274505615234,
+          "std": 0.16004793843502801,
+          "n_trials": 5
+        },
+        "ece": {
+          "mean": 0.07463157894736838,
+          "std": 0.0018002769869986412,
+          "n_trials": 5
+        },
+        "sigma_mean": {
+          "mean": 12.356457901000976,
+          "std": 0.048645923494222615,
+          "n_trials": 5
+        }
+      },
+      "1": {
+        "rmse": {
+          "mean": 13.365862023055366,
+          "std": 0.15585920967189934,
+          "n_trials": 5
+        },
+        "picp": {
+          "mean": 0.906,
+          "std": 0.01341640786499875,
+          "n_trials": 5
+        },
+        "mpiw": {
+          "mean": 40.6603889465332,
+          "std": 0.23479345555332126,
+          "n_trials": 5
+        },
+        "ece": {
+          "mean": 0.0697894736842105,
+          "std": 0.01299158048256266,
+          "n_trials": 5
+        },
+        "sigma_mean": {
+          "mean": 12.358780479431152,
+          "std": 0.07136604703958419,
+          "n_trials": 5
+        }
+      },
+      "2": {
+        "rmse": {
+          "mean": 13.36104572293532,
+          "std": 0.37853140637731336,
+          "n_trials": 5
+        },
+        "picp": {
+          "mean": 0.914,
+          "std": 0.01673320053068148,
+          "n_trials": 5
+        },
+        "mpiw": {
+          "mean": 40.91959075927734,
+          "std": 0.3667345557206061,
+          "n_trials": 5
+        },
+        "ece": {
+          "mean": 0.06684210526315786,
+          "std": 0.015367159284901503,
+          "n_trials": 5
+        },
+        "sigma_mean": {
+          "mean": 12.437565231323243,
+          "std": 0.11146928674202569,
+          "n_trials": 5
+        }
+      },
+      "5": {
+        "rmse": {
+          "mean": 16.736172842915096,
+          "std": 0.6618354363258123,
+          "n_trials": 5
+        },
+        "picp": {
+          "mean": 0.8240000000000001,
+          "std": 0.027018512172212565,
+          "n_trials": 5
+        },
+        "mpiw": {
+          "mean": 41.21352005004883,
+          "std": 1.0233322321934817,
+          "n_trials": 5
+        },
+        "ece": {
+          "mean": 0.03589473684210528,
+          "std": 0.007576022827556464,
+          "n_trials": 5
+        },
+        "sigma_mean": {
+          "mean": 12.526905250549316,
+          "std": 0.31104327737727183,
+          "n_trials": 5
+        }
+      }
+    },
+    "CP_norm": {
+      "0.1": {
+        "rmse": {
+          "grand_mean": 13.995991372850622,
+          "grand_std": 1.617877953036015,
+          "model_marginal_mean": 13.99599137285062,
+          "model_marginal_std": 1.7722422642021978,
+          "trial_marginal_mean": 13.99599137285062,
+          "trial_marginal_std": 0.00701195067212682
+        },
+        "picp": {
+          "grand_mean": 0.8963999999999999,
+          "grand_std": 0.03352610922848041,
+          "model_marginal_mean": 0.8964000000000001,
+          "model_marginal_std": 0.03614968879534092,
+          "trial_marginal_mean": 0.8964000000000001,
+          "trial_marginal_std": 0.0026076809620811086
+        },
+        "mpiw": {
+          "grand_mean": 46.039995727539065,
+          "grand_std": 9.957970994284727,
+          "model_marginal_mean": 46.03999572753906,
+          "model_marginal_std": 10.908302750090025,
+          "trial_marginal_mean": 46.039995727539065,
+          "trial_marginal_std": 0.04458969802228122
+        },
+        "ece": {
+          "grand_mean": 0.08120000000000002,
+          "grand_std": 0.01485659365011306,
+          "model_marginal_mean": 0.08120000000000002,
+          "model_marginal_std": 0.01621216669759075,
+          "trial_marginal_mean": 0.08120000000000002,
+          "trial_marginal_std": 0.0007684931473029021
+        },
+        "sigma_mean": {
+          "grand_mean": 11.267405090332032,
+          "grand_std": 0.5343791853894404,
+          "model_marginal_mean": 11.26740509033203,
+          "model_marginal_std": 0.5852493113301792,
+          "trial_marginal_mean": 11.26740509033203,
+          "trial_marginal_std": 0.011375231668740117
+        }
+      },
+      "0.5": {
+        "rmse": {
+          "grand_mean": 14.097912283237843,
+          "grand_std": 1.5932154310640265,
+          "model_marginal_mean": 14.097912283237843,
+          "model_marginal_std": 1.737865419545259,
+          "trial_marginal_mean": 14.097912283237847,
+          "trial_marginal_std": 0.14787647684624455
+        },
+        "picp": {
+          "grand_mean": 0.8939999999999999,
+          "grand_std": 0.03617089069035116,
+          "model_marginal_mean": 0.8940000000000001,
+          "model_marginal_std": 0.038288379438153275,
+          "trial_marginal_mean": 0.8940000000000001,
+          "trial_marginal_std": 0.006782329983125291
+        },
+        "mpiw": {
+          "grand_mean": 45.98234878540039,
+          "grand_std": 9.959205829314417,
+          "model_marginal_mean": 45.98234878540039,
+          "model_marginal_std": 10.908100808187932,
+          "trial_marginal_mean": 45.98234878540039,
+          "trial_marginal_std": 0.17029919868650464
+        },
+        "ece": {
+          "grand_mean": 0.08073684210526316,
+          "grand_std": 0.01461967836114033,
+          "model_marginal_mean": 0.08073684210526319,
+          "model_marginal_std": 0.015677320987713447,
+          "trial_marginal_mean": 0.08073684210526318,
+          "trial_marginal_std": 0.002449489742783173
+        },
+        "sigma_mean": {
+          "grand_mean": 11.252907638549805,
+          "grand_std": 0.5371696085198477,
+          "model_marginal_mean": 11.252907638549805,
+          "model_marginal_std": 0.5865970030690226,
+          "trial_marginal_mean": 11.252907638549805,
+          "trial_marginal_std": 0.04208722902529831
+        }
+      },
+      "1": {
+        "rmse": {
+          "grand_mean": 14.246790378741359,
+          "grand_std": 1.607567712129084,
+          "model_marginal_mean": 14.246790378741357,
+          "model_marginal_std": 1.7485893210455372,
+          "trial_marginal_mean": 14.246790378741357,
+          "trial_marginal_std": 0.14266902362782474
+        },
+        "picp": {
+          "grand_mean": 0.8912,
+          "grand_std": 0.03244482495971685,
+          "model_marginal_mean": 0.8912000000000001,
+          "model_marginal_std": 0.03372239611889993,
+          "trial_marginal_mean": 0.8911999999999999,
+          "trial_marginal_std": 0.006099180272790775
+        },
+        "mpiw": {
+          "grand_mean": 45.92035400390625,
+          "grand_std": 9.919048188523082,
+          "model_marginal_mean": 45.920354003906255,
+          "model_marginal_std": 10.861759941959036,
+          "trial_marginal_mean": 45.920354003906255,
+          "trial_marginal_std": 0.2416030719838793
+        },
+        "ece": {
+          "grand_mean": 0.08077894736842108,
+          "grand_std": 0.015295730519151311,
+          "model_marginal_mean": 0.08077894736842109,
+          "model_marginal_std": 0.014482121942439197,
+          "trial_marginal_mean": 0.08077894736842108,
+          "trial_marginal_std": 0.0031549108709879796
+        },
+        "sigma_mean": {
+          "grand_mean": 11.2390433883667,
+          "grand_std": 0.5375110520008289,
+          "model_marginal_mean": 11.2390433883667,
+          "model_marginal_std": 0.5849599631804736,
+          "trial_marginal_mean": 11.2390433883667,
+          "trial_marginal_std": 0.0577071619012454
+        }
+      },
+      "2": {
+        "rmse": {
+          "grand_mean": 14.353820907826243,
+          "grand_std": 1.5518966078370775,
+          "model_marginal_mean": 14.353820907826242,
+          "model_marginal_std": 1.6462579726634226,
+          "trial_marginal_mean": 14.353820907826243,
+          "trial_marginal_std": 0.3771756055757743
+        },
+        "picp": {
+          "grand_mean": 0.892,
+          "grand_std": 0.04031128874149275,
+          "model_marginal_mean": 0.8920000000000001,
+          "model_marginal_std": 0.04091454509095753,
+          "trial_marginal_mean": 0.892,
+          "trial_marginal_std": 0.009591663046625459
+        },
+        "mpiw": {
+          "grand_mean": 45.861985778808595,
+          "grand_std": 10.037894883103613,
+          "model_marginal_mean": 45.861985778808595,
+          "model_marginal_std": 10.979591709449773,
+          "trial_marginal_mean": 45.8619857788086,
+          "trial_marginal_std": 0.4508965527728069
+        },
+        "ece": {
+          "grand_mean": 0.08286315789473686,
+          "grand_std": 0.017301225678324046,
+          "model_marginal_mean": 0.08286315789473686,
+          "model_marginal_std": 0.01476358475787799,
+          "trial_marginal_mean": 0.08286315789473687,
+          "trial_marginal_std": 0.006444908230941939
+        },
+        "sigma_mean": {
+          "grand_mean": 11.216233673095703,
+          "grand_std": 0.5270803426214302,
+          "model_marginal_mean": 11.216233673095704,
+          "model_marginal_std": 0.5624288780825563,
+          "trial_marginal_mean": 11.216233673095703,
+          "trial_marginal_std": 0.1045615443555379
+        }
+      },
+      "5": {
+        "rmse": {
+          "grand_mean": 17.866040942442616,
+          "grand_std": 0.7476581806695992,
+          "model_marginal_mean": 17.866040942442616,
+          "model_marginal_std": 0.40208046371455436,
+          "trial_marginal_mean": 17.866040942442616,
+          "trial_marginal_std": 0.530384293449035
+        },
+        "picp": {
+          "grand_mean": 0.816,
+          "grand_std": 0.06363961030678929,
+          "model_marginal_mean": 0.8160000000000001,
+          "model_marginal_std": 0.06473020933072901,
+          "trial_marginal_mean": 0.8160000000000001,
+          "trial_marginal_std": 0.018110770276274786
+        },
+        "mpiw": {
+          "grand_mean": 45.064829711914065,
+          "grand_std": 10.417738598027038,
+          "model_marginal_mean": 45.06482971191406,
+          "model_marginal_std": 11.321329390091293,
+          "trial_marginal_mean": 45.06482971191407,
+          "trial_marginal_std": 1.1797331545931964
+        },
+        "ece": {
+          "grand_mean": 0.11176842105263163,
+          "grand_std": 0.030896828884008784,
+          "model_marginal_mean": 0.11176842105263163,
+          "model_marginal_std": 0.031164152998805605,
+          "trial_marginal_mean": 0.11176842105263163,
+          "trial_marginal_std": 0.009295219633405188
+        },
+        "sigma_mean": {
+          "grand_mean": 10.997022171020507,
+          "grand_std": 0.6660739269546888,
+          "model_marginal_mean": 10.99702217102051,
+          "model_marginal_std": 0.6235681571192845,
+          "trial_marginal_mean": 10.997022171020507,
+          "trial_marginal_std": 0.3116647534465488
+        }
+      }
+    },
+    "MSE_fixed": {
+      "0.1": {
+        "rmse": {
+          "grand_mean": 14.671685001525148,
+          "grand_std": 1.0368084727126337,
+          "model_marginal_mean": 14.671685001525148,
+          "model_marginal_std": 1.1356084614474038,
+          "trial_marginal_mean": 14.671685001525148,
+          "trial_marginal_std": 0.00386911212928401
+        },
+        "picp": {
+          "grand_mean": 0.8759999999999999,
+          "grand_std": 0.02466441431158126,
+          "model_marginal_mean": 0.876,
+          "model_marginal_std": 0.027018512172212582,
+          "trial_marginal_mean": 0.876,
+          "trial_marginal_std": 0.0
+        },
+        "mpiw": {
+          "grand_mean": 46.79837188720703,
+          "grand_std": 5.178304523999367,
+          "model_marginal_mean": 46.79837188720703,
+          "model_marginal_std": 5.672548394850857,
+          "trial_marginal_mean": 46.79837188720703,
+          "trial_marginal_std": 7.629394538355427e-07
+        },
+        "ece": {
+          "grand_mean": 0.10284210526315787,
+          "grand_std": 0.022505770266552927,
+          "model_marginal_mean": 0.10284210526315787,
+          "model_marginal_std": 0.02462134290236398,
+          "trial_marginal_mean": 0.10284210526315787,
+          "trial_marginal_std": 0.0005954583420518309
+        },
+        "sigma_mean": {
+          "grand_mean": 14.22443084716797,
+          "grand_std": 1.5739542051543638,
+          "model_marginal_mean": 14.22443084716797,
+          "model_marginal_std": 1.724180445286318,
+          "trial_marginal_mean": 14.22443084716797,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "0.5": {
+        "rmse": {
+          "grand_mean": 14.757636485711053,
+          "grand_std": 1.0279162591773539,
+          "model_marginal_mean": 14.75763648571105,
+          "model_marginal_std": 1.1149680036076794,
+          "trial_marginal_mean": 14.757636485711052,
+          "trial_marginal_std": 0.1351638558859093
+        },
+        "picp": {
+          "grand_mean": 0.8732,
+          "grand_std": 0.028095076674273994,
+          "model_marginal_mean": 0.8732,
+          "model_marginal_std": 0.030086541841826932,
+          "trial_marginal_mean": 0.8732,
+          "trial_marginal_std": 0.0022803508501983024
+        },
+        "mpiw": {
+          "grand_mean": 46.798372192382814,
+          "grand_std": 5.178304612185086,
+          "model_marginal_mean": 46.798372192382814,
+          "model_marginal_std": 5.672548491453524,
+          "trial_marginal_mean": 46.798372192382814,
+          "trial_marginal_std": 4.1787914693049667e-07
+        },
+        "ece": {
+          "grand_mean": 0.10221052631578946,
+          "grand_std": 0.022274311834091835,
+          "model_marginal_mean": 0.10221052631578946,
+          "model_marginal_std": 0.02385633361897028,
+          "trial_marginal_mean": 0.10221052631578945,
+          "trial_marginal_std": 0.0022092728275595144
+        },
+        "sigma_mean": {
+          "grand_mean": 14.22443084716797,
+          "grand_std": 1.5739542051543638,
+          "model_marginal_mean": 14.22443084716797,
+          "model_marginal_std": 1.724180445286318,
+          "trial_marginal_mean": 14.22443084716797,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "1": {
+        "rmse": {
+          "grand_mean": 14.868534937218953,
+          "grand_std": 1.0651493911657055,
+          "model_marginal_mean": 14.86853493721895,
+          "model_marginal_std": 1.1408260738397995,
+          "trial_marginal_mean": 14.868534937218953,
+          "trial_marginal_std": 0.17671072668620585
+        },
+        "picp": {
+          "grand_mean": 0.8732,
+          "grand_std": 0.03105371690045066,
+          "model_marginal_mean": 0.8732,
+          "model_marginal_std": 0.03229860678109818,
+          "trial_marginal_mean": 0.8732,
+          "trial_marginal_std": 0.005932958789676551
+        },
+        "mpiw": {
+          "grand_mean": 46.79837203979492,
+          "grand_std": 5.178304555347992,
+          "model_marginal_mean": 46.79837203979493,
+          "model_marginal_std": 5.672548429191658,
+          "trial_marginal_mean": 46.79837203979493,
+          "trial_marginal_std": 3.411968947097454e-07
+        },
+        "ece": {
+          "grand_mean": 0.10290526315789471,
+          "grand_std": 0.02406138272219937,
+          "model_marginal_mean": 0.10290526315789472,
+          "model_marginal_std": 0.025078558013214392,
+          "trial_marginal_mean": 0.10290526315789472,
+          "trial_marginal_std": 0.0038651794509913257
+        },
+        "sigma_mean": {
+          "grand_mean": 14.22443084716797,
+          "grand_std": 1.5739542051543638,
+          "model_marginal_mean": 14.22443084716797,
+          "model_marginal_std": 1.724180445286318,
+          "trial_marginal_mean": 14.22443084716797,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "2": {
+        "rmse": {
+          "grand_mean": 15.041774258693646,
+          "grand_std": 1.0535549484926692,
+          "model_marginal_mean": 15.041774258693646,
+          "model_marginal_std": 1.0576468411176234,
+          "trial_marginal_mean": 15.041774258693646,
+          "trial_marginal_std": 0.3374546909595792
+        },
+        "picp": {
+          "grand_mean": 0.866,
+          "grand_std": 0.03265986323710906,
+          "model_marginal_mean": 0.866,
+          "model_marginal_std": 0.029223278392404923,
+          "trial_marginal_mean": 0.866,
+          "trial_marginal_std": 0.016248076809271907
+        },
+        "mpiw": {
+          "grand_mean": 46.798372192382814,
+          "grand_std": 5.178304612185086,
+          "model_marginal_mean": 46.798372192382814,
+          "model_marginal_std": 5.672548491453524,
+          "trial_marginal_mean": 46.798372192382814,
+          "trial_marginal_std": 4.1787914693049667e-07
+        },
+        "ece": {
+          "grand_mean": 0.0978736842105263,
+          "grand_std": 0.024840432593107992,
+          "model_marginal_mean": 0.09787368421052631,
+          "model_marginal_std": 0.023744998015327812,
+          "trial_marginal_mean": 0.09787368421052631,
+          "trial_marginal_std": 0.008336549702474546
+        },
+        "sigma_mean": {
+          "grand_mean": 14.22443084716797,
+          "grand_std": 1.5739542051543638,
+          "model_marginal_mean": 14.22443084716797,
+          "model_marginal_std": 1.724180445286318,
+          "trial_marginal_mean": 14.22443084716797,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "5": {
+        "rmse": {
+          "grand_mean": 18.214604457406207,
+          "grand_std": 1.0579255065670843,
+          "model_marginal_mean": 18.214604457406207,
+          "model_marginal_std": 0.8973440072675505,
+          "trial_marginal_mean": 18.214604457406203,
+          "trial_marginal_std": 0.5094098603532908
+        },
+        "picp": {
+          "grand_mean": 0.8036,
+          "grand_std": 0.04405299838452164,
+          "model_marginal_mean": 0.8036,
+          "model_marginal_std": 0.0425064700957395,
+          "trial_marginal_mean": 0.8036,
+          "trial_marginal_std": 0.011349008767288919
+        },
+        "mpiw": {
+          "grand_mean": 46.79837203979492,
+          "grand_std": 5.178304709803471,
+          "model_marginal_mean": 46.79837203979493,
+          "model_marginal_std": 5.672548598389055,
+          "trial_marginal_mean": 46.79837203979493,
+          "trial_marginal_std": 8.357582987257469e-07
+        },
+        "ece": {
+          "grand_mean": 0.07793684210526317,
+          "grand_std": 0.01844855090436411,
+          "model_marginal_mean": 0.07793684210526317,
+          "model_marginal_std": 0.014586184789162683,
+          "trial_marginal_mean": 0.07793684210526317,
+          "trial_marginal_std": 0.00797697517634278
+        },
+        "sigma_mean": {
+          "grand_mean": 14.22443084716797,
+          "grand_std": 1.5739542051543638,
+          "model_marginal_mean": 14.22443084716797,
+          "model_marginal_std": 1.724180445286318,
+          "trial_marginal_mean": 14.22443084716797,
+          "trial_marginal_std": 0.0
+        }
+      }
+    },
+    "feat_oob": {
+      "0.1": 6.666666666666666e-05,
+      "0.5": 6.952380952380952e-05,
+      "1": 8.476190476190476e-05,
+      "2": 9.904761904761904e-05,
+      "5": 0.0010247619047619046
+    },
+    "NLL_frozen_sigma": {
+      "0.1": {
+        "rmse": {
+          "grand_mean": 13.995991372850622,
+          "grand_std": 1.617877953036015,
+          "model_marginal_mean": 13.99599137285062,
+          "model_marginal_std": 1.7722422642021978,
+          "trial_marginal_mean": 13.99599137285062,
+          "trial_marginal_std": 0.00701195067212682
+        },
+        "picp": {
+          "grand_mean": 0.8564,
+          "grand_std": 0.04414748010928824,
+          "model_marginal_mean": 0.8564000000000002,
+          "model_marginal_std": 0.048216179856973386,
+          "trial_marginal_mean": 0.8564,
+          "trial_marginal_std": 0.0008944271909998918
+        },
+        "mpiw": {
+          "grand_mean": 37.07608963012695,
+          "grand_std": 1.7583901092942915,
+          "model_marginal_mean": 37.07608963012696,
+          "model_marginal_std": 1.926219855508462,
+          "trial_marginal_mean": 37.07608963012696,
+          "trial_marginal_std": 3.411968947097454e-07
+        },
+        "ece": {
+          "grand_mean": 0.039473684210526314,
+          "grand_std": 0.01459834671067698,
+          "model_marginal_mean": 0.039473684210526314,
+          "model_marginal_std": 0.015898744702098105,
+          "trial_marginal_mean": 0.039473684210526314,
+          "trial_marginal_std": 0.0005367388961676642
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "0.5": {
+        "rmse": {
+          "grand_mean": 14.097912283237843,
+          "grand_std": 1.5932154310640265,
+          "model_marginal_mean": 14.097912283237843,
+          "model_marginal_std": 1.737865419545259,
+          "trial_marginal_mean": 14.097912283237847,
+          "trial_marginal_std": 0.14787647684624455
+        },
+        "picp": {
+          "grand_mean": 0.8512,
+          "grand_std": 0.044751163858235764,
+          "model_marginal_mean": 0.8511999999999998,
+          "model_marginal_std": 0.048137303622035194,
+          "trial_marginal_mean": 0.8512000000000001,
+          "trial_marginal_std": 0.006572670690062001
+        },
+        "mpiw": {
+          "grand_mean": 37.076089477539064,
+          "grand_std": 1.758390487851109,
+          "model_marginal_mean": 37.076089477539064,
+          "model_marginal_std": 1.9262202701966025,
+          "trial_marginal_mean": 37.076089477539064,
+          "trial_marginal_std": 5.394796614418732e-07
+        },
+        "ece": {
+          "grand_mean": 0.03837894736842106,
+          "grand_std": 0.013055673103470068,
+          "model_marginal_mean": 0.038378947368421054,
+          "model_marginal_std": 0.013882091534562095,
+          "trial_marginal_mean": 0.038378947368421054,
+          "trial_marginal_std": 0.0008825799501580876
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "1": {
+        "rmse": {
+          "grand_mean": 14.246790378741359,
+          "grand_std": 1.607567712129084,
+          "model_marginal_mean": 14.246790378741357,
+          "model_marginal_std": 1.7485893210455372,
+          "trial_marginal_mean": 14.246790378741357,
+          "trial_marginal_std": 0.14266902362782474
+        },
+        "picp": {
+          "grand_mean": 0.8452,
+          "grand_std": 0.039488394919689175,
+          "model_marginal_mean": 0.8452,
+          "model_marginal_std": 0.04088031311034691,
+          "trial_marginal_mean": 0.8452,
+          "trial_marginal_std": 0.007293833011524113
+        },
+        "mpiw": {
+          "grand_mean": 37.07609008789063,
+          "grand_std": 1.7583903594477572,
+          "model_marginal_mean": 37.07609008789062,
+          "model_marginal_std": 1.9262201295377788,
+          "trial_marginal_mean": 37.07609008789063,
+          "trial_marginal_std": 6.383209432653078e-07
+        },
+        "ece": {
+          "grand_mean": 0.038442105263157896,
+          "grand_std": 0.011673734832915079,
+          "model_marginal_mean": 0.038442105263157896,
+          "model_marginal_std": 0.011200118717218044,
+          "trial_marginal_mean": 0.0384421052631579,
+          "trial_marginal_std": 0.0019977827044180755
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "2": {
+        "rmse": {
+          "grand_mean": 14.353820907826243,
+          "grand_std": 1.5518966078370775,
+          "model_marginal_mean": 14.353820907826242,
+          "model_marginal_std": 1.6462579726634226,
+          "trial_marginal_mean": 14.353820907826243,
+          "trial_marginal_std": 0.3771756055757743
+        },
+        "picp": {
+          "grand_mean": 0.8476,
+          "grand_std": 0.038759944960401256,
+          "model_marginal_mean": 0.8475999999999999,
+          "model_marginal_std": 0.03740053475553525,
+          "trial_marginal_mean": 0.8476000000000001,
+          "trial_marginal_std": 0.013957077057894287
+        },
+        "mpiw": {
+          "grand_mean": 37.076089782714845,
+          "grand_std": 1.758390479229938,
+          "model_marginal_mean": 37.076089782714845,
+          "model_marginal_std": 1.926220260752279,
+          "trial_marginal_mean": 37.076089782714845,
+          "trial_marginal_std": 1.1570549715973407e-06
+        },
+        "ece": {
+          "grand_mean": 0.040947368421052656,
+          "grand_std": 0.013088413038384083,
+          "model_marginal_mean": 0.04094736842105265,
+          "model_marginal_std": 0.007580774633526656,
+          "trial_marginal_mean": 0.04094736842105265,
+          "trial_marginal_std": 0.0028342972669128923
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "5": {
+        "rmse": {
+          "grand_mean": 17.866040942442616,
+          "grand_std": 0.7476581806695992,
+          "model_marginal_mean": 17.866040942442616,
+          "model_marginal_std": 0.40208046371455436,
+          "trial_marginal_mean": 17.866040942442616,
+          "trial_marginal_std": 0.530384293449035
+        },
+        "picp": {
+          "grand_mean": 0.7684000000000001,
+          "grand_std": 0.030913858812297555,
+          "model_marginal_mean": 0.7684000000000001,
+          "model_marginal_std": 0.02359660992600423,
+          "trial_marginal_mean": 0.7684,
+          "trial_marginal_std": 0.012601587201618662
+        },
+        "mpiw": {
+          "grand_mean": 37.0760888671875,
+          "grand_std": 1.7583905334754937,
+          "model_marginal_mean": 37.0760888671875,
+          "model_marginal_std": 1.926220320175689,
+          "trial_marginal_mean": 37.0760888671875,
+          "trial_marginal_std": 6.383209441145688e-07
+        },
+        "ece": {
+          "grand_mean": 0.07130526315789477,
+          "grand_std": 0.0232931258906588,
+          "model_marginal_mean": 0.07130526315789477,
+          "model_marginal_std": 0.022557602473731127,
+          "trial_marginal_mean": 0.07130526315789477,
+          "trial_marginal_std": 0.006272924715595964
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      }
+    },
+    "CP_norm_frozen_sigma": {
+      "0.1": {
+        "rmse": {
+          "grand_mean": 13.995991372850622,
+          "grand_std": 1.617877953036015,
+          "model_marginal_mean": 13.99599137285062,
+          "model_marginal_std": 1.7722422642021978,
+          "trial_marginal_mean": 13.99599137285062,
+          "trial_marginal_std": 0.00701195067212682
+        },
+        "picp": {
+          "grand_mean": 0.8959999999999999,
+          "grand_std": 0.03378855822118881,
+          "model_marginal_mean": 0.8959999999999999,
+          "model_marginal_std": 0.036823905279043924,
+          "trial_marginal_mean": 0.8959999999999999,
+          "trial_marginal_std": 0.0020000000000000573
+        },
+        "mpiw": {
+          "grand_mean": 46.04669769287109,
+          "grand_std": 9.95332668117065,
+          "model_marginal_mean": 46.04669769287109,
+          "model_marginal_std": 10.903323090990284,
+          "trial_marginal_mean": 46.04669769287109,
+          "trial_marginal_std": 6.823937925971345e-07
+        },
+        "ece": {
+          "grand_mean": NaN,
+          "grand_std": NaN,
+          "model_marginal_mean": NaN,
+          "model_marginal_std": NaN,
+          "trial_marginal_mean": NaN,
+          "trial_marginal_std": NaN
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "0.5": {
+        "rmse": {
+          "grand_mean": 14.097912283237843,
+          "grand_std": 1.5932154310640265,
+          "model_marginal_mean": 14.097912283237843,
+          "model_marginal_std": 1.737865419545259,
+          "trial_marginal_mean": 14.097912283237847,
+          "trial_marginal_std": 0.14787647684624455
+        },
+        "picp": {
+          "grand_mean": 0.8952,
+          "grand_std": 0.03501428280002318,
+          "model_marginal_mean": 0.8952,
+          "model_marginal_std": 0.037672270969507496,
+          "trial_marginal_mean": 0.8952,
+          "trial_marginal_std": 0.004147288270665516
+        },
+        "mpiw": {
+          "grand_mean": 46.04669677734375,
+          "grand_std": 9.953326576196638,
+          "model_marginal_mean": 46.04669677734375,
+          "model_marginal_std": 10.903322975997016,
+          "trial_marginal_mean": 46.04669677734374,
+          "trial_marginal_std": 6.823937925971346e-07
+        },
+        "ece": {
+          "grand_mean": NaN,
+          "grand_std": NaN,
+          "model_marginal_mean": NaN,
+          "model_marginal_std": NaN,
+          "trial_marginal_mean": NaN,
+          "trial_marginal_std": NaN
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "1": {
+        "rmse": {
+          "grand_mean": 14.246790378741359,
+          "grand_std": 1.607567712129084,
+          "model_marginal_mean": 14.246790378741357,
+          "model_marginal_std": 1.7485893210455372,
+          "trial_marginal_mean": 14.246790378741357,
+          "trial_marginal_std": 0.14266902362782474
+        },
+        "picp": {
+          "grand_mean": 0.8919999999999999,
+          "grand_std": 0.03547299442298792,
+          "model_marginal_mean": 0.892,
+          "model_marginal_std": 0.037735924528226376,
+          "trial_marginal_mean": 0.892,
+          "trial_marginal_std": 0.00469041575982341
+        },
+        "mpiw": {
+          "grand_mean": 46.04669677734375,
+          "grand_std": 9.953326576196638,
+          "model_marginal_mean": 46.04669677734375,
+          "model_marginal_std": 10.903322975997016,
+          "trial_marginal_mean": 46.046696777343755,
+          "trial_marginal_std": 6.823937925971346e-07
+        },
+        "ece": {
+          "grand_mean": NaN,
+          "grand_std": NaN,
+          "model_marginal_mean": NaN,
+          "model_marginal_std": NaN,
+          "trial_marginal_mean": NaN,
+          "trial_marginal_std": NaN
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "2": {
+        "rmse": {
+          "grand_mean": 14.353820907826243,
+          "grand_std": 1.5518966078370775,
+          "model_marginal_mean": 14.353820907826242,
+          "model_marginal_std": 1.6462579726634226,
+          "trial_marginal_mean": 14.353820907826243,
+          "trial_marginal_std": 0.3771756055757743
+        },
+        "picp": {
+          "grand_mean": 0.892,
+          "grand_std": 0.038944404818493074,
+          "model_marginal_mean": 0.892,
+          "model_marginal_std": 0.03972404813208244,
+          "trial_marginal_mean": 0.892,
+          "trial_marginal_std": 0.008124038404636023
+        },
+        "mpiw": {
+          "grand_mean": 46.04669738769531,
+          "grand_std": 9.953326646179322,
+          "model_marginal_mean": 46.04669738769532,
+          "model_marginal_std": 10.903323052659152,
+          "trial_marginal_mean": 46.04669738769531,
+          "trial_marginal_std": 8.357582977527962e-07
+        },
+        "ece": {
+          "grand_mean": NaN,
+          "grand_std": NaN,
+          "model_marginal_mean": NaN,
+          "model_marginal_std": NaN,
+          "trial_marginal_mean": NaN,
+          "trial_marginal_std": NaN
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      },
+      "5": {
+        "rmse": {
+          "grand_mean": 17.866040942442616,
+          "grand_std": 0.7476581806695992,
+          "model_marginal_mean": 17.866040942442616,
+          "model_marginal_std": 0.40208046371455436,
+          "trial_marginal_mean": 17.866040942442616,
+          "trial_marginal_std": 0.530384293449035
+        },
+        "picp": {
+          "grand_mean": 0.8192000000000002,
+          "grand_std": 0.0646735391537116,
+          "model_marginal_mean": 0.8192,
+          "model_marginal_std": 0.06884184773813092,
+          "trial_marginal_mean": 0.8192,
+          "trial_marginal_std": 0.004604345773288489
+        },
+        "mpiw": {
+          "grand_mean": 46.04669662475586,
+          "grand_std": 9.95332676406217,
+          "model_marginal_mean": 46.04669662475586,
+          "model_marginal_std": 10.903323181793475,
+          "trial_marginal_mean": 46.04669662475585,
+          "trial_marginal_std": 3.411968978873891e-07
+        },
+        "ece": {
+          "grand_mean": NaN,
+          "grand_std": NaN,
+          "model_marginal_mean": NaN,
+          "model_marginal_std": NaN,
+          "trial_marginal_mean": NaN,
+          "trial_marginal_std": NaN
+        },
+        "sigma_mean": {
+          "grand_mean": 11.269329833984376,
+          "grand_std": 0.5344646013543028,
+          "model_marginal_mean": 11.269329833984376,
+          "model_marginal_std": 0.5854766366995157,
+          "trial_marginal_mean": 11.269329833984376,
+          "trial_marginal_std": 0.0
+        }
+      }
+    }
+  }
+}

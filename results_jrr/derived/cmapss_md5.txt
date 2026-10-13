@@ -1,0 +1,13 @@
+8f4a8b3d2692b2f7d8e72b344927bf4b  /home/jeffwork/论文4/data/cmapss/RUL_FD001.txt
+4b14b3e25fb98c645f5af6940206b699  /home/jeffwork/论文4/data/cmapss/RUL_FD002.txt
+93d593d8a0ea31bafd047470f3bad1f8  /home/jeffwork/论文4/data/cmapss/RUL_FD003.txt
+baab766b7287001b8c0262079fbd846a  /home/jeffwork/论文4/data/cmapss/RUL_FD004.txt
+9e66b06d060c2f6fb03d4cc4029bc655  /home/jeffwork/论文4/data/cmapss/readme.txt
+62316d1dd70f88a9a43a1e2690765437  /home/jeffwork/论文4/data/cmapss/test_FD001.txt
+9c64d7b4f7520c12e0193df2cfe9e279  /home/jeffwork/论文4/data/cmapss/test_FD002.txt
+602bec683069f2460590f1b32ee77ec9  /home/jeffwork/论文4/data/cmapss/test_FD003.txt
+b6ec46dbf47e0d71ffa40189b0a19238  /home/jeffwork/论文4/data/cmapss/test_FD004.txt
+259f340bac32ce6fa8894815600fa757  /home/jeffwork/论文4/data/cmapss/train_FD001.txt
+b6eaab2a6b589e5e41d43ca2f99e379b  /home/jeffwork/论文4/data/cmapss/train_FD002.txt
+81298e81977a53aa268ad500ac42b2d7  /home/jeffwork/论文4/data/cmapss/train_FD003.txt
+8b510e2c1460ba87214f58ceb3cd0266  /home/jeffwork/论文4/data/cmapss/train_FD004.txt

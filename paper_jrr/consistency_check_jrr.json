@@ -1,0 +1,42 @@
+{
+ "cited_not_in_list": [],
+ "listed_not_cited": [],
+ "n_refs": 19,
+ "refs_without_label": [],
+ "labels_never_referenced": [
+  "sec:decision",
+  "sec:noise",
+  "sec:reliability"
+ ],
+ "main_named": {
+  "pages": 13,
+  "undefined_refs_or_citations": 0,
+  "overfull_hbox_gt_10pt": 0
+ },
+ "main_anon": {
+  "pages": 13,
+  "undefined_refs_or_citations": 0,
+  "overfull_hbox_gt_10pt": 0
+ },
+ "supplementary_named": {
+  "pages": 25,
+  "undefined_refs_or_citations": 0,
+  "overfull_hbox_gt_10pt": 0
+ },
+ "supplementary_anon": {
+  "pages": 25,
+  "undefined_refs_or_citations": 0,
+  "overfull_hbox_gt_10pt": 0
+ },
+ "titlepage": {
+  "pages": 1,
+  "undefined_refs_or_citations": 0,
+  "overfull_hbox_gt_10pt": 0
+ },
+ "anon_identifiers_found": [],
+ "anon_supp_identifiers_found": [],
+ "stray_macro_text_in_pdf": 0,
+ "figures_in_main": 3,
+ "tables_in_main": 3,
+ "illustrations_total": 6
+}

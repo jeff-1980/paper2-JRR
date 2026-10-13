@@ -1,0 +1,74 @@
+{
+  "FD001": {
+    "method": "deep_ensemble",
+    "M": 5,
+    "variant": "option_A_single_ensemble_no_seed_variance_leakfree_T2",
+    "rmse": 13.907860137648726,
+    "score": 390.68143504859904,
+    "picp": 0.91,
+    "mpiw": 45.40378952026367,
+    "ece": 0.0647368421052631,
+    "latency_ms_per_sample": 1.272752285003662,
+    "member_seeds": [
+      42,
+      2024,
+      7,
+      888,
+      123
+    ]
+  },
+  "FD002": {
+    "method": "deep_ensemble",
+    "M": 5,
+    "variant": "option_A_single_ensemble_no_seed_variance_leakfree_T2",
+    "rmse": 15.17152550527555,
+    "score": 917.2108654297505,
+    "picp": 0.932806324110672,
+    "mpiw": 52.51568603515625,
+    "ece": 0.04614104431038065,
+    "latency_ms_per_sample": 0.05406164840276062,
+    "member_seeds": [
+      42,
+      2024,
+      7,
+      888,
+      123
+    ]
+  },
+  "FD003": {
+    "method": "deep_ensemble",
+    "M": 5,
+    "variant": "option_A_single_ensemble_no_seed_variance_leakfree_T2",
+    "rmse": 13.128783053200621,
+    "score": 353.9783874315794,
+    "picp": 0.93,
+    "mpiw": 42.864784240722656,
+    "ece": 0.0821052631578947,
+    "latency_ms_per_sample": 0.15861749649047852,
+    "member_seeds": [
+      42,
+      2024,
+      7,
+      888,
+      123
+    ]
+  },
+  "FD004": {
+    "method": "deep_ensemble",
+    "M": 5,
+    "variant": "option_A_single_ensemble_no_seed_variance_leakfree_T2",
+    "rmse": 17.319072921644345,
+    "score": 1679.5926997606743,
+    "picp": 0.9071729957805907,
+    "mpiw": 55.059444427490234,
+    "ece": 0.055474128358871826,
+    "latency_ms_per_sample": 0.06114380269110957,
+    "member_seeds": [
+      42,
+      2024,
+      7,
+      888,
+      123
+    ]
+  }
+}

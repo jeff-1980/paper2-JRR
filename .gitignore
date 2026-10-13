@@ -1,0 +1,14 @@
+results/generated/
+results/_snapshot/
+figures/
+__pycache__/
+*.pyc
+
+# paper build artefacts
+paper_jrr/*.aux
+paper_jrr/*.log
+paper_jrr/*.out
+paper_jrr/*.pdf
+paper_jrr/.texlocal/
+paper_jrr/texenv.sh
+paper_jrr/figures/

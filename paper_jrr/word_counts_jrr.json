@@ -1,0 +1,21 @@
+{
+ "abstract": 198,
+ "sections": {
+  "1 Introduction": 534,
+  "2 Evaluation and maintenance-decision framework": 1221,
+  "3 Interval reliability under sensor degradation": 979,
+  "4 Maintenance-trigger errors and cost sensitivity": 832,
+  "5 Discussion and limitations": 481,
+  "6 Conclusion": 161
+ },
+ "body_total": 4208,
+ "captions_words": 357,
+ "n_captions": 6,
+ "declarations": 143,
+ "references_words": 509,
+ "n_references": 19,
+ "n_figures": 3,
+ "n_tables": 3,
+ "abstract_plus_body": 4406,
+ "abstract_body_captions": 4763
+}

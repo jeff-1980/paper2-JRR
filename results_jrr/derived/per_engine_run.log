@@ -1,0 +1,35 @@
+== LSTM_FD002
+   clean engines 253 of 259
+   gaussian1pct engines 253 of 259
+   drift5pct engines 253 of 259
+   bias5pct engines 253 of 259
+== LSTM_FD003
+   clean engines 100 of 100
+   gaussian1pct engines 100 of 100
+   drift5pct engines 100 of 100
+   bias5pct engines 100 of 100
+== LSTM_FD004
+   clean engines 237 of 248
+   gaussian1pct engines 237 of 248
+   drift5pct engines 237 of 248
+   bias5pct engines 237 of 248
+== Transformer_FD001
+   clean engines 100 of 100
+   gaussian1pct engines 100 of 100
+   drift5pct engines 100 of 100
+   bias5pct engines 100 of 100
+== Transformer_FD002
+   clean engines 253 of 259
+   gaussian1pct engines 253 of 259
+   drift5pct engines 253 of 259
+   bias5pct engines 253 of 259
+== Transformer_FD003
+   clean engines 100 of 100
+   gaussian1pct engines 100 of 100
+   drift5pct engines 100 of 100
+   bias5pct engines 100 of 100
+== Transformer_FD004
+   clean engines 237 of 248
+   gaussian1pct engines 237 of 248
+   drift5pct engines 237 of 248
+   bias5pct engines 237 of 248

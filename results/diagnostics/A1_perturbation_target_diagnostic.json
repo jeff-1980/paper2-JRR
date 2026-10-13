@@ -1,0 +1,230 @@
+{
+  "FD002": {
+    "LSTM": {
+      "sensors": {
+        "drift5pct": {
+          "picp_grand_mean": 0.048221343873517786,
+          "f_oob_grand_mean": 0.11431884057971016,
+          "premature_rate_L20_grand_mean": 0.6932806324110672,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 270,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.8550197628458498,
+          "f_oob_grand_mean": 0.06630197628458498,
+          "premature_rate_L20_grand_mean": 0.05090909090909091,
+          "unrecognised_rate_L20_grand_mean": 0.0015810276679841895,
+          "n_at_risk_total_pooled": 1350,
+          "n_cells": 25
+        }
+      },
+      "settings": {
+        "drift5pct": {
+          "picp_grand_mean": 0.8940711462450593,
+          "f_oob_grand_mean": 0.48392621870882746,
+          "premature_rate_L20_grand_mean": 0.06403162055335967,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 270,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.91399209486166,
+          "f_oob_grand_mean": 0.31671497584541064,
+          "premature_rate_L20_grand_mean": 0.03794466403162055,
+          "unrecognised_rate_L20_grand_mean": 0.00015810276679841895,
+          "n_at_risk_total_pooled": 1350,
+          "n_cells": 25
+        }
+      },
+      "joint": {
+        "drift5pct": {
+          "picp_grand_mean": 0.04189723320158103,
+          "f_oob_grand_mean": 0.17592007026789636,
+          "premature_rate_L20_grand_mean": 0.6956521739130435,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 270,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.8502766798418971,
+          "f_oob_grand_mean": 0.10795520421607378,
+          "premature_rate_L20_grand_mean": 0.048695652173913036,
+          "unrecognised_rate_L20_grand_mean": 0.0012648221343873516,
+          "n_at_risk_total_pooled": 1350,
+          "n_cells": 25
+        }
+      }
+    },
+    "Transformer": {
+      "sensors": {
+        "drift5pct": {
+          "picp_grand_mean": 0.025296442687747035,
+          "f_oob_grand_mean": 0.11431884057971016,
+          "premature_rate_L20_grand_mean": 0.691699604743083,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 270,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.8240316205533597,
+          "f_oob_grand_mean": 0.06630197628458498,
+          "premature_rate_L20_grand_mean": 0.030671936758893282,
+          "unrecognised_rate_L20_grand_mean": 0.0012648221343873516,
+          "n_at_risk_total_pooled": 1350,
+          "n_cells": 25
+        }
+      },
+      "settings": {
+        "drift5pct": {
+          "picp_grand_mean": 0.7723320158102767,
+          "f_oob_grand_mean": 0.48392621870882746,
+          "premature_rate_L20_grand_mean": 0.056916996047430835,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 270,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.8901185770750988,
+          "f_oob_grand_mean": 0.31671497584541064,
+          "premature_rate_L20_grand_mean": 0.015968379446640316,
+          "unrecognised_rate_L20_grand_mean": 0.0006324110671936758,
+          "n_at_risk_total_pooled": 1350,
+          "n_cells": 25
+        }
+      },
+      "joint": {
+        "drift5pct": {
+          "picp_grand_mean": 0.028458498023715417,
+          "f_oob_grand_mean": 0.17592007026789636,
+          "premature_rate_L20_grand_mean": 0.6972332015810276,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 270,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.8148616600790514,
+          "f_oob_grand_mean": 0.10795520421607378,
+          "premature_rate_L20_grand_mean": 0.032252964426877466,
+          "unrecognised_rate_L20_grand_mean": 0.0020553359683794462,
+          "n_at_risk_total_pooled": 1350,
+          "n_cells": 25
+        }
+      }
+    }
+  },
+  "FD004": {
+    "LSTM": {
+      "sensors": {
+        "drift5pct": {
+          "picp_grand_mean": 0.31139240506329113,
+          "f_oob_grand_mean": 0.09249882794186591,
+          "premature_rate_L20_grand_mean": 0.5898734177215189,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 200,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.860253164556962,
+          "f_oob_grand_mean": 0.05433774027191749,
+          "premature_rate_L20_grand_mean": 0.056033755274261604,
+          "unrecognised_rate_L20_grand_mean": 0.001350210970464135,
+          "n_at_risk_total_pooled": 1000,
+          "n_cells": 25
+        }
+      },
+      "settings": {
+        "drift5pct": {
+          "picp_grand_mean": 0.7805907172995781,
+          "f_oob_grand_mean": 0.48396624472573835,
+          "premature_rate_L20_grand_mean": 0.2320675105485232,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 200,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.8818565400843882,
+          "f_oob_grand_mean": 0.3116268166901079,
+          "premature_rate_L20_grand_mean": 0.04151898734177215,
+          "unrecognised_rate_L20_grand_mean": 0.0008438818565400844,
+          "n_at_risk_total_pooled": 1000,
+          "n_cells": 25
+        }
+      },
+      "joint": {
+        "drift5pct": {
+          "picp_grand_mean": 0.19578059071729959,
+          "f_oob_grand_mean": 0.15774339740584467,
+          "premature_rate_L20_grand_mean": 0.6801687763713081,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 200,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.851476793248945,
+          "f_oob_grand_mean": 0.09709329582747303,
+          "premature_rate_L20_grand_mean": 0.058059071729957806,
+          "unrecognised_rate_L20_grand_mean": 0.0021940928270042194,
+          "n_at_risk_total_pooled": 1000,
+          "n_cells": 25
+        }
+      }
+    },
+    "Transformer": {
+      "sensors": {
+        "drift5pct": {
+          "picp_grand_mean": 0.05316455696202531,
+          "f_oob_grand_mean": 0.09249882794186591,
+          "premature_rate_L20_grand_mean": 0.5248945147679324,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 200,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.7824472573839663,
+          "f_oob_grand_mean": 0.05433774027191749,
+          "premature_rate_L20_grand_mean": 0.04084388185654008,
+          "unrecognised_rate_L20_grand_mean": 0.0006751054852320675,
+          "n_at_risk_total_pooled": 1000,
+          "n_cells": 25
+        }
+      },
+      "settings": {
+        "drift5pct": {
+          "picp_grand_mean": 0.5873417721518988,
+          "f_oob_grand_mean": 0.48396624472573835,
+          "premature_rate_L20_grand_mean": 0.11645569620253164,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 200,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.8362869198312236,
+          "f_oob_grand_mean": 0.3116268166901079,
+          "premature_rate_L20_grand_mean": 0.029873417721518986,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 1000,
+          "n_cells": 25
+        }
+      },
+      "joint": {
+        "drift5pct": {
+          "picp_grand_mean": 0.08354430379746836,
+          "f_oob_grand_mean": 0.15774339740584467,
+          "premature_rate_L20_grand_mean": 0.670042194092827,
+          "unrecognised_rate_L20_grand_mean": 0.0,
+          "n_at_risk_total_pooled": 200,
+          "n_cells": 5
+        },
+        "gauss1pct_armC": {
+          "picp_grand_mean": 0.7733333333333333,
+          "f_oob_grand_mean": 0.09709329582747303,
+          "premature_rate_L20_grand_mean": 0.04489451476793249,
+          "unrecognised_rate_L20_grand_mean": 0.0006751054852320675,
+          "n_at_risk_total_pooled": 1000,
+          "n_cells": 25
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+ "n_values_compared": 960,
+ "max_abs_difference": 1.1102230246251565e-16,
+ "torch_rederivation_note": "inference re-run with the torch/cuDNN of this session; see JRR_BASELINE.md"
+}
