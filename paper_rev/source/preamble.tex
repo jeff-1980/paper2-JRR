@@ -1,0 +1,295 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{mathptmx}
+\usepackage{amsmath,amssymb,booktabs,multirow,graphicx,xcolor,url,array,longtable,setspace,caption,placeins,pdflscape,float}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[super,comma,sort&compress]{natbib}
+\captionsetup{font=small,labelfont=bf,labelsep=period}
+\newcommand{\PICP}{\mathrm{PICP}}
+\newcommand{\NLeakRMSE}{2--14}
+\newcommand{\NLeakScore}{-2--106}
+\newcommand{\NSelRMSE}{0--14}
+\newcommand{\NSelScoreMax}{108}
+\newcommand{\NNormRMSE}{-1--2}
+\newcommand{\NSelPICP}{$-0.08$, $-0.00$, $-0.04$}
+\newcommand{\NEcePooledFDone}{0.035}
+\newcommand{\NEnsBestIS}{8}
+\newcommand{\NFixWorstIS}{7}
+\newcommand{\NWisTopSame}{8}
+\newcommand{\NHeadRecover}{58}
+\newcommand{\NHeadRecoverRange}{41--76}
+\newcommand{\NMcdCovGE}{8}
+\newcommand{\NSameGain}{2.1--9.0}
+\newcommand{\NSameGainCount}{8}
+\newcommand{\NSameCrossMax}{5.1}
+\newcommand{\NOnePartSingleFDone}{60.2}
+\newcommand{\NFivePartSingleFDone}{67.7}
+\newcommand{\NDomPoint}{16}
+\newcommand{\NCIA}{16}
+\newcommand{\NCIB}{16}
+\newcommand{\NCITot}{32}
+\newcommand{\NCIExceptions}{none}
+\newcommand{\NInterMax}{0.043}
+\newcommand{\NInterPos}{16}
+\newcommand{\NHelpA}{2}
+\newcommand{\NHelpB}{0}
+\newcommand{\NAvgHarm}{16}
+\newcommand{\NHelpAList}{LSTM/FD004/het., LSTM/FD004/CP}
+\newcommand{\NShareFDoneLSTM}{28}
+\newcommand{\NHalfBelowOneSeven}{33}
+\newcommand{\NHalfMaxRest}{4.3}
+\newcommand{\NHalfOutlier}{Transformer/FD001/Deep_Ensemble}
+\newcommand{\NHalfOutlierVal}{10.2}
+\newcommand{\NThrGrand}{3.7}
+\newcommand{\NThrTrial}{0.9--5.1}
+\newcommand{\NThrLeftMin}{1.0}
+\newcommand{\NMechSpread}{5--40}
+\newcommand{\NWorstHead}{21}
+\newcommand{\NWorstHeadN}{24}
+\newcommand{\NStructRange}{4--10}
+\newcommand{\NRampL}{0.05}
+\newcommand{\NRampT}{0.03}
+\newcommand{\NContL}{0.04}
+\newcommand{\NContT}{0.02}
+\newcommand{\NBiasEqL}{0.49}
+\newcommand{\NBiasEqT}{0.23}
+\newcommand{\NRevL}{0.68}
+\newcommand{\NRevT}{0.69}
+\newcommand{\NShufL}{0.29}
+\newcommand{\NShufT}{0.12}
+\newcommand{\NSingleL}{0.63}
+\newcommand{\NSingleT}{0.54}
+\newcommand{\NFixEndOneL}{0.29}
+\newcommand{\NFixEndFiveL}{0.13}
+\newcommand{\NFixEndT}{0.03--0.07}
+\newcommand{\NDriftPrem}{40--72}
+\newcommand{\NDriftRULunc}{101--105}
+\newcommand{\NDriftRULcap}{94--96}
+\newcommand{\NDriftExcess}{84}
+\newcommand{\NBiasUnrec}{0.078}
+\newcommand{\NBiasUnrecCond}{0.37}
+\newcommand{\NDriftUnrecNZ}{0}
+\newcommand{\NDriftUnrecNZList}{none}
+\newcommand{\NEnsLowUnrecLSTM}{4}
+\newcommand{\NRev}{36}
+\newcommand{\NRevTop}{20}
+\newcommand{\NBootSig}{63--101}
+\newcommand{\NPremFDone}{2.6}
+\newcommand{\NPremFDthree}{14}
+\newcommand{\NSensJointRatio}{0.78--1.00}
+\newcommand{\NSetOnlyPrem}{6--23}
+\newcommand{\NSensPrem}{52--69}
+\newcommand{\NAlignRMSE}{+0.04 to +0.31}
+\newcommand{\NAlignPICP}{-0.010 to +0.008}
+\newcommand{\NLeakExceptions}{FD002 score under fit-only normalisation}
+\newcommand{\NLeakExceptionsN}{1}
+\newcommand{\NMcdISFDtwo}{74.3}
+\newcommand{\NHeadISFDtwo}{62.4}
+\newcommand{\NCPOutside}{0.932 (CP-norm, LSTM, FD002; $+0.032$); 0.866 (CP-norm, Transformer, FD004; $-0.034$)}
+\newcommand{\NCPOutsideN}{2}
+\newcommand{\NCPInsideN}{6}
+\newcommand{\NFairRatio}{8--36}
+\newcommand{\NDriftCovOne}{0.64--0.64}
+\newcommand{\NDriftCovTwo}{0.03--0.05}
+\newcommand{\NDriftCovThree}{0.10--0.21}
+\newcommand{\NDriftCovFour}{0.05--0.31}
+\newcommand{\NDriftFoobSix}{9--11}
+\newcommand{\NBiasFoobSix}{13--16}
+\newcommand{\NDriftFoobSingleMax}{9.5e-06}
+\newcommand{\NDriftHalfSix}{2.2--5.4}
+\newcommand{\NBGHalfSix}{4--9}
+\newcommand{\NNoiseMedian}{1.0}
+\newcommand{\NContFoob}{0.141}
+\newcommand{\NDriftPremTwenty}{52--69}
+\newcommand{\NAOneFDtwoSens}{0.69}
+\newcommand{\NAOneFDtwoJoint}{0.70}
+\newcommand{\NAOneFDfourSens}{0.52--0.59}
+\newcommand{\NAOneFDfourJoint}{0.67--0.68}
+\newcommand{\NAOneFDfourSet}{0.12--0.23}
+\newcommand{\NAOneSetCov}{0.59--0.89}
+\newcommand{\NMSweepPICP}{0.909 to 0.924}
+\newcommand{\NMSweepIS}{77.6 to 75.0}
+\newcommand{\NIndepIS}{56.7/55.1/60.3, 60.4/58.7/56.8, 52.2/54.2/55.8, 75.2/74.8/77.4}
+\newcommand{\NIndepSig}{none}
+\newcommand{\NNFiveFifteenRaw}{['FD001', 'FD002', 'FD004']}
+\newcommand{\NDoseMAD}{0.08--0.35}
+\newcommand{\NHalfMaxRestCell}{the ensemble Transformer on FD003}
+\newcommand{\NSelPICPsign}{}
+\newcommand{\NTableIFDtwoScore}{1349.2 against 1319.5}
+\newcommand{\NNFiveFifteen}{1.36, 0.70, 0.80}
+\newcommand{\NIndepSigN}{none}
+\newcommand{\NIndepPosN}{all four}
+\newcommand{\NSelEffRMSE}{-1.94 to -0.29}
+\newcommand{\NNormEffRMSE}{-0.04 to 0.07}
+\newcommand{\NIntEffRMSE}{-0.43 to 0.47}
+\newcommand{\NSelEffScore}{-860 to -8}
+\newcommand{\NNormEffScore}{-4 to 214}
+\newcommand{\NIntEffScore}{-700 to -21}
+\newcommand{\NNormAbsMaxRMSE}{0.07}
+\newcommand{\NSelAbsMaxRMSE}{1.94}
+\newcommand{\NLeakRMSEmax}{14}
+\newcommand{\NLeakScoremax}{106}
+\newcommand{\NReproBit}{63 of the 66}
+
+\newcommand{\JEvalEng}{100, 253, 100 and 237}
+\newcommand{\JFileEng}{100, 259, 100 and 248}
+\newcommand{\JExclTwo}{6}
+\newcommand{\JExclFour}{11}
+\newcommand{\JAgreeN}{960}
+\newcommand{\JAgreeMax}{1e-16}
+\newcommand{\JDriftPremRange}{52--69}
+\newcommand{\JDriftPremCI}{47--75}
+\newcommand{\JDriftPremModelRange}{47--70}
+\newcommand{\JDriftPremHalfCI}{6}
+\newcommand{\JDriftPremLten}{40--72}
+\newcommand{\JDriftPremLthirty}{61--64}
+\newcommand{\JDriftPremAllMech}{52--70}
+\newcommand{\JDriftUnrecMax}{0.0}
+\newcommand{\JBiasPremRange}{14--32}
+\newcommand{\JBiasUnrecRange}{1.8--10.2}
+\newcommand{\JBiasUnrecCondRange}{11--48}
+\newcommand{\JBiasUnrecMaxCI}{13.1}
+\newcommand{\JBiasPremAllMech}{14--36}
+\newcommand{\JBiasUnrecAllMech}{0.6--10.2}
+\newcommand{\JDriftRULunc}{101--105}
+\newcommand{\JDriftRULcap}{94--96}
+\newcommand{\JCleanPremRange}{2--4}
+\newcommand{\JNoisePremRange}{3--6}
+\newcommand{\JCleanUnrecMax}{0.1}
+\newcommand{\JDriftPremSingle}{2.6, 2.4}
+\newcommand{\JDriftPremSingleThree}{14 and 17}
+\newcommand{\JSwapMuDrift}{46--67}
+\newcommand{\JSwapMuDriftLoCI}{40}
+\newcommand{\JSwapSigDrift}{-3$ to $+9}
+\newcommand{\JMuShiftDrift}{-66$ to $-49}
+\newcommand{\JSwapMuDriftSingle}{13--43}
+\newcommand{\JSwapSigDriftSingle}{-26$ to $-10}
+\newcommand{\JSwapSigDriftSingleN}{4}
+\newcommand{\JSwapMuBias}{12--30}
+\newcommand{\JSwapMuBiasUnrec}{2.6--11.2}
+\newcommand{\JSwapSigBiasUnrec}{+0.0$ to $+0.5}
+\newcommand{\JRevClean}{7}
+\newcommand{\JTopClean}{6}
+\newcommand{\JNClean}{24}
+\newcommand{\JRevNoise}{13}
+\newcommand{\JTopNoise}{11}
+\newcommand{\JNNoise}{24}
+\newcommand{\JRevDrift}{0}
+\newcommand{\JTopDrift}{0}
+\newcommand{\JNDrift}{24}
+\newcommand{\JRevBias}{16}
+\newcommand{\JTopBias}{3}
+\newcommand{\JNBias}{24}
+\newcommand{\JRevTotal}{36}
+\newcommand{\JTopTotal}{20}
+\newcommand{\JRevGroups}{96}
+\newcommand{\JTopBootMed}{0.78}
+\newcommand{\JTopBootIQR}{0.52--0.87}
+\newcommand{\JTopBootN}{20}
+\newcommand{\JTopBootGeFive}{16}
+\newcommand{\JLabelMax}{2.0}
+\newcommand{\JLabelHeadline}{1.3}
+\newcommand{\JMatchNoise}{0.62--0.68}
+\newcommand{\JMatchNoiseL}{0.68}
+\newcommand{\JMatchNoiseT}{0.62}
+\newcommand{\JMatchBias}{0.71--0.78}
+\newcommand{\JMatchBiasL}{0.78}
+\newcommand{\JMatchBiasT}{0.71}
+\newcommand{\JMatchGain}{0.21--0.28}
+\newcommand{\JMatchGainL}{0.28}
+\newcommand{\JMatchGainT}{0.21}
+\newcommand{\JMatchDrift}{0.09--0.14}
+\newcommand{\JMatchDriftL}{0.14}
+\newcommand{\JMatchDriftT}{0.09}
+\newcommand{\JMatchFDfourNoise}{0.55--0.72}
+\newcommand{\JMatchFDfourBias}{0.52--0.64}
+\newcommand{\JMatchFDfourGain}{0.24--0.46}
+\newcommand{\JDriftCovOne}{0.64}
+\newcommand{\JCleanCovOne}{0.86--0.88}
+\newcommand{\JDriftCovThree}{0.10--0.21}
+\newcommand{\JCleanCovThree}{0.86--0.87}
+\newcommand{\JDriftFoobSingleMax}{9.5\times10^{-6}}
+\newcommand{\JGainSingleFoob}{14}
+\newcommand{\JGainSinglePICP}{0.07--0.40}
+\newcommand{\JDriftCovTwoSix}{0.03--0.05}
+\newcommand{\JDriftCovFourSix}{0.05--0.31}
+\newcommand{\JBiasCovSix}{0.16--0.42}
+\newcommand{\JBiasFoobSix}{13--16}
+\newcommand{\JDriftFoobSix}{9--11}
+\newcommand{\JCleanCovSix}{0.86--0.91}
+\newcommand{\JLCcells}{5}
+\newcommand{\JLCtotal}{24}
+\newcommand{\JEnsBestISeight}{8}
+\newcommand{\JCohRampPICPSix}{0.03--0.31}
+\newcommand{\JCohPosPICPSix}{0.02--0.35}
+\newcommand{\JCohNegPICPSix}{0.28--0.66}
+\newcommand{\JCohRampPremSix}{52--69}
+\newcommand{\JCohPosPremSix}{33--66}
+\newcommand{\JCohNegPremSixMax}{3}
+\newcommand{\JCohNegUnrecSix}{4--15}
+\newcommand{\JCohPosUnrecSixMax}{0.0}
+\newcommand{\JCohRampPICPSingle}{0.10--0.64}
+\newcommand{\JCohPosPICPSingle}{0.69--0.85}
+\newcommand{\JCohNegPICPSingle}{0.65--0.74}
+\newcommand{\JCohRampPICPThree}{0.10--0.21}
+\newcommand{\JCohPosPICPThree}{0.69--0.82}
+\newcommand{\JCohRampPICPOne}{0.64}
+\newcommand{\JCohPosPICPOne}{0.75--0.85}
+\newcommand{\JCohRampPremFDtwo}{69}
+\newcommand{\JCohPosPremFDtwo}{63--66}
+\newcommand{\JCohRampPremFDfour}{52--59}
+\newcommand{\JCohPosPremFDfour}{33--36}
+\newcommand{\JCohRampPICPFDtwo}{0.03--0.05}
+\newcommand{\JCohPosPICPFDtwo}{0.02--0.04}
+\newcommand{\JCohNegUnrecFDtwo}{12--15}
+\newcommand{\JCohNegUnrecFDfour}{4--8}
+\newcommand{\JCleanCovAll}{0.84--0.96}
+\newcommand{\JCleanNLLShiftMax}{1.0}
+\newcommand{\JCleanNLLShiftNchg}{6}
+\newcommand{\JCleanAllShiftMax}{1.0}
+\newcommand{\JCleanAllShiftNchg}{13}
+\newcommand{\JCleanAllShiftN}{40}
+\newcommand{\JCleanRMSEshiftMax}{0.19}
+\newcommand{\JCleanXcheckCoh}{0.0000}
+\newcommand{\JCleanXcheckCtl}{0.0000}
+\newcommand{\JClipRateMaxNLL}{0.0}
+\newcommand{\JClipRateMaxCP}{0.0}
+\newcommand{\JClipRateMaxEns}{0.3}
+\newcommand{\JClipRateN}{288}
+\newcommand{\JClipPICPmaxClean}{0.010}
+\newcommand{\JClipPICPmaxNoise}{0.011}
+\newcommand{\JClipPICPmaxDrift}{0.085}
+\newcommand{\JClipPICPmaxBias}{0.050}
+\newcommand{\JClipDriftTwoU}{0.03--0.05}
+\newcommand{\JClipDriftTwoA}{0.11}
+\newcommand{\JWFoneRamp}{0.64}
+\newcommand{\JWFoneShuf}{0.86--0.88}
+\newcommand{\JWFoneRev}{0.68--0.76}
+\newcommand{\JWFoneCont}{0.75--0.83}
+\newcommand{\JWFoneSingle}{0.87--0.90}
+\newcommand{\JWFoneBiasEq}{0.68--0.88}
+\newcommand{\JWFtwoShufL}{0.29}
+\newcommand{\JWFtwoShufT}{0.12}
+\newcommand{\JWFoneClean}{0.86--0.88}
+\newcommand{\JSigExtMaxCell}{LSTM FD004}
+\newcommand{\JSigExtMaxPt}{$+9.5$}
+\newcommand{\JSigExtMaxLo}{$+6.8$}
+\newcommand{\JSigExtMaxHi}{$+12.2$}
+\newcommand{\JSigExtMinCell}{Transformer FD003}
+\newcommand{\JSigExtMinPt}{$-25.8$}
+\newcommand{\JSigExtMinLo}{$-32.6$}
+\newcommand{\JSigExtMinHi}{$-19.4$}
+\newcommand{\JSigExtExclZero}{7}
+\newcommand{\JSigExtCells}{8}
+\newcommand{\JCNswapMuUnrec}{8--18}
+\newcommand{\JCNswapSigUnrec}{$-7.2$ to $-0.3$}
+\newcommand{\JCNswapShift}{5--42}
+\newcommand{\JCPswapMuPrem}{38--66}
+\newcommand{\JCPswapShift}{42--65}
+\newcommand{\JCPswapSigPrem}{$-9$ to $-1$}
+\newcommand{\JRankCSVn}{96}
+\newcommand{\JBootCSVn}{480}
+
+\newif\ifanon
+\setlength{\bibsep}{2pt}
+
+\anonfalse

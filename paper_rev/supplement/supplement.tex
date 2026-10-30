@@ -1,0 +1,1452 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{mathptmx}
+\usepackage{amsmath,amssymb,booktabs,multirow,graphicx,xcolor,url,array,longtable,setspace,caption,placeins,pdflscape,float}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage[super,comma,sort&compress]{natbib}
+\captionsetup{font=small,labelfont=bf,labelsep=period}
+\newcommand{\PICP}{\mathrm{PICP}}
+\newcommand{\NLeakRMSE}{2--14}
+\newcommand{\NLeakScore}{-2--106}
+\newcommand{\NSelRMSE}{0--14}
+\newcommand{\NSelScoreMax}{108}
+\newcommand{\NNormRMSE}{-1--2}
+\newcommand{\NSelPICP}{$-0.08$, $-0.00$, $-0.04$}
+\newcommand{\NEcePooledFDone}{0.035}
+\newcommand{\NEnsBestIS}{8}
+\newcommand{\NFixWorstIS}{7}
+\newcommand{\NWisTopSame}{8}
+\newcommand{\NHeadRecover}{58}
+\newcommand{\NHeadRecoverRange}{41--76}
+\newcommand{\NMcdCovGE}{8}
+\newcommand{\NSameGain}{2.1--9.0}
+\newcommand{\NSameGainCount}{8}
+\newcommand{\NSameCrossMax}{5.1}
+\newcommand{\NOnePartSingleFDone}{60.2}
+\newcommand{\NFivePartSingleFDone}{67.7}
+\newcommand{\NDomPoint}{16}
+\newcommand{\NCIA}{16}
+\newcommand{\NCIB}{16}
+\newcommand{\NCITot}{32}
+\newcommand{\NCIExceptions}{none}
+\newcommand{\NInterMax}{0.043}
+\newcommand{\NInterPos}{16}
+\newcommand{\NHelpA}{2}
+\newcommand{\NHelpB}{0}
+\newcommand{\NAvgHarm}{16}
+\newcommand{\NHelpAList}{LSTM/FD004/het., LSTM/FD004/CP}
+\newcommand{\NShareFDoneLSTM}{28}
+\newcommand{\NHalfBelowOneSeven}{33}
+\newcommand{\NHalfMaxRest}{4.3}
+\newcommand{\NHalfOutlier}{Transformer/FD001/Deep_Ensemble}
+\newcommand{\NHalfOutlierVal}{10.2}
+\newcommand{\NThrGrand}{3.7}
+\newcommand{\NThrTrial}{0.9--5.1}
+\newcommand{\NThrLeftMin}{1.0}
+\newcommand{\NMechSpread}{5--40}
+\newcommand{\NWorstHead}{21}
+\newcommand{\NWorstHeadN}{24}
+\newcommand{\NStructRange}{4--10}
+\newcommand{\NRampL}{0.05}
+\newcommand{\NRampT}{0.03}
+\newcommand{\NContL}{0.04}
+\newcommand{\NContT}{0.02}
+\newcommand{\NBiasEqL}{0.49}
+\newcommand{\NBiasEqT}{0.23}
+\newcommand{\NRevL}{0.68}
+\newcommand{\NRevT}{0.69}
+\newcommand{\NShufL}{0.29}
+\newcommand{\NShufT}{0.12}
+\newcommand{\NSingleL}{0.63}
+\newcommand{\NSingleT}{0.54}
+\newcommand{\NFixEndOneL}{0.29}
+\newcommand{\NFixEndFiveL}{0.13}
+\newcommand{\NFixEndT}{0.03--0.07}
+\newcommand{\NDriftPrem}{40--72}
+\newcommand{\NDriftRULunc}{101--105}
+\newcommand{\NDriftRULcap}{94--96}
+\newcommand{\NDriftExcess}{84}
+\newcommand{\NBiasUnrec}{0.078}
+\newcommand{\NBiasUnrecCond}{0.37}
+\newcommand{\NDriftUnrecNZ}{0}
+\newcommand{\NDriftUnrecNZList}{none}
+\newcommand{\NEnsLowUnrecLSTM}{4}
+\newcommand{\NRev}{36}
+\newcommand{\NRevTop}{20}
+\newcommand{\NBootSig}{63--101}
+\newcommand{\NPremFDone}{2.6}
+\newcommand{\NPremFDthree}{14}
+\newcommand{\NSensJointRatio}{0.78--1.00}
+\newcommand{\NSetOnlyPrem}{6--23}
+\newcommand{\NSensPrem}{52--69}
+\newcommand{\NAlignRMSE}{+0.04 to +0.31}
+\newcommand{\NAlignPICP}{-0.010 to +0.008}
+\newcommand{\NLeakExceptions}{FD002 score under fit-only normalisation}
+\newcommand{\NLeakExceptionsN}{1}
+\newcommand{\NMcdISFDtwo}{74.3}
+\newcommand{\NHeadISFDtwo}{62.4}
+\newcommand{\NCPOutside}{0.932 (CP-norm, LSTM, FD002; $+0.032$); 0.866 (CP-norm, Transformer, FD004; $-0.034$)}
+\newcommand{\NCPOutsideN}{2}
+\newcommand{\NCPInsideN}{6}
+\newcommand{\NFairRatio}{8--36}
+\newcommand{\NDriftCovOne}{0.64--0.64}
+\newcommand{\NDriftCovTwo}{0.03--0.05}
+\newcommand{\NDriftCovThree}{0.10--0.21}
+\newcommand{\NDriftCovFour}{0.05--0.31}
+\newcommand{\NDriftFoobSix}{9--11}
+\newcommand{\NBiasFoobSix}{13--16}
+\newcommand{\NDriftFoobSingleMax}{9.5e-06}
+\newcommand{\NDriftHalfSix}{2.2--5.4}
+\newcommand{\NBGHalfSix}{4--9}
+\newcommand{\NNoiseMedian}{1.0}
+\newcommand{\NContFoob}{0.141}
+\newcommand{\NDriftPremTwenty}{52--69}
+\newcommand{\NAOneFDtwoSens}{0.69}
+\newcommand{\NAOneFDtwoJoint}{0.70}
+\newcommand{\NAOneFDfourSens}{0.52--0.59}
+\newcommand{\NAOneFDfourJoint}{0.67--0.68}
+\newcommand{\NAOneFDfourSet}{0.12--0.23}
+\newcommand{\NAOneSetCov}{0.59--0.89}
+\newcommand{\NMSweepPICP}{0.909 to 0.924}
+\newcommand{\NMSweepIS}{77.6 to 75.0}
+\newcommand{\NIndepIS}{56.7/55.1/60.3, 60.4/58.7/56.8, 52.2/54.2/55.8, 75.2/74.8/77.4}
+\newcommand{\NIndepSig}{none}
+\newcommand{\NNFiveFifteenRaw}{['FD001', 'FD002', 'FD004']}
+\newcommand{\NDoseMAD}{0.08--0.35}
+\newcommand{\NHalfMaxRestCell}{the ensemble Transformer on FD003}
+\newcommand{\NSelPICPsign}{}
+\newcommand{\NTableIFDtwoScore}{1349.2 against 1319.5}
+\newcommand{\NNFiveFifteen}{1.36, 0.70, 0.80}
+\newcommand{\NIndepSigN}{none}
+\newcommand{\NIndepPosN}{all four}
+\newcommand{\NSelEffRMSE}{-1.94 to -0.29}
+\newcommand{\NNormEffRMSE}{-0.04 to 0.07}
+\newcommand{\NIntEffRMSE}{-0.43 to 0.47}
+\newcommand{\NSelEffScore}{-860 to -8}
+\newcommand{\NNormEffScore}{-4 to 214}
+\newcommand{\NIntEffScore}{-700 to -21}
+\newcommand{\NNormAbsMaxRMSE}{0.07}
+\newcommand{\NSelAbsMaxRMSE}{1.94}
+\newcommand{\NLeakRMSEmax}{14}
+\newcommand{\NLeakScoremax}{106}
+\newcommand{\NReproBit}{63 of the 66}
+
+\newcommand{\JEvalEng}{100, 253, 100 and 237}
+\newcommand{\JFileEng}{100, 259, 100 and 248}
+\newcommand{\JExclTwo}{6}
+\newcommand{\JExclFour}{11}
+\newcommand{\JAgreeN}{960}
+\newcommand{\JAgreeMax}{1e-16}
+\newcommand{\JDriftPremRange}{52--69}
+\newcommand{\JDriftPremCI}{47--75}
+\newcommand{\JDriftPremModelRange}{47--70}
+\newcommand{\JDriftPremHalfCI}{6}
+\newcommand{\JDriftPremLten}{40--72}
+\newcommand{\JDriftPremLthirty}{61--64}
+\newcommand{\JDriftPremAllMech}{52--70}
+\newcommand{\JDriftUnrecMax}{0.0}
+\newcommand{\JBiasPremRange}{14--32}
+\newcommand{\JBiasUnrecRange}{1.8--10.2}
+\newcommand{\JBiasUnrecCondRange}{11--48}
+\newcommand{\JBiasUnrecMaxCI}{13.1}
+\newcommand{\JBiasPremAllMech}{14--36}
+\newcommand{\JBiasUnrecAllMech}{0.6--10.2}
+\newcommand{\JDriftRULunc}{101--105}
+\newcommand{\JDriftRULcap}{94--96}
+\newcommand{\JCleanPremRange}{2--4}
+\newcommand{\JNoisePremRange}{3--6}
+\newcommand{\JCleanUnrecMax}{0.1}
+\newcommand{\JDriftPremSingle}{2.6, 2.4}
+\newcommand{\JDriftPremSingleThree}{14 and 17}
+\newcommand{\JSwapMuDrift}{46--67}
+\newcommand{\JSwapMuDriftLoCI}{40}
+\newcommand{\JSwapSigDrift}{-3$ to $+9}
+\newcommand{\JMuShiftDrift}{-66$ to $-49}
+\newcommand{\JSwapMuDriftSingle}{13--43}
+\newcommand{\JSwapSigDriftSingle}{-26$ to $-10}
+\newcommand{\JSwapSigDriftSingleN}{4}
+\newcommand{\JSwapMuBias}{12--30}
+\newcommand{\JSwapMuBiasUnrec}{2.6--11.2}
+\newcommand{\JSwapSigBiasUnrec}{+0.0$ to $+0.5}
+\newcommand{\JRevClean}{7}
+\newcommand{\JTopClean}{6}
+\newcommand{\JNClean}{24}
+\newcommand{\JRevNoise}{13}
+\newcommand{\JTopNoise}{11}
+\newcommand{\JNNoise}{24}
+\newcommand{\JRevDrift}{0}
+\newcommand{\JTopDrift}{0}
+\newcommand{\JNDrift}{24}
+\newcommand{\JRevBias}{16}
+\newcommand{\JTopBias}{3}
+\newcommand{\JNBias}{24}
+\newcommand{\JRevTotal}{36}
+\newcommand{\JTopTotal}{20}
+\newcommand{\JRevGroups}{96}
+\newcommand{\JTopBootMed}{0.78}
+\newcommand{\JTopBootIQR}{0.52--0.87}
+\newcommand{\JTopBootN}{20}
+\newcommand{\JTopBootGeFive}{16}
+\newcommand{\JLabelMax}{2.0}
+\newcommand{\JLabelHeadline}{1.3}
+\newcommand{\JMatchNoise}{0.62--0.68}
+\newcommand{\JMatchNoiseL}{0.68}
+\newcommand{\JMatchNoiseT}{0.62}
+\newcommand{\JMatchBias}{0.71--0.78}
+\newcommand{\JMatchBiasL}{0.78}
+\newcommand{\JMatchBiasT}{0.71}
+\newcommand{\JMatchGain}{0.21--0.28}
+\newcommand{\JMatchGainL}{0.28}
+\newcommand{\JMatchGainT}{0.21}
+\newcommand{\JMatchDrift}{0.09--0.14}
+\newcommand{\JMatchDriftL}{0.14}
+\newcommand{\JMatchDriftT}{0.09}
+\newcommand{\JMatchFDfourNoise}{0.55--0.72}
+\newcommand{\JMatchFDfourBias}{0.52--0.64}
+\newcommand{\JMatchFDfourGain}{0.24--0.46}
+\newcommand{\JDriftCovOne}{0.64}
+\newcommand{\JCleanCovOne}{0.86--0.88}
+\newcommand{\JDriftCovThree}{0.10--0.21}
+\newcommand{\JCleanCovThree}{0.86--0.87}
+\newcommand{\JDriftFoobSingleMax}{9.5\times10^{-6}}
+\newcommand{\JGainSingleFoob}{14}
+\newcommand{\JGainSinglePICP}{0.07--0.40}
+\newcommand{\JDriftCovTwoSix}{0.03--0.05}
+\newcommand{\JDriftCovFourSix}{0.05--0.31}
+\newcommand{\JBiasCovSix}{0.16--0.42}
+\newcommand{\JBiasFoobSix}{13--16}
+\newcommand{\JDriftFoobSix}{9--11}
+\newcommand{\JCleanCovSix}{0.86--0.91}
+\newcommand{\JLCcells}{5}
+\newcommand{\JLCtotal}{24}
+\newcommand{\JEnsBestISeight}{8}
+\newcommand{\JCohRampPICPSix}{0.03--0.31}
+\newcommand{\JCohPosPICPSix}{0.02--0.35}
+\newcommand{\JCohNegPICPSix}{0.28--0.66}
+\newcommand{\JCohRampPremSix}{52--69}
+\newcommand{\JCohPosPremSix}{33--66}
+\newcommand{\JCohNegPremSixMax}{3}
+\newcommand{\JCohNegUnrecSix}{4--15}
+\newcommand{\JCohPosUnrecSixMax}{0.0}
+\newcommand{\JCohRampPICPSingle}{0.10--0.64}
+\newcommand{\JCohPosPICPSingle}{0.69--0.85}
+\newcommand{\JCohNegPICPSingle}{0.65--0.74}
+\newcommand{\JCohRampPICPThree}{0.10--0.21}
+\newcommand{\JCohPosPICPThree}{0.69--0.82}
+\newcommand{\JCohRampPICPOne}{0.64}
+\newcommand{\JCohPosPICPOne}{0.75--0.85}
+\newcommand{\JCohRampPremFDtwo}{69}
+\newcommand{\JCohPosPremFDtwo}{63--66}
+\newcommand{\JCohRampPremFDfour}{52--59}
+\newcommand{\JCohPosPremFDfour}{33--36}
+\newcommand{\JCohRampPICPFDtwo}{0.03--0.05}
+\newcommand{\JCohPosPICPFDtwo}{0.02--0.04}
+\newcommand{\JCohNegUnrecFDtwo}{12--15}
+\newcommand{\JCohNegUnrecFDfour}{4--8}
+\newcommand{\JCleanCovAll}{0.84--0.96}
+\newcommand{\JCleanNLLShiftMax}{1.0}
+\newcommand{\JCleanNLLShiftNchg}{6}
+\newcommand{\JCleanAllShiftMax}{1.0}
+\newcommand{\JCleanAllShiftNchg}{13}
+\newcommand{\JCleanAllShiftN}{40}
+\newcommand{\JCleanRMSEshiftMax}{0.19}
+\newcommand{\JCleanXcheckCoh}{0.0000}
+\newcommand{\JCleanXcheckCtl}{0.0000}
+\newcommand{\JClipRateMaxNLL}{0.0}
+\newcommand{\JClipRateMaxCP}{0.0}
+\newcommand{\JClipRateMaxEns}{0.3}
+\newcommand{\JClipRateN}{288}
+\newcommand{\JClipPICPmaxClean}{0.010}
+\newcommand{\JClipPICPmaxNoise}{0.011}
+\newcommand{\JClipPICPmaxDrift}{0.085}
+\newcommand{\JClipPICPmaxBias}{0.050}
+\newcommand{\JClipDriftTwoU}{0.03--0.05}
+\newcommand{\JClipDriftTwoA}{0.11}
+\newcommand{\JWFoneRamp}{0.64}
+\newcommand{\JWFoneShuf}{0.86--0.88}
+\newcommand{\JWFoneRev}{0.68--0.76}
+\newcommand{\JWFoneCont}{0.75--0.83}
+\newcommand{\JWFoneSingle}{0.87--0.90}
+\newcommand{\JWFoneBiasEq}{0.68--0.88}
+\newcommand{\JWFtwoShufL}{0.29}
+\newcommand{\JWFtwoShufT}{0.12}
+\newcommand{\JWFoneClean}{0.86--0.88}
+\newcommand{\JSigExtMaxCell}{LSTM FD004}
+\newcommand{\JSigExtMaxPt}{$+9.5$}
+\newcommand{\JSigExtMaxLo}{$+6.8$}
+\newcommand{\JSigExtMaxHi}{$+12.2$}
+\newcommand{\JSigExtMinCell}{Transformer FD003}
+\newcommand{\JSigExtMinPt}{$-25.8$}
+\newcommand{\JSigExtMinLo}{$-32.6$}
+\newcommand{\JSigExtMinHi}{$-19.4$}
+\newcommand{\JSigExtExclZero}{7}
+\newcommand{\JSigExtCells}{8}
+\newcommand{\JCNswapMuUnrec}{8--18}
+\newcommand{\JCNswapSigUnrec}{$-7.2$ to $-0.3$}
+\newcommand{\JCNswapShift}{5--42}
+\newcommand{\JCPswapMuPrem}{38--66}
+\newcommand{\JCPswapShift}{42--65}
+\newcommand{\JCPswapSigPrem}{$-9$ to $-1$}
+\newcommand{\JRankCSVn}{96}
+\newcommand{\JBootCSVn}{480}
+
+\newif\ifanon
+\setlength{\bibsep}{2pt}
+
+\anonfalse
+\begin{document}
+\begin{center}
+{\large\bfseries Supplementary material for ``When interval coverage hides the direction of maintenance-trigger errors: a sensor-degradation stress test of remaining-useful-life prediction intervals''\par}
+\ifanon\else\vspace{0.3em}{\small Yi Wang, Lishui University\par}\fi
+\end{center}
+\small
+\noindent All tables are generated by \texttt{paper\_jrr/make\_tables\_v18.py} (the unchanged v1.8 generator, from released result files) or \texttt{paper\_jrr/make\_tables\_jrr.py} (new or re-derived quantities, from released result files and from \texttt{results\_jrr/derived/}); no value is typed by hand. Rates are percentages of evaluated engines unless stated. Analyses marked \emph{exploratory} were run once after the main protocol was fixed and are not pre-registered. Sections S3--S6 keep the analyses of the first submission, in which perturbation sizes are percentages of each channel's training range (\emph{range scale}); the main text of this version expresses sizes in within-operating-condition standard deviations (SD), and Sections S8--S11 are new.
+
+\section*{S1. Protocol audit}
+\textbf{Controlled $2\times2$ retraining.} Table~\ref{tab:leak} trains the heteroscedastic LSTM with the same five seeds under all four combinations of checkpoint selection (test set T or validation engines V) and normaliser scope (whole training file W or fitting engines F), with the fitting engines held fixed. Sel.\ is the mean over normaliser levels of (T$-$V), Norm.\ the mean over selection levels of (W$-$F), Int.\ the difference of differences; negative means the choice makes the result look better. Test-set selection improves RMSE by \NSelEffRMSE{} cycles and the NASA score by \NSelEffScore{} units; the normaliser scope changes RMSE by \NNormEffRMSE{} cycles. The interaction (\NIntEffRMSE{} cycles, \NIntEffScore{} score units) is of the same order as the normaliser effect. The only cell in which a leaked choice does not flatter the result is the \NLeakExceptions. An earlier uncontrolled version left the fitting set free, so whole-file cells were fitted on more engines, and the normaliser appeared to cost as much as the selection choice; that apparent effect was training-set size.
+\begin{table}[H]\centering\footnotesize
+\caption{Controlled $2\times2$ experiment, heteroscedastic LSTM, terminal unit, mean of five seeds.}\label{tab:leak}
+\begin{tabular}{llrrrr|rrr}\toprule
+ & & T/W & V/W & V/F & T/F & Sel. & Norm. & Int. \\ \midrule
+\multirow{2}{*}{FD001} & RMSE & 13.48 & 15.31 & 15.41 & 13.36 & $-1.94$ & $+0.01$ & $+0.22$ \\
+ & Score & 268.4 & 558.4 & 552.2 & 283.1 & $-279.5$ & $-4.2$ & $-20.8$ \\
+\midrule
+\multirow{2}{*}{FD002} & RMSE & 16.14 & 16.20 & 16.47 & 15.94 & $-0.29$ & $-0.04$ & $+0.47$ \\
+ & Score & 1342.3 & 1388.1 & 1319.5 & 1349.2 & $-8.1$ & $+30.8$ & $-75.4$ \\
+\midrule
+\multirow{2}{*}{FD004} & RMSE & 19.35 & 20.37 & 20.08 & 19.49 & $-0.80$ & $+0.07$ & $-0.43$ \\
+ & Score & 2750.5 & 3960.7 & 3396.0 & 2886.3 & $-859.9$ & $+214.4$ & $-700.4$ \\
+\bottomrule\end{tabular}
+\end{table}
+
+\noindent\textbf{Audit history.} The protocol was adopted after an audit of an earlier, unpublished pipeline found that the checkpoint had been selected on the official test set and the normaliser fitted on data used for checkpoint selection. The audit also found an MC Dropout baseline that omitted the residual variance term (coverage 0.40--0.49) and an ensemble evaluation that gave each member its own noise realisation, which averages the perturbation at $1/\sqrt{M}$ and manufactured apparent robustness. All were corrected; the earlier results are retained in the released repository under \texttt{results/superseded/}.
+
+\section*{S2. Clean benchmark, mean processing and ensemble controls}
+\noindent\textbf{Predicted-mean processing by analysis.} The analyses of the original pipeline did not post-process the predicted mean identically. Table~\ref{tab:proto} lists what each analysis does, read from the code; the clean baseline of the main text (Table~1) and Table~\ref{tab:samepath} use the stress-test processing.
+\begin{table}[H]\centering\scriptsize
+\caption{Predicted-mean processing (clip to $[0,125]$ or none) by analysis. Heteroscedastic: mean of the heteroscedastic head, also used by CP-norm. Other: fixed-variance, MC Dropout; ensemble mean.}\label{tab:proto}
+\begin{tabular}{p{5.6cm}p{3.6cm}p{4.4cm}}\toprule Analysis (scripts) & Heteroscedastic, CP-norm & Other \\ \midrule
+v1.8 clean benchmark: PICP, MPIW, ECE, per-engine, RMSE (\texttt{eval\_*\_b1}, \texttt{eval\_*\_deep\_ensemble}, per-engine coverage) & clipped & clipped; ensemble members clipped before averaging \\
+v1.8 clean interval score of the heteroscedastic head, CP-norm, ensemble (\texttt{interval\_score.py}) & unclipped & ensemble members unclipped, ensemble mean clipped \\
+v1.8 $2\times2$ retraining, same-split ensemble control (\texttt{protocol\_2x2\_*}, \texttt{*samesplit*}) & clipped & clipped \\
+v1.8 sweeps, dose--response, decision tables, drift controls (\texttt{sweep\_engine}, \texttt{maintenance\_decision\_*}, \texttt{drift\_controls}) & unclipped & fixed variance and MC Dropout clipped; ensemble members unclipped, mean clipped \\
+Derived analyses of this revision (\texttt{jrr\_decision\_per\_engine}, \texttt{jrr\_coherent\_*}) & unclipped & as the sweeps \\
+Clean baseline of this revision (\texttt{jrr\_clean\_same\_path.py}) & unclipped (variant B); clipped (variant A) reported for reference & as the sweeps \\
+Clipping sensitivity (\texttt{jrr\_clip\_sensitivity.py}) & both & ensemble members clipped individually (A) or not (B) \\ \bottomrule
+\end{tabular}
+\end{table}
+\begin{table}[H]\centering\scriptsize
+\caption{Clean terminal-window benchmark recomputed through the stress-test code path (mean of five seeds; MC Dropout also over five sampling repeats; the ensemble is a single $M=5$ estimate). PICP, MPIW (cycles), ECE, interval score IS and RMSE (cycles) use the unclipped heteroscedastic and CP-norm means; the last column is PICP under the v1.8 benchmark processing (all means clipped).}\label{tab:samepath}
+\begin{tabular}{llccccc|c}\toprule Cell & Mechanism & PICP & MPIW & ECE & IS & RMSE & PICP, v1.8 \\ \midrule
+LSTM FD001 & Fixed variance & 0.870 & 47.8 & 0.062 & 70.9 & 15.35 & 0.870 \\
+LSTM FD001 & Heteroscedastic & 0.864 & 42.2 & 0.035 & 67.7 & 15.42 & 0.866 \\
+LSTM FD001 & MC Dropout & 0.891 & 50.3 & 0.071 & 69.5 & 15.31 & 0.890 \\
+LSTM FD001 & Deep ensemble & 0.910 & 45.1 & 0.031 & 63.2 & 14.60 & 0.910 \\
+LSTM FD001 & Split-CP (norm) & 0.878 & 45.6 & 0.038 & 67.3 & 15.42 & 0.880 \\
+\midrule
+LSTM FD002 & Fixed variance & 0.912 & 60.9 & 0.059 & 74.2 & 17.09 & 0.912 \\
+LSTM FD002 & Heteroscedastic & 0.913 & 51.6 & 0.030 & 62.4 & 16.47 & 0.913 \\
+LSTM FD002 & MC Dropout & 0.927 & 62.8 & 0.067 & 74.4 & 17.10 & 0.927 \\
+LSTM FD002 & Deep ensemble & 0.964 & 54.6 & 0.058 & 58.6 & 15.61 & 0.964 \\
+LSTM FD002 & Split-CP (norm) & 0.932 & 53.7 & 0.036 & 62.9 & 16.47 & 0.932 \\
+\midrule
+LSTM FD003 & Fixed variance & 0.876 & 46.8 & 0.104 & 72.4 & 14.66 & 0.876 \\
+LSTM FD003 & Heteroscedastic & 0.858 & 37.1 & 0.040 & 62.8 & 13.98 & 0.860 \\
+LSTM FD003 & MC Dropout & 0.890 & 49.2 & 0.114 & 70.7 & 14.59 & 0.890 \\
+LSTM FD003 & Deep ensemble & 0.910 & 40.7 & 0.078 & 56.7 & 13.11 & 0.910 \\
+LSTM FD003 & Split-CP (norm) & 0.896 & 46.0 & 0.082 & 62.3 & 13.98 & 0.898 \\
+\midrule
+LSTM FD004 & Fixed variance & 0.877 & 60.9 & 0.051 & 87.9 & 19.23 & 0.877 \\
+LSTM FD004 & Heteroscedastic & 0.882 & 58.0 & 0.028 & 80.7 & 20.08 & 0.882 \\
+LSTM FD004 & MC Dropout & 0.889 & 63.1 & 0.056 & 87.5 & 19.24 & 0.886 \\
+LSTM FD004 & Deep ensemble & 0.932 & 61.5 & 0.042 & 74.8 & 19.40 & 0.932 \\
+LSTM FD004 & Split-CP (norm) & 0.882 & 56.7 & 0.046 & 80.4 & 20.08 & 0.882 \\
+\midrule
+Transformer FD001 & Fixed variance & 0.876 & 45.3 & 0.079 & 68.0 & 14.38 & 0.876 \\
+Transformer FD001 & Heteroscedastic & 0.880 & 43.4 & 0.037 & 65.9 & 14.58 & 0.888 \\
+Transformer FD001 & MC Dropout & 0.916 & 48.8 & 0.093 & 62.5 & 13.61 & 0.914 \\
+Transformer FD001 & Deep ensemble & 0.910 & 45.5 & 0.065 & 60.1 & 13.94 & 0.910 \\
+Transformer FD001 & Split-CP (norm) & 0.892 & 43.9 & 0.063 & 64.8 & 14.58 & 0.896 \\
+\midrule
+Transformer FD002 & Fixed variance & 0.919 & 58.9 & 0.080 & 73.0 & 16.14 & 0.919 \\
+Transformer FD002 & Heteroscedastic & 0.892 & 49.8 & 0.033 & 64.8 & 15.90 & 0.896 \\
+Transformer FD002 & MC Dropout & 0.921 & 60.5 & 0.079 & 71.8 & 16.25 & 0.919 \\
+Transformer FD002 & Deep ensemble & 0.933 & 52.6 & 0.046 & 60.7 & 15.18 & 0.933 \\
+Transformer FD002 & Split-CP (norm) & 0.911 & 52.6 & 0.032 & 65.1 & 15.90 & 0.915 \\
+\midrule
+Transformer FD003 & Fixed variance & 0.842 & 42.7 & 0.090 & 70.6 & 14.50 & 0.842 \\
+Transformer FD003 & Heteroscedastic & 0.870 & 39.1 & 0.046 & 63.5 & 14.27 & 0.880 \\
+Transformer FD003 & MC Dropout & 0.882 & 45.3 & 0.089 & 62.6 & 13.67 & 0.888 \\
+Transformer FD003 & Deep ensemble & 0.920 & 43.1 & 0.083 & 56.0 & 13.22 & 0.930 \\
+Transformer FD003 & Split-CP (norm) & 0.876 & 44.8 & 0.110 & 65.0 & 14.27 & 0.884 \\
+\midrule
+Transformer FD004 & Fixed variance & 0.853 & 55.5 & 0.074 & 88.5 & 18.57 & 0.853 \\
+Transformer FD004 & Heteroscedastic & 0.857 & 50.5 & 0.027 & 84.1 & 18.30 & 0.866 \\
+Transformer FD004 & MC Dropout & 0.882 & 57.7 & 0.039 & 80.9 & 18.18 & 0.881 \\
+Transformer FD004 & Deep ensemble & 0.907 & 55.2 & 0.057 & 76.0 & 17.34 & 0.907 \\
+Transformer FD004 & Split-CP (norm) & 0.857 & 51.7 & 0.119 & 84.3 & 18.30 & 0.866 \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[H]\centering\scriptsize
+\caption{Effect of clipping the heteroscedastic mean to $[0,125]$ on coverage (stored per-engine outputs; unclipped / clipped), 90\% interval, terminal window; noise 1\%, bias 5\%, drift 5\% of range. Trigger rates of the heteroscedastic head and CP-norm are unchanged in all \JClipRateN{} cell--condition--lead-time combinations; the ensemble changes by at most \JClipRateMaxEns{} points.}
+\begin{tabular}{lcccc}\toprule Cell & Clean & Noise & Bias & Drift \\ \midrule
+LSTM FD001 & 0.864 / 0.866 & 0.861 / 0.862 & 0.772 / 0.774 & 0.644 / 0.644 \\
+LSTM FD002 & 0.913 / 0.913 & 0.837 / 0.838 & 0.315 / 0.355 & 0.048 / 0.111 \\
+LSTM FD003 & 0.858 / 0.860 & 0.855 / 0.856 & 0.742 / 0.744 & 0.214 / 0.214 \\
+LSTM FD004 & 0.882 / 0.882 & 0.857 / 0.857 & 0.431 / 0.453 & 0.311 / 0.321 \\
+Transformer FD001 & 0.880 / 0.888 & 0.884 / 0.890 & 0.836 / 0.848 & 0.642 / 0.644 \\
+Transformer FD002 & 0.892 / 0.896 & 0.806 / 0.813 & 0.299 / 0.329 & 0.025 / 0.111 \\
+Transformer FD003 & 0.870 / 0.880 & 0.865 / 0.873 & 0.784 / 0.792 & 0.096 / 0.122 \\
+Transformer FD004 & 0.857 / 0.866 & 0.788 / 0.799 & 0.294 / 0.344 & 0.053 / 0.127 \\
+\bottomrule\end{tabular}
+\end{table}
+\FloatBarrier
+\noindent\textbf{v1.8 clean benchmark (benchmark processing, unchanged).} PICP, MPIW, ECE and per-engine compliance are from the clipped benchmark; the interval score of the heteroscedastic head, CP-norm and ensemble is the unclipped-path value from the interval-score file, and that of the fixed-variance and MC Dropout heads comes from the fair-calibration files, so the IS column mixes processings (compare Table~\ref{tab:samepath}).
+\begin{table}[H]\centering\scriptsize
+\caption{v1.8 clean-input benchmark under fair calibration, v1.8 processing, terminal unit except per-engine (trajectory unit), mean of five seeds; the ensemble is a single $M=5$ estimate.}
+\begin{tabular}{llccccc|ccccc}\toprule
+ & & \multicolumn{5}{c|}{LSTM} & \multicolumn{5}{c}{Transformer} \\
+ & Mechanism & PICP & MPIW & ECE & Per-eng. & IS & PICP & MPIW & ECE & Per-eng. & IS \\ \midrule
+\multirow{5}{*}{FD001} & Fixed variance & 0.870 & 47.82 & 0.062 & 0.55 & 70.8 & 0.876 & 45.26 & 0.079 & 0.61 & 67.9 \\
+ & Heteroscedastic & 0.866 & 42.20 & 0.035 & 0.69 & 67.7 & 0.888 & 43.40 & 0.041 & 0.77 & 65.9 \\
+ & MC Dropout & 0.890 & 50.31 & 0.072 & 0.62 & 69.2 & 0.914 & 48.85 & 0.093 & 0.72 & 62.9 \\
+ & Deep ensemble & 0.910 & 45.05 & 0.032 & 0.81 & 63.1 & 0.910 & 45.40 & 0.065 & 0.81 & 60.1 \\
+ & Split-CP (norm) & 0.880 & 45.60 & 0.038 & 0.75 & 67.2 & 0.896 & 43.85 & 0.056 & 0.75 & 64.7 \\
+\midrule
+\multirow{5}{*}{FD002} & Fixed variance & 0.912 & 60.92 & 0.059 & 0.60 & 74.1 & 0.919 & 58.91 & 0.080 & 0.63 & 72.9 \\
+ & Heteroscedastic & 0.913 & 51.63 & 0.030 & 0.75 & 62.4 & 0.896 & 49.79 & 0.032 & 0.73 & 64.7 \\
+ & MC Dropout & 0.927 & 62.82 & 0.067 & 0.64 & 74.3 & 0.919 & 60.52 & 0.079 & 0.63 & 71.8 \\
+ & Deep ensemble & 0.964 & 54.63 & 0.058 & 0.81 & 58.6 & 0.933 & 52.52 & 0.046 & 0.80 & 60.6 \\
+ & Split-CP (norm) & 0.932 & 53.72 & 0.037 & 0.77 & 62.9 & 0.915 & 52.60 & 0.028 & 0.76 & 65.1 \\
+\midrule
+\multirow{5}{*}{FD003} & Fixed variance & 0.876 & 46.80 & 0.104 & 0.70 & 72.4 & 0.842 & 42.71 & 0.090 & 0.67 & 70.5 \\
+ & Heteroscedastic & 0.860 & 37.08 & 0.042 & 0.72 & 62.7 & 0.880 & 39.14 & 0.048 & 0.76 & 63.4 \\
+ & MC Dropout & 0.890 & 49.15 & 0.114 & 0.72 & 71.0 & 0.888 & 45.29 & 0.088 & 0.72 & 62.4 \\
+ & Deep ensemble & 0.910 & 40.63 & 0.076 & 0.76 & 56.7 & 0.930 & 42.86 & 0.082 & 0.84 & 56.0 \\
+ & Split-CP (norm) & 0.898 & 46.05 & 0.073 & 0.78 & 62.2 & 0.884 & 44.76 & 0.085 & 0.83 & 65.0 \\
+\midrule
+\multirow{5}{*}{FD004} & Fixed variance & 0.877 & 60.93 & 0.051 & 0.68 & 87.8 & 0.853 & 55.53 & 0.074 & 0.68 & 88.4 \\
+ & Heteroscedastic & 0.882 & 58.01 & 0.027 & 0.76 & 80.6 & 0.866 & 50.48 & 0.029 & 0.75 & 84.0 \\
+ & MC Dropout & 0.886 & 63.07 & 0.056 & 0.70 & 87.4 & 0.881 & 57.66 & 0.038 & 0.74 & 81.0 \\
+ & Deep ensemble & 0.932 & 61.47 & 0.042 & 0.81 & 74.8 & 0.907 & 55.06 & 0.055 & 0.82 & 75.9 \\
+ & Split-CP (norm) & 0.882 & 56.72 & 0.046 & 0.73 & 80.3 & 0.866 & 51.74 & 0.094 & 0.76 & 84.2 \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[H]\centering\scriptsize
+\caption{Ensemble gain with the partition held fixed. Single models: five initialisations on the seed-42 partition; same-partition ensemble: those five combined; cross-partition ensemble: the five seeds of the main benchmark, each on its own partition.}
+\begin{tabular}{llcccccc}\toprule
+ & & \multicolumn{4}{c}{IS} & \multicolumn{2}{c}{PICP} \\
+Backbone & Data & 5 part., single & 1 part., single & 1 part., ens. & 5 part., ens. & 1 part., ens. & 5 part., ens. \\ \midrule
+LSTM & FD001 & 67.7 & 60.2 $\pm$ 2.2 & 58.0 & 63.1 & 0.890 & 0.910 \\
+LSTM & FD002 & 62.4 & 63.5 $\pm$ 3.9 & 58.7 & 58.6 & 0.917 & 0.964 \\
+LSTM & FD003 & 62.7 & 61.2 $\pm$ 5.3 & 57.2 & 56.7 & 0.920 & 0.910 \\
+LSTM & FD004 & 80.6 & 81.7 $\pm$ 3.6 & 77.7 & 74.8 & 0.928 & 0.932 \\
+Transformer & FD001 & 65.9 & 61.8 $\pm$ 3.2 & 59.5 & 60.1 & 0.910 & 0.910 \\
+Transformer & FD002 & 64.7 & 67.1 $\pm$ 6.0 & 62.2 & 60.6 & 0.925 & 0.933 \\
+Transformer & FD003 & 63.4 & 64.3 $\pm$ 6.0 & 55.3 & 56.0 & 0.920 & 0.930 \\
+Transformer & FD004 & 84.0 & 83.4 $\pm$ 4.5 & 75.7 & 75.9 & 0.899 & 0.907 \\
+\bottomrule\end{tabular}
+\end{table}
+The same-partition ensemble beats the mean of its own members by \NSameGain{} IS points in all eight combinations, and the two ensembles differ by at most \NSameCrossMax{} points with no consistent direction. On FD001 five single models on one partition average \NOnePartSingleFDone{} IS against \NFivePartSingleFDone{} for five single models on five partitions, a difference as large as the ensemble margin; five seeds on five partitions are therefore a coarse instrument. Three disjoint five-member ensembles from a fifteen-seed pool give IS of \NIndepIS{} on FD001--FD004; the ratio of fifteen- to five-seed PICP standard deviation is \NNFiveFifteen{} on FD001, FD002 and FD004; over $M\in\{2,3,5,10\}$ the FD004 PICP rises from \NMSweepPICP{} and IS falls from \NMSweepIS.
+
+\noindent\textbf{Fair calibration.} Table~\ref{tab:fair} regenerates the calibration-versus-training residual comparison from released result files. The v1.8 manuscript typed this table by hand; its ratio column agrees with the result files, but its coverage columns did not agree with the main benchmark (differences up to 0.016), and the training-residual coverage is available from the released results only for the LSTM fixed-variance head on FD001, FD002 and FD004.
+\begin{table}[H]\centering\footnotesize
+\caption{Ratio of calibration-set to training-residual scale, and PICP under each estimator (``--'': not in the released result files).}\label{tab:fair}
+\begin{tabular}{lcccc}\toprule
+ & Ratio & PICP fixed, train & PICP fixed, calibration & PICP MC Dropout, calibration \\ \midrule
+LSTM FD001 & 1.241 & 0.790 & 0.870 & 0.890 \\
+LSTM FD002 & 1.125 & 0.874 & 0.912 & 0.927 \\
+LSTM FD003 & 1.364 & -- & 0.876 & 0.890 \\
+LSTM FD004 & 1.103 & 0.850 & 0.877 & 0.886 \\
+Transformer FD001 & 1.079 & -- & 0.876 & 0.914 \\
+Transformer FD002 & 1.084 & -- & 0.919 & 0.919 \\
+Transformer FD003 & 1.238 & -- & 0.842 & 0.888 \\
+Transformer FD004 & 1.168 & -- & 0.853 & 0.881 \\
+\bottomrule\end{tabular}
+\end{table}
+
+\FloatBarrier
+\section*{S3. Coverage against out-of-range share (range scale)}
+Perturbation levels are percentages of the training range for noise, bias and drift and percentages of the reading for gain. Matched-excursion interpolation (heteroscedastic head, linear in $f_{\mathrm{oob}}$ between measured levels; ``--'': the target lies outside the measured range of that curve). The underlying points are in \texttt{results\_jrr/derived/foob\_coverage\_points.csv}.
+\begin{table}[H]\centering\scriptsize
+\caption{Coverage at matched $f_{\mathrm{oob}}$ of 5\% and 10\% (excursion levels, not perturbation amplitudes; amplitudes are percentages of range except gain, which is a percentage of the reading).}
+\begin{tabular}{lllcccc}\toprule
+Backbone & Data & $f_{\mathrm{oob}}$ & Noise & Bias & Gain & Drift \\ \midrule
+LSTM & FD001 & 5\% & -- & -- & -- & -- \\
+LSTM & FD001 & 10\% & -- & -- & -- & -- \\
+LSTM & FD002 & 5\% & 0.88 & 0.88 & -- & 0.64 \\
+LSTM & FD002 & 10\% & 0.68 & 0.78 & 0.28 & 0.14 \\
+LSTM & FD003 & 5\% & -- & -- & -- & -- \\
+LSTM & FD003 & 10\% & -- & -- & -- & -- \\
+LSTM & FD004 & 5\% & 0.86 & 0.85 & 0.81 & 0.82 \\
+LSTM & FD004 & 10\% & 0.72 & 0.64 & 0.46 & -- \\
+Transformer & FD001 & 5\% & -- & -- & -- & -- \\
+Transformer & FD001 & 10\% & -- & -- & -- & -- \\
+Transformer & FD002 & 5\% & 0.85 & 0.85 & 0.56 & 0.58 \\
+Transformer & FD002 & 10\% & 0.62 & 0.71 & 0.21 & 0.09 \\
+Transformer & FD003 & 5\% & -- & -- & -- & -- \\
+Transformer & FD003 & 10\% & -- & -- & -- & -- \\
+Transformer & FD004 & 5\% & 0.79 & 0.81 & 0.36 & 0.57 \\
+Transformer & FD004 & 10\% & 0.55 & 0.52 & 0.24 & -- \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[H]\centering\scriptsize
+\caption{Excursion $f_{\mathrm{oob}}$ at which the heteroscedastic head loses ten points of coverage (v1.8 definition), with left-censored cells marked LC (coverage already lost ten points at the lowest level; the $f_{\mathrm{oob}}$ at that level in parentheses). n.r.: not reached within 5\% of range; $<10^{-4}$: coverage falls while the excursion stays below $10^{-4}$.}
+\begin{tabular}{llcccc}\toprule
+Backbone & Degradation & FD001 & FD002 & FD003 & FD004 \\ \midrule
+\multirow{3}{*}{LSTM} & Bias & n.r. & 9.47\% & n.r. & 8.24\% \\
+ & Drift & 0.00\% & 2.53\% & $<10^{-4}$ & 5.40\% \\
+ & Gain & LC (14\%) & 6.35\% & LC (14\%) & 5.18\% \\
+\midrule
+\multirow{3}{*}{Transformer} & Bias & n.r. & 8.30\% & 0.03\% & 6.70\% \\
+ & Drift & 0.00\% & 2.22\% & $<10^{-4}$ & 2.94\% \\
+ & Gain & LC (14\%) & LC (4\%) & LC (14\%) & 4.15\% \\
+\bottomrule\end{tabular}
+\end{table}
+
+\FloatBarrier
+\section*{S4. Decision stress test (range scale)}
+\begin{table}[H]\centering\scriptsize
+\caption{Both mechanisms' families at $L=20$ for drift and bias, six-condition sub-datasets; engine-bootstrap 95\% intervals (\%).}
+\begin{tabular}{llllcc}\toprule
+Cell & Condition & Mechanism & Premature & Unrecognised \\ \midrule
+LSTM FD002 & Drift & Fixed variance & 70 [64, 75] & 0.0 [0.0, 0.0] \\
+LSTM FD002 & Drift & Heteroscedastic & 69 [64, 75] & 0.0 [0.0, 0.0] \\
+LSTM FD002 & Drift & MC Dropout & 70 [64, 75] & 0.0 [0.0, 0.0] \\
+LSTM FD002 & Drift & Deep ensemble & 70 [64, 75] & 0.0 [0.0, 0.0] \\
+LSTM FD002 & Drift & Split-CP (norm) & 69 [63, 75] & 0.0 [0.0, 0.0] \\
+LSTM FD002 & Bias & Fixed variance & 14 [13, 15] & 7.2 [5.4, 9.2] \\
+LSTM FD002 & Bias & Heteroscedastic & 17 [15, 18] & 7.8 [5.8, 10.0] \\
+LSTM FD002 & Bias & MC Dropout & 14 [13, 15] & 7.1 [5.2, 9.0] \\
+LSTM FD002 & Bias & Deep ensemble & 19 [17, 21] & 4.5 [3.0, 6.1] \\
+LSTM FD002 & Bias & Split-CP (norm) & 17 [16, 18] & 7.1 [5.2, 9.0] \\
+LSTM FD004 & Drift & Fixed variance & 63 [58, 69] & 0.0 [0.0, 0.0] \\
+LSTM FD004 & Drift & Heteroscedastic & 59 [53, 64] & 0.0 [0.0, 0.0] \\
+LSTM FD004 & Drift & MC Dropout & 63 [58, 69] & 0.0 [0.0, 0.0] \\
+LSTM FD004 & Drift & Deep ensemble & 65 [59, 71] & 0.0 [0.0, 0.0] \\
+LSTM FD004 & Drift & Split-CP (norm) & 64 [58, 70] & 0.0 [0.0, 0.0] \\
+LSTM FD004 & Bias & Fixed variance & 34 [31, 37] & 2.6 [1.7, 3.7] \\
+LSTM FD004 & Bias & Heteroscedastic & 30 [27, 33] & 2.5 [1.7, 3.5] \\
+LSTM FD004 & Bias & MC Dropout & 34 [31, 38] & 2.5 [1.6, 3.6] \\
+LSTM FD004 & Bias & Deep ensemble & 35 [31, 38] & 1.4 [0.6, 2.1] \\
+LSTM FD004 & Bias & Split-CP (norm) & 32 [29, 35] & 2.2 [1.5, 3.1] \\
+Transformer FD002 & Drift & Fixed variance & 70 [64, 75] & 0.0 [0.0, 0.0] \\
+Transformer FD002 & Drift & Heteroscedastic & 69 [64, 74] & 0.0 [0.0, 0.0] \\
+Transformer FD002 & Drift & MC Dropout & 70 [64, 75] & 0.0 [0.0, 0.0] \\
+Transformer FD002 & Drift & Deep ensemble & 70 [64, 75] & 0.0 [0.0, 0.0] \\
+Transformer FD002 & Drift & Split-CP (norm) & 69 [64, 75] & 0.0 [0.0, 0.0] \\
+Transformer FD002 & Bias & Fixed variance & 14 [13, 15] & 7.6 [5.7, 9.8] \\
+Transformer FD002 & Bias & Heteroscedastic & 14 [13, 15] & 10.2 [7.7, 13.1] \\
+Transformer FD002 & Bias & MC Dropout & 14 [13, 15] & 7.9 [6.0, 10.2] \\
+Transformer FD002 & Bias & Deep ensemble & 14 [13, 16] & 5.8 [4.0, 8.0] \\
+Transformer FD002 & Bias & Split-CP (norm) & 14 [13, 15] & 9.2 [6.9, 11.8] \\
+Transformer FD004 & Drift & Fixed variance & 66 [60, 72] & 0.0 [0.0, 0.0] \\
+Transformer FD004 & Drift & Heteroscedastic & 52 [47, 58] & 0.0 [0.0, 0.0] \\
+Transformer FD004 & Drift & MC Dropout & 64 [59, 70] & 0.0 [0.0, 0.0] \\
+Transformer FD004 & Drift & Deep ensemble & 57 [51, 64] & 0.0 [0.0, 0.0] \\
+Transformer FD004 & Drift & Split-CP (norm) & 56 [51, 62] & 0.0 [0.0, 0.0] \\
+Transformer FD004 & Bias & Fixed variance & 36 [32, 39] & 1.6 [1.0, 2.2] \\
+Transformer FD004 & Bias & Heteroscedastic & 32 [29, 35] & 1.8 [1.2, 2.4] \\
+Transformer FD004 & Bias & MC Dropout & 35 [32, 38] & 1.9 [1.2, 2.6] \\
+Transformer FD004 & Bias & Deep ensemble & 35 [32, 38] & 0.6 [0.2, 1.0] \\
+Transformer FD004 & Bias & Split-CP (norm) & 34 [31, 37] & 1.5 [0.9, 2.1] \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{center}\scriptsize
+\begin{longtable}{lllcll}
+\caption{Heteroscedastic head, all backbones, sub-datasets, conditions and lead times; premature and unrecognised rates (\%) with engine-bootstrap 95\% intervals.}\\
+\toprule
+Backbone & Data & Condition & $L$ & Premature & Unrecognised \\ \midrule \endfirsthead
+\toprule Backbone & Data & Condition & $L$ & Premature & Unrecognised \\ \midrule \endhead
+LSTM & FD001 & Clean & 10 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+LSTM & FD001 & Clean & 20 & 0.0 [0.0, 0.0] & 0.2 [0.0, 0.6]  \\
+LSTM & FD001 & Clean & 30 & 0.8 [0.0, 2.0] & 0.0 [0.0, 0.0]  \\
+LSTM & FD001 & Noise 1\% & 10 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+LSTM & FD001 & Noise 1\% & 20 & 0.0 [0.0, 0.0] & 0.2 [0.0, 0.6]  \\
+LSTM & FD001 & Noise 1\% & 30 & 0.7 [0.0, 1.9] & 0.1 [0.0, 0.2]  \\
+LSTM & FD001 & Drift 5\% & 10 & 1.8 [0.0, 4.6] & 0.0 [0.0, 0.0]  \\
+LSTM & FD001 & Drift 5\% & 20 & 2.6 [0.4, 5.4] & 0.0 [0.0, 0.0]  \\
+LSTM & FD001 & Drift 5\% & 30 & 6.8 [2.8, 11.8] & 0.0 [0.0, 0.0]  \\
+LSTM & FD001 & Bias 5\% & 10 & 0.3 [0.0, 0.8] & 0.0 [0.0, 0.0]  \\
+LSTM & FD001 & Bias 5\% & 20 & 0.1 [0.0, 0.2] & 0.5 [0.1, 1.1]  \\
+LSTM & FD001 & Bias 5\% & 30 & 1.4 [0.5, 2.8] & 0.3 [0.0, 0.7]  \\
+LSTM & FD002 & Clean & 10 & 0.1 [0.0, 0.2] & 0.0 [0.0, 0.0]  \\
+LSTM & FD002 & Clean & 20 & 3.7 [2.1, 5.5] & 0.0 [0.0, 0.0]  \\
+LSTM & FD002 & Clean & 30 & 7.4 [4.9, 10.3] & 0.0 [0.0, 0.0]  \\
+LSTM & FD002 & Noise 1\% & 10 & 0.7 [0.3, 1.1] & 0.3 [0.1, 0.6]  \\
+LSTM & FD002 & Noise 1\% & 20 & 5.0 [3.3, 6.9] & 0.2 [0.0, 0.5]  \\
+LSTM & FD002 & Noise 1\% & 30 & 9.4 [7.1, 12.0] & 0.0 [0.0, 0.1]  \\
+LSTM & FD002 & Drift 5\% & 10 & 71.5 [66.2, 76.6] & 0.0 [0.0, 0.0]  \\
+LSTM & FD002 & Drift 5\% & 20 & 69.3 [63.6, 74.9] & 0.0 [0.0, 0.0]  \\
+LSTM & FD002 & Drift 5\% & 30 & 64.3 [58.5, 70.4] & 0.0 [0.0, 0.0]  \\
+LSTM & FD002 & Bias 5\% & 10 & 17.1 [15.8, 18.5] & 5.5 [3.7, 7.7]  \\
+LSTM & FD002 & Bias 5\% & 20 & 17.0 [15.5, 18.4] & 7.8 [5.8, 10.0]  \\
+LSTM & FD002 & Bias 5\% & 30 & 16.1 [14.6, 17.7] & 5.9 [4.3, 7.6]  \\
+LSTM & FD003 & Clean & 10 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Clean & 20 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Clean & 30 & 1.4 [0.2, 3.0] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Noise 1\% & 10 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Noise 1\% & 20 & 0.1 [0.0, 0.2] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Noise 1\% & 30 & 1.6 [0.2, 3.4] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Drift 5\% & 10 & 2.2 [0.4, 4.8] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Drift 5\% & 20 & 13.8 [8.0, 19.8] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Drift 5\% & 30 & 25.0 [18.0, 32.8] & 0.0 [0.0, 0.0]  \\
+LSTM & FD003 & Bias 5\% & 10 & 0.2 [0.0, 0.7] & 0.2 [0.0, 0.4]  \\
+LSTM & FD003 & Bias 5\% & 20 & 0.6 [0.2, 1.0] & 0.1 [0.0, 0.2]  \\
+LSTM & FD003 & Bias 5\% & 30 & 3.8 [1.7, 6.3] & 0.1 [0.0, 0.3]  \\
+LSTM & FD004 & Clean & 10 & 3.3 [1.7, 5.1] & 0.3 [0.0, 0.8]  \\
+LSTM & FD004 & Clean & 20 & 3.9 [2.0, 6.0] & 0.1 [0.0, 0.3]  \\
+LSTM & FD004 & Clean & 30 & 6.8 [4.2, 9.8] & 0.3 [0.0, 0.8]  \\
+LSTM & FD004 & Noise 1\% & 10 & 4.4 [2.6, 6.2] & 0.6 [0.0, 1.4]  \\
+LSTM & FD004 & Noise 1\% & 20 & 5.5 [3.6, 7.7] & 0.3 [0.0, 0.7]  \\
+LSTM & FD004 & Noise 1\% & 30 & 8.6 [6.2, 11.1] & 0.3 [0.0, 0.6]  \\
+LSTM & FD004 & Drift 5\% & 10 & 46.6 [41.9, 51.4] & 0.0 [0.0, 0.0]  \\
+LSTM & FD004 & Drift 5\% & 20 & 59.0 [53.2, 64.5] & 0.0 [0.0, 0.0]  \\
+LSTM & FD004 & Drift 5\% & 30 & 61.9 [55.9, 67.5] & 0.0 [0.0, 0.0]  \\
+LSTM & FD004 & Bias 5\% & 10 & 28.9 [26.3, 31.4] & 1.6 [0.9, 2.5]  \\
+LSTM & FD004 & Bias 5\% & 20 & 30.2 [27.2, 33.0] & 2.5 [1.7, 3.5]  \\
+LSTM & FD004 & Bias 5\% & 30 & 32.3 [28.9, 35.3] & 3.0 [2.1, 4.0]  \\
+Transformer & FD001 & Clean & 10 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Clean & 20 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Clean & 30 & 0.8 [0.0, 2.4] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Noise 1\% & 10 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Noise 1\% & 20 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Noise 1\% & 30 & 0.8 [0.0, 2.4] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Drift 5\% & 10 & 1.6 [0.0, 4.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Drift 5\% & 20 & 2.4 [0.4, 5.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Drift 5\% & 30 & 6.2 [2.8, 10.4] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Bias 5\% & 10 & 0.2 [0.0, 0.7] & 0.0 [0.0, 0.0]  \\
+Transformer & FD001 & Bias 5\% & 20 & 0.0 [0.0, 0.0] & 0.2 [0.0, 0.4]  \\
+Transformer & FD001 & Bias 5\% & 30 & 1.0 [0.2, 2.3] & 0.0 [0.0, 0.1]  \\
+Transformer & FD002 & Clean & 10 & 0.0 [0.0, 0.0] & 0.3 [0.0, 0.9]  \\
+Transformer & FD002 & Clean & 20 & 1.5 [0.5, 2.8] & 0.1 [0.0, 0.2]  \\
+Transformer & FD002 & Clean & 30 & 6.0 [3.8, 8.6] & 0.0 [0.0, 0.0]  \\
+Transformer & FD002 & Noise 1\% & 10 & 0.5 [0.1, 1.1] & 0.3 [0.0, 0.7]  \\
+Transformer & FD002 & Noise 1\% & 20 & 3.1 [1.9, 4.3] & 0.2 [0.0, 0.5]  \\
+Transformer & FD002 & Noise 1\% & 30 & 8.1 [6.0, 10.6] & 0.0 [0.0, 0.0]  \\
+Transformer & FD002 & Drift 5\% & 10 & 69.1 [63.5, 74.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD002 & Drift 5\% & 20 & 69.2 [63.6, 74.5] & 0.0 [0.0, 0.0]  \\
+Transformer & FD002 & Drift 5\% & 30 & 64.3 [58.3, 70.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD002 & Bias 5\% & 10 & 13.9 [12.9, 14.9] & 6.5 [4.2, 9.4]  \\
+Transformer & FD002 & Bias 5\% & 20 & 13.8 [12.7, 14.9] & 10.2 [7.7, 13.1]  \\
+Transformer & FD002 & Bias 5\% & 30 & 13.3 [12.1, 14.6] & 8.2 [6.2, 10.5]  \\
+Transformer & FD003 & Clean & 10 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Clean & 20 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Clean & 30 & 2.2 [0.6, 4.2] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Noise 1\% & 10 & 0.0 [0.0, 0.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Noise 1\% & 20 & 0.0 [0.0, 0.1] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Noise 1\% & 30 & 2.2 [0.7, 4.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Drift 5\% & 10 & 4.6 [1.6, 8.2] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Drift 5\% & 20 & 17.4 [10.8, 24.4] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Drift 5\% & 30 & 30.6 [22.8, 38.8] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Bias 5\% & 10 & 0.2 [0.0, 0.6] & 0.0 [0.0, 0.1]  \\
+Transformer & FD003 & Bias 5\% & 20 & 0.5 [0.2, 1.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD003 & Bias 5\% & 30 & 3.8 [1.7, 6.2] & 0.0 [0.0, 0.0]  \\
+Transformer & FD004 & Clean & 10 & 3.0 [1.6, 4.7] & 0.0 [0.0, 0.0]  \\
+Transformer & FD004 & Clean & 20 & 2.9 [1.4, 4.6] & 0.0 [0.0, 0.0]  \\
+Transformer & FD004 & Clean & 30 & 4.7 [2.6, 7.1] & 0.0 [0.0, 0.0]  \\
+Transformer & FD004 & Noise 1\% & 10 & 3.8 [2.2, 5.6] & 0.1 [0.0, 0.2]  \\
+Transformer & FD004 & Noise 1\% & 20 & 3.9 [2.4, 5.6] & 0.0 [0.0, 0.1]  \\
+Transformer & FD004 & Noise 1\% & 30 & 7.1 [4.9, 9.5] & 0.1 [0.0, 0.1]  \\
+Transformer & FD004 & Drift 5\% & 10 & 40.3 [34.7, 46.2] & 0.0 [0.0, 0.0]  \\
+Transformer & FD004 & Drift 5\% & 20 & 52.5 [46.8, 58.4] & 0.0 [0.0, 0.0]  \\
+Transformer & FD004 & Drift 5\% & 30 & 60.6 [54.8, 67.0] & 0.0 [0.0, 0.0]  \\
+Transformer & FD004 & Bias 5\% & 10 & 32.0 [29.4, 34.5] & 0.9 [0.4, 1.4]  \\
+Transformer & FD004 & Bias 5\% & 20 & 31.9 [28.9, 34.8] & 1.8 [1.2, 2.4]  \\
+Transformer & FD004 & Bias 5\% & 30 & 33.3 [29.9, 36.8] & 2.1 [1.4, 2.8]  \\
+\bottomrule
+\end{longtable}
+\end{center}
+\begin{table}[H]\centering\footnotesize
+\caption{Rank stability across cost ratios 5/20/100 by condition: groups (backbone $\times$ sub-dataset $\times$ lead time), groups with a changed full ranking, groups with a changed top place, and the median engine-bootstrap probability that the top mechanism at ratio 5 differs from that at ratio 100 among groups with a changed top place.}
+\begin{tabular}{lcccc}\toprule
+Condition & Groups & Ranking changes & Top changes & Median probability \\ \midrule
+Clean & 24 & 7 & 6 & 0.45 \\
+Noise 1\% & 24 & 13 & 11 & 0.85 \\
+Drift 5\% & 24 & 0 & 0 & -- \\
+Bias 5\% & 24 & 16 & 3 & 0.86 \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{landscape}
+\noindent\textbf{Full cost and rank table (v1.8 generator).} Cost $=c_{\mathrm{late}}r_{\mathrm{late}}+r_{\mathrm{early}}$ at ratios 5/20/100 and rank for every mechanism. In this table unrecognised (overall / conditional) and premature rates are fractions between 0 and 1, not percentages; cost is in the same units; RUL@t is the true RUL at premature trigger under the 125-cycle clip. The table is generated by the unchanged v1.8 generator. Rates and engine-bootstrap intervals of all five mechanisms, eight cells, four conditions and three lead times are enumerated in \texttt{results\_jrr/derived/decision\_engine\_bootstrap\_all.csv}.
+\begin{center}\scriptsize
+\begin{longtable}{lllllcclll}
+\toprule Backbone & Data & Cond. & $L$ & Mech. & unrec. (ovr / cond.) & prem. & RUL@t & cost 5/20/100 & rank \\ \midrule \endhead
+LSTM & FD001 & Clean & 10 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD001 & Clean & 10 & Fixed var. & 0.0000 / 0.000 & 0.0180 & 37.4 & 0.018 / 0.018 / 0.018 & 4/4/4 \\
+LSTM & FD001 & Clean & 10 & MC Drop. & 0.0000 / 0.000 & 0.0180 & 37.4 & 0.018 / 0.018 / 0.018 & 5/5/5 \\
+LSTM & FD001 & Clean & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+LSTM & FD001 & Clean & 10 & CP-norm & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 3/3/3 \\
+LSTM & FD001 & Clean & 20 & Heterosc. & 0.0020 / 0.011 & 0.0000 & -- & 0.010 / 0.040 / 0.200 & 3/5/5 \\
+LSTM & FD001 & Clean & 20 & Fixed var. & 0.0000 / 0.000 & 0.0220 & 54.6 & 0.022 / 0.022 / 0.022 & 4/3/3 \\
+LSTM & FD001 & Clean & 20 & MC Drop. & 0.0000 / 0.000 & 0.0220 & 54.6 & 0.022 / 0.022 / 0.022 & 5/4/4 \\
+LSTM & FD001 & Clean & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD001 & Clean & 20 & CP-norm & 0.0000 / 0.000 & 0.0020 & 46.0 & 0.002 / 0.002 / 0.002 & 2/2/2 \\
+LSTM & FD001 & Clean & 30 & Heterosc. & 0.0000 / 0.000 & 0.0080 & 60.5 & 0.008 / 0.008 / 0.008 & 2/2/2 \\
+LSTM & FD001 & Clean & 30 & Fixed var. & 0.0000 / 0.000 & 0.0300 & 68.3 & 0.030 / 0.030 / 0.030 & 4/4/4 \\
+LSTM & FD001 & Clean & 30 & MC Drop. & 0.0000 / 0.000 & 0.0300 & 68.3 & 0.030 / 0.030 / 0.030 & 5/5/5 \\
+LSTM & FD001 & Clean & 30 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD001 & Clean & 30 & CP-norm & 0.0000 / 0.000 & 0.0220 & 69.7 & 0.022 / 0.022 / 0.022 & 3/3/3 \\
+LSTM & FD001 & Noise 1\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD001 & Noise 1\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0172 & 36.7 & 0.017 / 0.017 / 0.017 & 4/4/4 \\
+LSTM & FD001 & Noise 1\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0180 & 37.4 & 0.018 / 0.018 / 0.018 & 5/5/5 \\
+LSTM & FD001 & Noise 1\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+LSTM & FD001 & Noise 1\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0004 & 33.0 & 0.000 / 0.000 / 0.000 & 3/3/3 \\
+LSTM & FD001 & Noise 1\% & 20 & Heterosc. & 0.0020 / 0.011 & 0.0000 & -- & 0.010 / 0.040 / 0.200 & 3/5/5 \\
+LSTM & FD001 & Noise 1\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.0208 & 54.3 & 0.021 / 0.021 / 0.021 & 4/3/2 \\
+LSTM & FD001 & Noise 1\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.0232 & 55.8 & 0.023 / 0.023 / 0.023 & 5/4/3 \\
+LSTM & FD001 & Noise 1\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD001 & Noise 1\% & 20 & CP-norm & 0.0004 / 0.002 & 0.0020 & 46.0 & 0.004 / 0.010 / 0.042 & 2/2/4 \\
+LSTM & FD001 & Noise 1\% & 30 & Heterosc. & 0.0008 / 0.003 & 0.0072 & 62.2 & 0.011 / 0.023 / 0.087 & 2/3/5 \\
+LSTM & FD001 & Noise 1\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.0296 & 68.1 & 0.030 / 0.030 / 0.030 & 4/4/3 \\
+LSTM & FD001 & Noise 1\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.0300 & 68.3 & 0.030 / 0.030 / 0.030 & 5/5/4 \\
+LSTM & FD001 & Noise 1\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0020 & 68.0 & 0.002 / 0.002 / 0.002 & 1/1/1 \\
+LSTM & FD001 & Noise 1\% & 30 & CP-norm & 0.0000 / 0.000 & 0.0188 & 65.8 & 0.019 / 0.019 / 0.019 & 3/2/2 \\
+LSTM & FD001 & Bias 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0028 & 37.0 & 0.003 / 0.003 / 0.003 & 1/1/1 \\
+LSTM & FD001 & Bias 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0188 & 38.4 & 0.019 / 0.019 / 0.019 & 4/4/4 \\
+LSTM & FD001 & Bias 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0192 & 39.0 & 0.019 / 0.019 / 0.019 & 5/5/5 \\
+LSTM & FD001 & Bias 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0040 & 37.0 & 0.004 / 0.004 / 0.004 & 2/2/2 \\
+LSTM & FD001 & Bias 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0056 & 39.5 & 0.006 / 0.006 / 0.006 & 3/3/3 \\
+LSTM & FD001 & Bias 5\% & 20 & Heterosc. & 0.0052 / 0.027 & 0.0008 & 57.0 & 0.027 / 0.105 / 0.521 & 3/5/5 \\
+LSTM & FD001 & Bias 5\% & 20 & Fixed var. & 0.0016 / 0.008 & 0.0264 & 59.2 & 0.034 / 0.058 / 0.186 & 5/3/3 \\
+LSTM & FD001 & Bias 5\% & 20 & MC Drop. & 0.0012 / 0.006 & 0.0272 & 58.9 & 0.033 / 0.051 / 0.147 & 4/2/2 \\
+LSTM & FD001 & Bias 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD001 & Bias 5\% & 20 & CP-norm & 0.0028 / 0.015 & 0.0120 & 75.1 & 0.026 / 0.068 / 0.292 & 2/4/4 \\
+LSTM & FD001 & Bias 5\% & 30 & Heterosc. & 0.0032 / 0.013 & 0.0144 & 68.4 & 0.030 / 0.078 / 0.334 & 2/5/5 \\
+LSTM & FD001 & Bias 5\% & 30 & Fixed var. & 0.0012 / 0.005 & 0.0316 & 69.1 & 0.038 / 0.056 / 0.152 & 3/2/2 \\
+LSTM & FD001 & Bias 5\% & 30 & MC Drop. & 0.0012 / 0.005 & 0.0336 & 69.3 & 0.040 / 0.058 / 0.154 & 4/3/3 \\
+LSTM & FD001 & Bias 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0220 & 68.1 & 0.022 / 0.022 / 0.022 & 1/1/1 \\
+LSTM & FD001 & Bias 5\% & 30 & CP-norm & 0.0016 / 0.006 & 0.0384 & 77.3 & 0.046 / 0.070 / 0.198 & 5/4/4 \\
+LSTM & FD001 & Drift 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0180 & 35.2 & 0.018 / 0.018 / 0.018 & 1/1/1 \\
+LSTM & FD001 & Drift 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0720 & 48.4 & 0.072 / 0.072 / 0.072 & 4/4/4 \\
+LSTM & FD001 & Drift 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0740 & 49.4 & 0.074 / 0.074 / 0.074 & 5/5/5 \\
+LSTM & FD001 & Drift 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0200 & 35.0 & 0.020 / 0.020 / 0.020 & 2/2/2 \\
+LSTM & FD001 & Drift 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0280 & 38.3 & 0.028 / 0.028 / 0.028 & 3/3/3 \\
+LSTM & FD001 & Drift 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.0260 & 62.0 & 0.026 / 0.026 / 0.026 & 1/1/1 \\
+LSTM & FD001 & Drift 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.1180 & 61.5 & 0.118 / 0.118 / 0.118 & 4/4/4 \\
+LSTM & FD001 & Drift 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.1200 & 61.3 & 0.120 / 0.120 / 0.120 & 5/5/5 \\
+LSTM & FD001 & Drift 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0300 & 54.3 & 0.030 / 0.030 / 0.030 & 2/2/2 \\
+LSTM & FD001 & Drift 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0580 & 66.8 & 0.058 / 0.058 / 0.058 & 3/3/3 \\
+LSTM & FD001 & Drift 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.0680 & 68.3 & 0.068 / 0.068 / 0.068 & 1/1/1 \\
+LSTM & FD001 & Drift 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.1360 & 77.8 & 0.136 / 0.136 / 0.136 & 3/3/3 \\
+LSTM & FD001 & Drift 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.1400 & 77.6 & 0.140 / 0.140 / 0.140 & 4/4/4 \\
+LSTM & FD001 & Drift 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.1600 & 78.1 & 0.160 / 0.160 / 0.160 & 5/5/5 \\
+LSTM & FD001 & Drift 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.1340 & 80.9 & 0.134 / 0.134 / 0.134 & 2/2/2 \\
+LSTM & FD002 & Clean & 10 & Heterosc. & 0.0000 / 0.000 & 0.0008 & 36.0 & 0.001 / 0.001 / 0.001 & 1/1/1 \\
+LSTM & FD002 & Clean & 10 & Fixed var. & 0.0000 / 0.000 & 0.0617 & 42.4 & 0.062 / 0.062 / 0.062 & 4/4/4 \\
+LSTM & FD002 & Clean & 10 & MC Drop. & 0.0000 / 0.000 & 0.0625 & 42.4 & 0.062 / 0.062 / 0.062 & 5/5/5 \\
+LSTM & FD002 & Clean & 10 & Ensemble & 0.0000 / 0.000 & 0.0040 & 42.0 & 0.004 / 0.004 / 0.004 & 2/2/2 \\
+LSTM & FD002 & Clean & 10 & CP-norm & 0.0000 / 0.000 & 0.0095 & 48.8 & 0.009 / 0.009 / 0.009 & 3/3/3 \\
+LSTM & FD002 & Clean & 20 & Heterosc. & 0.0000 / 0.000 & 0.0372 & 49.4 & 0.037 / 0.037 / 0.037 & 1/1/1 \\
+LSTM & FD002 & Clean & 20 & Fixed var. & 0.0000 / 0.000 & 0.0783 & 52.6 & 0.078 / 0.078 / 0.078 & 4/4/4 \\
+LSTM & FD002 & Clean & 20 & MC Drop. & 0.0000 / 0.000 & 0.0814 & 53.0 & 0.081 / 0.081 / 0.081 & 5/5/5 \\
+LSTM & FD002 & Clean & 20 & Ensemble & 0.0000 / 0.000 & 0.0514 & 48.2 & 0.051 / 0.051 / 0.051 & 2/2/2 \\
+LSTM & FD002 & Clean & 20 & CP-norm & 0.0000 / 0.000 & 0.0522 & 54.3 & 0.052 / 0.052 / 0.052 & 3/3/3 \\
+LSTM & FD002 & Clean & 30 & Heterosc. & 0.0000 / 0.000 & 0.0743 & 68.0 & 0.074 / 0.074 / 0.074 & 3/3/3 \\
+LSTM & FD002 & Clean & 30 & Fixed var. & 0.0000 / 0.000 & 0.0719 & 64.0 & 0.072 / 0.072 / 0.072 & 1/1/1 \\
+LSTM & FD002 & Clean & 30 & MC Drop. & 0.0000 / 0.000 & 0.0719 & 64.2 & 0.072 / 0.072 / 0.072 & 2/2/2 \\
+LSTM & FD002 & Clean & 30 & Ensemble & 0.0000 / 0.000 & 0.0870 & 67.1 & 0.087 / 0.087 / 0.087 & 5/5/5 \\
+LSTM & FD002 & Clean & 30 & CP-norm & 0.0000 / 0.000 & 0.0838 & 69.8 & 0.084 / 0.084 / 0.084 & 4/4/4 \\
+LSTM & FD002 & Noise 1\% & 10 & Heterosc. & 0.0032 / 0.029 & 0.0068 & 44.3 & 0.023 / 0.070 / 0.323 & 1/2/4 \\
+LSTM & FD002 & Noise 1\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0757 & 46.3 & 0.076 / 0.076 / 0.076 & 4/3/1 \\
+LSTM & FD002 & Noise 1\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0778 & 46.8 & 0.078 / 0.078 / 0.078 & 5/5/2 \\
+LSTM & FD002 & Noise 1\% & 10 & Ensemble & 0.0032 / 0.029 & 0.0126 & 39.8 & 0.028 / 0.076 / 0.329 & 2/4/5 \\
+LSTM & FD002 & Noise 1\% & 10 & CP-norm & 0.0027 / 0.024 & 0.0150 & 50.7 & 0.028 / 0.069 / 0.284 & 3/1/3 \\
+LSTM & FD002 & Noise 1\% & 20 & Heterosc. & 0.0022 / 0.010 & 0.0496 & 56.1 & 0.061 / 0.094 / 0.271 & 1/2/5 \\
+LSTM & FD002 & Noise 1\% & 20 & Fixed var. & 0.0003 / 0.001 & 0.0877 & 56.8 & 0.089 / 0.094 / 0.119 & 4/3/1 \\
+LSTM & FD002 & Noise 1\% & 20 & MC Drop. & 0.0003 / 0.001 & 0.0889 & 57.0 & 0.090 / 0.095 / 0.120 & 5/4/2 \\
+LSTM & FD002 & Noise 1\% & 20 & Ensemble & 0.0008 / 0.004 & 0.0704 & 57.3 & 0.074 / 0.086 / 0.149 & 3/1/3 \\
+LSTM & FD002 & Noise 1\% & 20 & CP-norm & 0.0016 / 0.007 & 0.0653 & 61.8 & 0.073 / 0.097 / 0.223 & 2/5/4 \\
+LSTM & FD002 & Noise 1\% & 30 & Heterosc. & 0.0003 / 0.001 & 0.0938 & 77.8 & 0.095 / 0.100 / 0.125 & 3/3/5 \\
+LSTM & FD002 & Noise 1\% & 30 & Fixed var. & 0.0002 / 0.001 & 0.0822 & 71.4 & 0.083 / 0.085 / 0.098 & 1/2/2 \\
+LSTM & FD002 & Noise 1\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.0841 & 71.8 & 0.084 / 0.084 / 0.084 & 2/1/1 \\
+LSTM & FD002 & Noise 1\% & 30 & Ensemble & 0.0000 / 0.000 & 0.1075 & 77.2 & 0.108 / 0.108 / 0.108 & 5/5/3 \\
+LSTM & FD002 & Noise 1\% & 30 & CP-norm & 0.0002 / 0.001 & 0.1018 & 78.5 & 0.103 / 0.105 / 0.118 & 4/4/4 \\
+LSTM & FD002 & Bias 5\% & 10 & Heterosc. & 0.0553 / 0.500 & 0.1711 & 89.2 & 0.448 / 1.278 / 5.705 & 5/5/5 \\
+LSTM & FD002 & Bias 5\% & 10 & Fixed var. & 0.0370 / 0.334 & 0.1521 & 90.5 & 0.337 / 0.892 / 3.852 & 2/2/2 \\
+LSTM & FD002 & Bias 5\% & 10 & MC Drop. & 0.0360 / 0.326 & 0.1521 & 90.5 & 0.332 / 0.873 / 3.757 & 1/1/1 \\
+LSTM & FD002 & Bias 5\% & 10 & Ensemble & 0.0395 / 0.357 & 0.1684 & 86.6 & 0.366 / 0.959 / 4.121 & 3/3/3 \\
+LSTM & FD002 & Bias 5\% & 10 & CP-norm & 0.0536 / 0.484 & 0.1700 & 88.6 & 0.438 / 1.242 / 5.530 & 4/4/4 \\
+LSTM & FD002 & Bias 5\% & 20 & Heterosc. & 0.0783 / 0.367 & 0.1698 & 94.3 & 0.561 / 1.735 / 7.996 & 5/5/5 \\
+LSTM & FD002 & Bias 5\% & 20 & Fixed var. & 0.0721 / 0.338 & 0.1410 & 95.0 & 0.502 / 1.583 / 7.351 & 3/3/4 \\
+LSTM & FD002 & Bias 5\% & 20 & MC Drop. & 0.0705 / 0.330 & 0.1412 & 94.9 & 0.494 / 1.551 / 7.193 & 2/2/2 \\
+LSTM & FD002 & Bias 5\% & 20 & Ensemble & 0.0451 / 0.211 & 0.1905 & 92.9 & 0.416 / 1.092 / 4.696 & 1/1/1 \\
+LSTM & FD002 & Bias 5\% & 20 & CP-norm & 0.0707 / 0.331 & 0.1698 & 93.9 & 0.523 / 1.583 / 7.237 & 4/4/3 \\
+LSTM & FD002 & Bias 5\% & 30 & Heterosc. & 0.0590 / 0.241 & 0.1609 & 99.1 & 0.456 / 1.340 / 6.058 & 3/3/3 \\
+LSTM & FD002 & Bias 5\% & 30 & Fixed var. & 0.0751 / 0.306 & 0.1300 & 99.2 & 0.505 / 1.632 / 7.640 & 5/5/5 \\
+LSTM & FD002 & Bias 5\% & 30 & MC Drop. & 0.0729 / 0.297 & 0.1303 & 99.1 & 0.495 / 1.588 / 7.419 & 4/4/4 \\
+LSTM & FD002 & Bias 5\% & 30 & Ensemble & 0.0348 / 0.142 & 0.1897 & 98.1 & 0.364 / 0.885 / 3.668 & 1/1/1 \\
+LSTM & FD002 & Bias 5\% & 30 & CP-norm & 0.0582 / 0.237 & 0.1606 & 98.8 & 0.452 / 1.324 / 5.979 & 2/2/2 \\
+LSTM & FD002 & Drift 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.7154 & 89.4 & 0.715 / 0.715 / 0.715 & 2/2/2 \\
+LSTM & FD002 & Drift 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.7518 & 90.8 & 0.752 / 0.752 / 0.752 & 4/4/4 \\
+LSTM & FD002 & Drift 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.7518 & 90.8 & 0.752 / 0.752 / 0.752 & 5/5/5 \\
+LSTM & FD002 & Drift 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.7431 & 90.5 & 0.743 / 0.743 / 0.743 & 3/3/3 \\
+LSTM & FD002 & Drift 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.7115 & 89.3 & 0.711 / 0.711 / 0.711 & 1/1/1 \\
+LSTM & FD002 & Drift 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.6933 & 95.1 & 0.693 / 0.693 / 0.693 & 2/2/2 \\
+LSTM & FD002 & Drift 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.6996 & 95.3 & 0.700 / 0.700 / 0.700 & 4/4/4 \\
+LSTM & FD002 & Drift 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.6996 & 95.3 & 0.700 / 0.700 / 0.700 & 5/5/5 \\
+LSTM & FD002 & Drift 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.6957 & 95.2 & 0.696 / 0.696 / 0.696 & 3/3/3 \\
+LSTM & FD002 & Drift 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.6917 & 95.0 & 0.692 / 0.692 / 0.692 & 1/1/1 \\
+LSTM & FD002 & Drift 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.6435 & 99.6 & 0.643 / 0.643 / 0.643 & 1/1/1 \\
+LSTM & FD002 & Drift 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.6443 & 99.6 & 0.644 / 0.644 / 0.644 & 3/3/3 \\
+LSTM & FD002 & Drift 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.6443 & 99.6 & 0.644 / 0.644 / 0.644 & 4/4/4 \\
+LSTM & FD002 & Drift 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.6443 & 99.6 & 0.644 / 0.644 / 0.644 & 5/5/5 \\
+LSTM & FD002 & Drift 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.6435 & 99.6 & 0.643 / 0.643 / 0.643 & 2/2/2 \\
+LSTM & FD003 & Clean & 10 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD003 & Clean & 10 & Fixed var. & 0.0000 / 0.000 & 0.0160 & 48.1 & 0.016 / 0.016 / 0.016 & 5/5/5 \\
+LSTM & FD003 & Clean & 10 & MC Drop. & 0.0000 / 0.000 & 0.0140 & 45.0 & 0.014 / 0.014 / 0.014 & 4/4/4 \\
+LSTM & FD003 & Clean & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+LSTM & FD003 & Clean & 10 & CP-norm & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 3/3/3 \\
+LSTM & FD003 & Clean & 20 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD003 & Clean & 20 & Fixed var. & 0.0000 / 0.000 & 0.0380 & 54.5 & 0.038 / 0.038 / 0.038 & 4/4/4 \\
+LSTM & FD003 & Clean & 20 & MC Drop. & 0.0000 / 0.000 & 0.0420 & 54.0 & 0.042 / 0.042 / 0.042 & 5/5/5 \\
+LSTM & FD003 & Clean & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+LSTM & FD003 & Clean & 20 & CP-norm & 0.0000 / 0.000 & 0.0320 & 63.6 & 0.032 / 0.032 / 0.032 & 3/3/3 \\
+LSTM & FD003 & Clean & 30 & Heterosc. & 0.0000 / 0.000 & 0.0140 & 60.9 & 0.014 / 0.014 / 0.014 & 1/1/1 \\
+LSTM & FD003 & Clean & 30 & Fixed var. & 0.0000 / 0.000 & 0.0440 & 59.5 & 0.044 / 0.044 / 0.044 & 3/3/3 \\
+LSTM & FD003 & Clean & 30 & MC Drop. & 0.0000 / 0.000 & 0.0500 & 59.1 & 0.050 / 0.050 / 0.050 & 4/4/4 \\
+LSTM & FD003 & Clean & 30 & Ensemble & 0.0000 / 0.000 & 0.0300 & 59.3 & 0.030 / 0.030 / 0.030 & 2/2/2 \\
+LSTM & FD003 & Clean & 30 & CP-norm & 0.0000 / 0.000 & 0.0680 & 64.4 & 0.068 / 0.068 / 0.068 & 5/5/5 \\
+LSTM & FD003 & Noise 1\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD003 & Noise 1\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0148 & 46.4 & 0.015 / 0.015 / 0.015 & 4/4/4 \\
+LSTM & FD003 & Noise 1\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0148 & 46.4 & 0.015 / 0.015 / 0.015 & 5/5/5 \\
+LSTM & FD003 & Noise 1\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+LSTM & FD003 & Noise 1\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0012 & 68.0 & 0.001 / 0.001 / 0.001 & 3/3/3 \\
+LSTM & FD003 & Noise 1\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.0008 & 54.0 & 0.001 / 0.001 / 0.001 & 2/2/2 \\
+LSTM & FD003 & Noise 1\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.0340 & 54.7 & 0.034 / 0.034 / 0.034 & 4/4/4 \\
+LSTM & FD003 & Noise 1\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.0352 & 54.3 & 0.035 / 0.035 / 0.035 & 5/5/5 \\
+LSTM & FD003 & Noise 1\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+LSTM & FD003 & Noise 1\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0292 & 63.5 & 0.029 / 0.029 / 0.029 & 3/3/3 \\
+LSTM & FD003 & Noise 1\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.0160 & 60.8 & 0.016 / 0.016 / 0.016 & 1/1/1 \\
+LSTM & FD003 & Noise 1\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.0496 & 59.3 & 0.050 / 0.050 / 0.050 & 3/3/3 \\
+LSTM & FD003 & Noise 1\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.0536 & 59.0 & 0.054 / 0.054 / 0.054 & 4/4/4 \\
+LSTM & FD003 & Noise 1\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0340 & 58.7 & 0.034 / 0.034 / 0.034 & 2/2/2 \\
+LSTM & FD003 & Noise 1\% & 30 & CP-norm & 0.0000 / 0.000 & 0.0740 & 65.1 & 0.074 / 0.074 / 0.074 & 5/5/5 \\
+LSTM & FD003 & Bias 5\% & 10 & Heterosc. & 0.0016 / 0.020 & 0.0024 & 36.7 & 0.010 / 0.034 / 0.162 & 3/3/5 \\
+LSTM & FD003 & Bias 5\% & 10 & Fixed var. & 0.0008 / 0.010 & 0.0300 & 46.4 & 0.034 / 0.046 / 0.110 & 4/4/3 \\
+LSTM & FD003 & Bias 5\% & 10 & MC Drop. & 0.0008 / 0.010 & 0.0328 & 47.5 & 0.037 / 0.049 / 0.113 & 5/5/4 \\
+LSTM & FD003 & Bias 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0020 & 34.0 & 0.002 / 0.002 / 0.002 & 1/1/1 \\
+LSTM & FD003 & Bias 5\% & 10 & CP-norm & 0.0004 / 0.005 & 0.0048 & 49.2 & 0.007 / 0.013 / 0.045 & 2/2/2 \\
+LSTM & FD003 & Bias 5\% & 20 & Heterosc. & 0.0008 / 0.006 & 0.0060 & 55.2 & 0.010 / 0.022 / 0.086 & 2/2/3 \\
+LSTM & FD003 & Bias 5\% & 20 & Fixed var. & 0.0008 / 0.006 & 0.0572 & 54.7 & 0.061 / 0.073 / 0.137 & 4/4/4 \\
+LSTM & FD003 & Bias 5\% & 20 & MC Drop. & 0.0008 / 0.006 & 0.0592 & 54.8 & 0.063 / 0.075 / 0.139 & 5/5/5 \\
+LSTM & FD003 & Bias 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0060 & 57.3 & 0.006 / 0.006 / 0.006 & 1/1/1 \\
+LSTM & FD003 & Bias 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0472 & 63.2 & 0.047 / 0.047 / 0.047 & 3/3/2 \\
+LSTM & FD003 & Bias 5\% & 30 & Heterosc. & 0.0012 / 0.006 & 0.0384 & 59.5 & 0.044 / 0.062 / 0.158 & 1/2/4 \\
+LSTM & FD003 & Bias 5\% & 30 & Fixed var. & 0.0008 / 0.004 & 0.0696 & 62.5 & 0.074 / 0.086 / 0.150 & 3/4/3 \\
+LSTM & FD003 & Bias 5\% & 30 & MC Drop. & 0.0004 / 0.002 & 0.0728 & 62.4 & 0.075 / 0.081 / 0.113 & 4/3/2 \\
+LSTM & FD003 & Bias 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0620 & 60.7 & 0.062 / 0.062 / 0.062 & 2/1/1 \\
+LSTM & FD003 & Bias 5\% & 30 & CP-norm & 0.0020 / 0.010 & 0.1004 & 67.9 & 0.110 / 0.140 / 0.300 & 5/5/5 \\
+LSTM & FD003 & Drift 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0220 & 47.4 & 0.022 / 0.022 / 0.022 & 2/2/2 \\
+LSTM & FD003 & Drift 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.2360 & 56.2 & 0.236 / 0.236 / 0.236 & 4/4/4 \\
+LSTM & FD003 & Drift 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.2400 & 56.3 & 0.240 / 0.240 / 0.240 & 5/5/5 \\
+LSTM & FD003 & Drift 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0200 & 52.0 & 0.020 / 0.020 / 0.020 & 1/1/1 \\
+LSTM & FD003 & Drift 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0440 & 46.1 & 0.044 / 0.044 / 0.044 & 3/3/3 \\
+LSTM & FD003 & Drift 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.1380 & 55.1 & 0.138 / 0.138 / 0.138 & 1/1/1 \\
+LSTM & FD003 & Drift 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.3540 & 68.7 & 0.354 / 0.354 / 0.354 & 4/4/4 \\
+LSTM & FD003 & Drift 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.3600 & 69.1 & 0.360 / 0.360 / 0.360 & 5/5/5 \\
+LSTM & FD003 & Drift 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.1600 & 55.9 & 0.160 / 0.160 / 0.160 & 2/2/2 \\
+LSTM & FD003 & Drift 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.1880 & 60.7 & 0.188 / 0.188 / 0.188 & 3/3/3 \\
+LSTM & FD003 & Drift 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.2500 & 71.3 & 0.250 / 0.250 / 0.250 & 1/1/1 \\
+LSTM & FD003 & Drift 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.4220 & 82.6 & 0.422 / 0.422 / 0.422 & 4/4/4 \\
+LSTM & FD003 & Drift 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.4280 & 82.7 & 0.428 / 0.428 / 0.428 & 5/5/5 \\
+LSTM & FD003 & Drift 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.2600 & 70.5 & 0.260 / 0.260 / 0.260 & 2/2/2 \\
+LSTM & FD003 & Drift 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.3540 & 80.9 & 0.354 / 0.354 / 0.354 & 3/3/3 \\
+LSTM & FD004 & Clean & 10 & Heterosc. & 0.0034 / 0.044 & 0.0329 & 42.6 & 0.050 / 0.100 / 0.370 & 1/5/5 \\
+LSTM & FD004 & Clean & 10 & Fixed var. & 0.0000 / 0.000 & 0.0726 & 42.7 & 0.073 / 0.073 / 0.073 & 4/3/3 \\
+LSTM & FD004 & Clean & 10 & MC Drop. & 0.0000 / 0.000 & 0.0734 & 42.8 & 0.073 / 0.073 / 0.073 & 5/4/4 \\
+LSTM & FD004 & Clean & 10 & Ensemble & 0.0000 / 0.000 & 0.0506 & 43.8 & 0.051 / 0.051 / 0.051 & 2/1/1 \\
+LSTM & FD004 & Clean & 10 & CP-norm & 0.0000 / 0.000 & 0.0650 & 47.9 & 0.065 / 0.065 / 0.065 & 3/2/2 \\
+LSTM & FD004 & Clean & 20 & Heterosc. & 0.0008 / 0.005 & 0.0388 & 60.0 & 0.043 / 0.056 / 0.123 & 1/2/3 \\
+LSTM & FD004 & Clean & 20 & Fixed var. & 0.0017 / 0.010 & 0.0363 & 57.1 & 0.045 / 0.070 / 0.205 & 2/4/4 \\
+LSTM & FD004 & Clean & 20 & MC Drop. & 0.0017 / 0.010 & 0.0388 & 56.9 & 0.047 / 0.073 / 0.208 & 4/5/5 \\
+LSTM & FD004 & Clean & 20 & Ensemble & 0.0000 / 0.000 & 0.0464 & 60.5 & 0.046 / 0.046 / 0.046 & 3/1/1 \\
+LSTM & FD004 & Clean & 20 & CP-norm & 0.0000 / 0.000 & 0.0675 & 69.7 & 0.068 / 0.068 / 0.068 & 5/3/2 \\
+LSTM & FD004 & Clean & 30 & Heterosc. & 0.0025 / 0.011 & 0.0684 & 77.6 & 0.081 / 0.119 / 0.322 & 3/1/2 \\
+LSTM & FD004 & Clean & 30 & Fixed var. & 0.0042 / 0.019 & 0.0371 & 72.6 & 0.058 / 0.122 / 0.459 & 1/2/3 \\
+LSTM & FD004 & Clean & 30 & MC Drop. & 0.0042 / 0.019 & 0.0380 & 72.4 & 0.059 / 0.122 / 0.460 & 2/3/4 \\
+LSTM & FD004 & Clean & 30 & Ensemble & 0.0042 / 0.019 & 0.0675 & 75.0 & 0.089 / 0.152 / 0.489 & 4/5/5 \\
+LSTM & FD004 & Clean & 30 & CP-norm & 0.0008 / 0.004 & 0.1055 & 80.7 & 0.110 / 0.122 / 0.190 & 5/4/1 \\
+LSTM & FD004 & Noise 1\% & 10 & Heterosc. & 0.0056 / 0.073 & 0.0441 & 47.9 & 0.072 / 0.155 / 0.601 & 2/5/5 \\
+LSTM & FD004 & Noise 1\% & 10 & Fixed var. & 0.0010 / 0.013 & 0.0734 & 45.0 & 0.078 / 0.094 / 0.175 & 3/2/2 \\
+LSTM & FD004 & Noise 1\% & 10 & MC Drop. & 0.0008 / 0.011 & 0.0751 & 45.3 & 0.079 / 0.092 / 0.159 & 4/1/1 \\
+LSTM & FD004 & Noise 1\% & 10 & Ensemble & 0.0025 / 0.033 & 0.0523 & 46.3 & 0.065 / 0.103 / 0.305 & 1/3/3 \\
+LSTM & FD004 & Noise 1\% & 10 & CP-norm & 0.0029 / 0.038 & 0.0759 & 53.6 & 0.090 / 0.133 / 0.363 & 5/4/4 \\
+LSTM & FD004 & Noise 1\% & 20 & Heterosc. & 0.0025 / 0.015 & 0.0550 & 67.2 & 0.068 / 0.106 / 0.308 & 3/4/5 \\
+LSTM & FD004 & Noise 1\% & 20 & Fixed var. & 0.0025 / 0.015 & 0.0523 & 62.2 & 0.065 / 0.103 / 0.305 & 2/3/4 \\
+LSTM & FD004 & Noise 1\% & 20 & MC Drop. & 0.0022 / 0.013 & 0.0538 & 62.1 & 0.065 / 0.098 / 0.273 & 1/2/3 \\
+LSTM & FD004 & Noise 1\% & 20 & Ensemble & 0.0017 / 0.010 & 0.0616 & 66.0 & 0.070 / 0.095 / 0.230 & 4/1/2 \\
+LSTM & FD004 & Noise 1\% & 20 & CP-norm & 0.0014 / 0.008 & 0.0906 & 73.8 & 0.097 / 0.118 / 0.226 & 5/5/1 \\
+LSTM & FD004 & Noise 1\% & 30 & Heterosc. & 0.0027 / 0.012 & 0.0857 & 81.4 & 0.099 / 0.140 / 0.356 & 3/1/3 \\
+LSTM & FD004 & Noise 1\% & 30 & Fixed var. & 0.0054 / 0.024 & 0.0557 & 77.7 & 0.083 / 0.164 / 0.596 & 1/5/5 \\
+LSTM & FD004 & Noise 1\% & 30 & MC Drop. & 0.0052 / 0.023 & 0.0582 & 78.2 & 0.084 / 0.163 / 0.581 & 2/4/4 \\
+LSTM & FD004 & Noise 1\% & 30 & Ensemble & 0.0025 / 0.011 & 0.0928 & 78.9 & 0.105 / 0.143 / 0.346 & 4/2/2 \\
+LSTM & FD004 & Noise 1\% & 30 & CP-norm & 0.0014 / 0.006 & 0.1200 & 83.9 & 0.127 / 0.147 / 0.255 & 5/3/1 \\
+LSTM & FD004 & Bias 5\% & 10 & Heterosc. & 0.0164 / 0.216 & 0.2889 & 83.7 & 0.371 / 0.616 / 1.926 & 1/3/5 \\
+LSTM & FD004 & Bias 5\% & 10 & Fixed var. & 0.0140 / 0.184 & 0.3507 & 86.2 & 0.421 / 0.631 / 1.752 & 4/5/3 \\
+LSTM & FD004 & Bias 5\% & 10 & MC Drop. & 0.0138 / 0.182 & 0.3529 & 86.2 & 0.422 / 0.630 / 1.737 & 5/4/2 \\
+LSTM & FD004 & Bias 5\% & 10 & Ensemble & 0.0110 / 0.144 & 0.3367 & 86.7 & 0.392 / 0.556 / 1.434 & 3/1/1 \\
+LSTM & FD004 & Bias 5\% & 10 & CP-norm & 0.0145 / 0.191 & 0.3151 & 84.4 & 0.388 / 0.605 / 1.767 & 2/2/4 \\
+LSTM & FD004 & Bias 5\% & 20 & Heterosc. & 0.0255 / 0.151 & 0.3016 & 94.5 & 0.429 / 0.811 / 2.850 & 2/3/3 \\
+LSTM & FD004 & Bias 5\% & 20 & Fixed var. & 0.0257 / 0.152 & 0.3411 & 95.1 & 0.469 / 0.854 / 2.906 & 4/5/5 \\
+LSTM & FD004 & Bias 5\% & 20 & MC Drop. & 0.0255 / 0.151 & 0.3431 & 95.1 & 0.471 / 0.853 / 2.892 & 5/4/4 \\
+LSTM & FD004 & Bias 5\% & 20 & Ensemble & 0.0135 / 0.080 & 0.3468 & 96.2 & 0.414 / 0.617 / 1.697 & 1/1/1 \\
+LSTM & FD004 & Bias 5\% & 20 & CP-norm & 0.0224 / 0.133 & 0.3219 & 94.7 & 0.434 / 0.771 / 2.567 & 3/2/2 \\
+LSTM & FD004 & Bias 5\% & 30 & Heterosc. & 0.0300 / 0.132 & 0.3229 & 99.3 & 0.473 / 0.924 / 3.327 & 2/3/3 \\
+LSTM & FD004 & Bias 5\% & 30 & Fixed var. & 0.0322 / 0.141 & 0.3389 & 99.4 & 0.500 / 0.984 / 3.563 & 5/5/5 \\
+LSTM & FD004 & Bias 5\% & 30 & MC Drop. & 0.0305 / 0.134 & 0.3414 & 99.5 & 0.494 / 0.952 / 3.396 & 4/4/4 \\
+LSTM & FD004 & Bias 5\% & 30 & Ensemble & 0.0186 / 0.081 & 0.3519 & 100.2 & 0.445 / 0.723 / 2.208 & 1/1/1 \\
+LSTM & FD004 & Bias 5\% & 30 & CP-norm & 0.0278 / 0.122 & 0.3399 & 99.3 & 0.479 / 0.897 / 3.125 & 3/2/2 \\
+LSTM & FD004 & Drift 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.4658 & 81.8 & 0.466 / 0.466 / 0.466 & 1/1/1 \\
+LSTM & FD004 & Drift 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.6329 & 87.3 & 0.633 / 0.633 / 0.633 & 3/3/3 \\
+LSTM & FD004 & Drift 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.6397 & 87.6 & 0.640 / 0.640 / 0.640 & 5/5/5 \\
+LSTM & FD004 & Drift 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.6371 & 88.3 & 0.637 / 0.637 / 0.637 & 4/4/4 \\
+LSTM & FD004 & Drift 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.5882 & 86.9 & 0.588 / 0.588 / 0.588 & 2/2/2 \\
+LSTM & FD004 & Drift 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.5899 & 96.0 & 0.590 / 0.590 / 0.590 & 1/1/1 \\
+LSTM & FD004 & Drift 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.6346 & 97.2 & 0.635 / 0.635 / 0.635 & 2/2/2 \\
+LSTM & FD004 & Drift 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.6346 & 97.2 & 0.635 / 0.635 / 0.635 & 3/3/3 \\
+LSTM & FD004 & Drift 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.6540 & 97.6 & 0.654 / 0.654 / 0.654 & 5/5/5 \\
+LSTM & FD004 & Drift 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.6422 & 97.5 & 0.642 / 0.642 / 0.642 & 4/4/4 \\
+LSTM & FD004 & Drift 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.6194 & 101.2 & 0.619 / 0.619 / 0.619 & 1/1/1 \\
+LSTM & FD004 & Drift 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.6253 & 101.3 & 0.625 / 0.625 / 0.625 & 2/2/2 \\
+LSTM & FD004 & Drift 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.6278 & 101.3 & 0.628 / 0.628 / 0.628 & 3/3/3 \\
+LSTM & FD004 & Drift 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.6287 & 101.3 & 0.629 / 0.629 / 0.629 & 4/4/4 \\
+LSTM & FD004 & Drift 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.6304 & 101.5 & 0.630 / 0.630 / 0.630 & 5/5/5 \\
+Transformer & FD001 & Clean & 10 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD001 & Clean & 10 & Fixed var. & 0.0000 / 0.000 & 0.0220 & 36.0 & 0.022 / 0.022 / 0.022 & 5/5/5 \\
+Transformer & FD001 & Clean & 10 & MC Drop. & 0.0000 / 0.000 & 0.0200 & 36.3 & 0.020 / 0.020 / 0.020 & 4/4/4 \\
+Transformer & FD001 & Clean & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+Transformer & FD001 & Clean & 10 & CP-norm & 0.0000 / 0.000 & 0.0040 & 35.0 & 0.004 / 0.004 / 0.004 & 3/3/3 \\
+Transformer & FD001 & Clean & 20 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD001 & Clean & 20 & Fixed var. & 0.0000 / 0.000 & 0.0200 & 49.6 & 0.020 / 0.020 / 0.020 & 4/4/4 \\
+Transformer & FD001 & Clean & 20 & MC Drop. & 0.0000 / 0.000 & 0.0260 & 49.3 & 0.026 / 0.026 / 0.026 & 5/5/5 \\
+Transformer & FD001 & Clean & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+Transformer & FD001 & Clean & 20 & CP-norm & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 3/3/3 \\
+Transformer & FD001 & Clean & 30 & Heterosc. & 0.0000 / 0.000 & 0.0080 & 53.0 & 0.008 / 0.008 / 0.008 & 1/1/1 \\
+Transformer & FD001 & Clean & 30 & Fixed var. & 0.0000 / 0.000 & 0.0220 & 67.0 & 0.022 / 0.022 / 0.022 & 3/3/3 \\
+Transformer & FD001 & Clean & 30 & MC Drop. & 0.0000 / 0.000 & 0.0240 & 67.1 & 0.024 / 0.024 / 0.024 & 4/4/4 \\
+Transformer & FD001 & Clean & 30 & Ensemble & 0.0000 / 0.000 & 0.0100 & 53.0 & 0.010 / 0.010 / 0.010 & 2/2/2 \\
+Transformer & FD001 & Clean & 30 & CP-norm & 0.0000 / 0.000 & 0.0380 & 68.8 & 0.038 / 0.038 / 0.038 & 5/5/5 \\
+Transformer & FD001 & Noise 1\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD001 & Noise 1\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0212 & 36.1 & 0.021 / 0.021 / 0.021 & 5/5/5 \\
+Transformer & FD001 & Noise 1\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0208 & 36.6 & 0.021 / 0.021 / 0.021 & 4/4/4 \\
+Transformer & FD001 & Noise 1\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+Transformer & FD001 & Noise 1\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0040 & 35.4 & 0.004 / 0.004 / 0.004 & 3/3/3 \\
+Transformer & FD001 & Noise 1\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD001 & Noise 1\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.0208 & 49.6 & 0.021 / 0.021 / 0.021 & 4/4/4 \\
+Transformer & FD001 & Noise 1\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.0260 & 50.9 & 0.026 / 0.026 / 0.026 & 5/5/5 \\
+Transformer & FD001 & Noise 1\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+Transformer & FD001 & Noise 1\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 3/3/3 \\
+Transformer & FD001 & Noise 1\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.0084 & 53.7 & 0.008 / 0.008 / 0.008 & 2/2/2 \\
+Transformer & FD001 & Noise 1\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.0224 & 67.6 & 0.022 / 0.022 / 0.022 & 3/3/3 \\
+Transformer & FD001 & Noise 1\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.0244 & 67.9 & 0.024 / 0.024 / 0.024 & 4/4/4 \\
+Transformer & FD001 & Noise 1\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0060 & 53.0 & 0.006 / 0.006 / 0.006 & 1/1/1 \\
+Transformer & FD001 & Noise 1\% & 30 & CP-norm & 0.0000 / 0.000 & 0.0376 & 69.0 & 0.038 / 0.038 / 0.038 & 5/5/5 \\
+Transformer & FD001 & Bias 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0024 & 36.3 & 0.002 / 0.002 / 0.002 & 2/2/2 \\
+Transformer & FD001 & Bias 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0188 & 36.4 & 0.019 / 0.019 / 0.019 & 4/4/4 \\
+Transformer & FD001 & Bias 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0204 & 38.1 & 0.020 / 0.020 / 0.020 & 5/5/5 \\
+Transformer & FD001 & Bias 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0020 & 37.0 & 0.002 / 0.002 / 0.002 & 1/1/1 \\
+Transformer & FD001 & Bias 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0048 & 36.0 & 0.005 / 0.005 / 0.005 & 3/3/3 \\
+Transformer & FD001 & Bias 5\% & 20 & Heterosc. & 0.0016 / 0.008 & 0.0000 & -- & 0.008 / 0.032 / 0.160 & 3/5/5 \\
+Transformer & FD001 & Bias 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.0208 & 53.2 & 0.021 / 0.021 / 0.021 & 4/3/3 \\
+Transformer & FD001 & Bias 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.0236 & 53.2 & 0.024 / 0.024 / 0.024 & 5/4/4 \\
+Transformer & FD001 & Bias 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD001 & Bias 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0008 & 64.5 & 0.001 / 0.001 / 0.001 & 2/2/2 \\
+Transformer & FD001 & Bias 5\% & 30 & Heterosc. & 0.0004 / 0.002 & 0.0104 & 60.8 & 0.012 / 0.018 / 0.050 & 2/2/5 \\
+Transformer & FD001 & Bias 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.0236 & 64.2 & 0.024 / 0.024 / 0.024 & 3/3/2 \\
+Transformer & FD001 & Bias 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.0260 & 64.7 & 0.026 / 0.026 / 0.026 & 4/4/3 \\
+Transformer & FD001 & Bias 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0100 & 59.0 & 0.010 / 0.010 / 0.010 & 1/1/1 \\
+Transformer & FD001 & Bias 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.0316 & 69.5 & 0.032 / 0.032 / 0.032 & 5/5/4 \\
+Transformer & FD001 & Drift 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0160 & 35.9 & 0.016 / 0.016 / 0.016 & 1/1/1 \\
+Transformer & FD001 & Drift 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0680 & 47.0 & 0.068 / 0.068 / 0.068 & 4/4/4 \\
+Transformer & FD001 & Drift 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0700 & 47.0 & 0.070 / 0.070 / 0.070 & 5/5/5 \\
+Transformer & FD001 & Drift 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0200 & 35.0 & 0.020 / 0.020 / 0.020 & 3/3/3 \\
+Transformer & FD001 & Drift 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0160 & 35.9 & 0.016 / 0.016 / 0.016 & 2/2/2 \\
+Transformer & FD001 & Drift 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.0240 & 54.5 & 0.024 / 0.024 / 0.024 & 2/2/2 \\
+Transformer & FD001 & Drift 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.1020 & 58.5 & 0.102 / 0.102 / 0.102 & 4/4/4 \\
+Transformer & FD001 & Drift 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.1040 & 59.1 & 0.104 / 0.104 / 0.104 & 5/5/5 \\
+Transformer & FD001 & Drift 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0200 & 57.0 & 0.020 / 0.020 / 0.020 & 1/1/1 \\
+Transformer & FD001 & Drift 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0360 & 64.1 & 0.036 / 0.036 / 0.036 & 3/3/3 \\
+Transformer & FD001 & Drift 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.0620 & 72.4 & 0.062 / 0.062 / 0.062 & 1/1/1 \\
+Transformer & FD001 & Drift 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.1320 & 75.3 & 0.132 / 0.132 / 0.132 & 4/4/4 \\
+Transformer & FD001 & Drift 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.1420 & 75.8 & 0.142 / 0.142 / 0.142 & 5/5/5 \\
+Transformer & FD001 & Drift 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.1300 & 72.8 & 0.130 / 0.130 / 0.130 & 2/2/2 \\
+Transformer & FD001 & Drift 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.1300 & 83.1 & 0.130 / 0.130 / 0.130 & 3/3/3 \\
+Transformer & FD002 & Clean & 10 & Heterosc. & 0.0032 / 0.029 & 0.0000 & -- & 0.016 / 0.063 / 0.316 & 1/3/3 \\
+Transformer & FD002 & Clean & 10 & Fixed var. & 0.0000 / 0.000 & 0.0427 & 40.6 & 0.043 / 0.043 / 0.043 & 5/2/2 \\
+Transformer & FD002 & Clean & 10 & MC Drop. & 0.0000 / 0.000 & 0.0411 & 40.3 & 0.041 / 0.041 / 0.041 & 4/1/1 \\
+Transformer & FD002 & Clean & 10 & Ensemble & 0.0040 / 0.036 & 0.0000 & -- & 0.020 / 0.079 / 0.395 & 2/4/4 \\
+Transformer & FD002 & Clean & 10 & CP-norm & 0.0040 / 0.036 & 0.0055 & 44.0 & 0.025 / 0.085 / 0.401 & 3/5/5 \\
+Transformer & FD002 & Clean & 20 & Heterosc. & 0.0008 / 0.004 & 0.0150 & 46.7 & 0.019 / 0.031 / 0.094 & 1/2/4 \\
+Transformer & FD002 & Clean & 20 & Fixed var. & 0.0000 / 0.000 & 0.0625 & 51.9 & 0.062 / 0.062 / 0.062 & 4/4/2 \\
+Transformer & FD002 & Clean & 20 & MC Drop. & 0.0000 / 0.000 & 0.0648 & 51.9 & 0.065 / 0.065 / 0.065 & 5/5/3 \\
+Transformer & FD002 & Clean & 20 & Ensemble & 0.0000 / 0.000 & 0.0198 & 44.2 & 0.020 / 0.020 / 0.020 & 2/1/1 \\
+Transformer & FD002 & Clean & 20 & CP-norm & 0.0008 / 0.004 & 0.0316 & 52.9 & 0.036 / 0.047 / 0.111 & 3/3/5 \\
+Transformer & FD002 & Clean & 30 & Heterosc. & 0.0000 / 0.000 & 0.0601 & 69.9 & 0.060 / 0.060 / 0.060 & 1/1/1 \\
+Transformer & FD002 & Clean & 30 & Fixed var. & 0.0000 / 0.000 & 0.0632 & 63.7 & 0.063 / 0.063 / 0.063 & 2/2/2 \\
+Transformer & FD002 & Clean & 30 & MC Drop. & 0.0000 / 0.000 & 0.0680 & 64.1 & 0.068 / 0.068 / 0.068 & 4/4/4 \\
+Transformer & FD002 & Clean & 30 & Ensemble & 0.0000 / 0.000 & 0.0711 & 65.3 & 0.071 / 0.071 / 0.071 & 5/5/5 \\
+Transformer & FD002 & Clean & 30 & CP-norm & 0.0000 / 0.000 & 0.0664 & 70.1 & 0.066 / 0.066 / 0.066 & 3/3/3 \\
+Transformer & FD002 & Noise 1\% & 10 & Heterosc. & 0.0028 / 0.026 & 0.0051 & 38.0 & 0.019 / 0.062 / 0.290 & 2/3/4 \\
+Transformer & FD002 & Noise 1\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0667 & 47.5 & 0.067 / 0.067 / 0.067 & 5/4/2 \\
+Transformer & FD002 & Noise 1\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0610 & 46.3 & 0.061 / 0.061 / 0.061 & 4/2/1 \\
+Transformer & FD002 & Noise 1\% & 10 & Ensemble & 0.0008 / 0.007 & 0.0079 & 42.0 & 0.012 / 0.024 / 0.087 & 1/1/3 \\
+Transformer & FD002 & Noise 1\% & 10 & CP-norm & 0.0030 / 0.027 & 0.0115 & 43.9 & 0.027 / 0.072 / 0.312 & 3/5/5 \\
+Transformer & FD002 & Noise 1\% & 20 & Heterosc. & 0.0021 / 0.010 & 0.0308 & 56.2 & 0.041 / 0.072 / 0.236 & 1/2/4 \\
+Transformer & FD002 & Noise 1\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.0817 & 60.2 & 0.082 / 0.082 / 0.082 & 5/4/2 \\
+Transformer & FD002 & Noise 1\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.0816 & 59.8 & 0.082 / 0.082 / 0.082 & 4/3/1 \\
+Transformer & FD002 & Noise 1\% & 20 & Ensemble & 0.0008 / 0.004 & 0.0395 & 55.8 & 0.043 / 0.055 / 0.119 & 2/1/3 \\
+Transformer & FD002 & Noise 1\% & 20 & CP-norm & 0.0021 / 0.010 & 0.0474 & 62.2 & 0.058 / 0.089 / 0.253 & 3/5/5 \\
+Transformer & FD002 & Noise 1\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.0813 & 77.3 & 0.081 / 0.081 / 0.081 & 1/1/1 \\
+Transformer & FD002 & Noise 1\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.0889 & 73.2 & 0.089 / 0.089 / 0.089 & 2/2/2 \\
+Transformer & FD002 & Noise 1\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.0920 & 73.5 & 0.092 / 0.092 / 0.092 & 4/4/4 \\
+Transformer & FD002 & Noise 1\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0909 & 75.2 & 0.091 / 0.091 / 0.091 & 3/3/3 \\
+Transformer & FD002 & Noise 1\% & 30 & CP-norm & 0.0000 / 0.000 & 0.0963 & 78.7 & 0.096 / 0.096 / 0.096 & 5/5/5 \\
+Transformer & FD002 & Bias 5\% & 10 & Heterosc. & 0.0655 / 0.591 & 0.1393 & 88.7 & 0.467 / 1.448 / 6.685 & 4/5/5 \\
+Transformer & FD002 & Bias 5\% & 10 & Fixed var. & 0.0411 / 0.371 & 0.1507 & 90.1 & 0.356 / 0.973 / 4.261 & 1/1/1 \\
+Transformer & FD002 & Bias 5\% & 10 & MC Drop. & 0.0443 / 0.400 & 0.1499 & 90.2 & 0.371 / 1.035 / 4.577 & 2/2/2 \\
+Transformer & FD002 & Bias 5\% & 10 & Ensemble & 0.0530 / 0.479 & 0.1502 & 90.8 & 0.415 / 1.209 / 5.447 & 3/3/3 \\
+Transformer & FD002 & Bias 5\% & 10 & CP-norm & 0.0643 / 0.581 & 0.1458 & 87.8 & 0.468 / 1.433 / 6.581 & 5/4/4 \\
+Transformer & FD002 & Bias 5\% & 20 & Heterosc. & 0.1021 / 0.479 & 0.1380 & 94.3 & 0.649 / 2.181 / 10.351 & 5/5/5 \\
+Transformer & FD002 & Bias 5\% & 20 & Fixed var. & 0.0759 / 0.356 & 0.1432 & 94.0 & 0.523 / 1.661 / 7.732 & 2/2/2 \\
+Transformer & FD002 & Bias 5\% & 20 & MC Drop. & 0.0794 / 0.372 & 0.1421 & 94.4 & 0.539 / 1.729 / 8.079 & 3/3/3 \\
+Transformer & FD002 & Bias 5\% & 20 & Ensemble & 0.0585 / 0.274 & 0.1447 & 93.9 & 0.437 / 1.315 / 5.994 & 1/1/1 \\
+Transformer & FD002 & Bias 5\% & 20 & CP-norm & 0.0919 / 0.430 & 0.1428 & 93.4 & 0.602 / 1.980 / 9.329 & 4/4/4 \\
+Transformer & FD002 & Bias 5\% & 30 & Heterosc. & 0.0821 / 0.335 & 0.1334 & 98.4 & 0.544 / 1.775 / 8.339 & 5/5/5 \\
+Transformer & FD002 & Bias 5\% & 30 & Fixed var. & 0.0776 / 0.317 & 0.1345 & 97.9 & 0.523 / 1.687 / 7.897 & 4/4/4 \\
+Transformer & FD002 & Bias 5\% & 30 & MC Drop. & 0.0773 / 0.315 & 0.1344 & 97.9 & 0.521 / 1.681 / 7.866 & 3/3/3 \\
+Transformer & FD002 & Bias 5\% & 30 & Ensemble & 0.0530 / 0.216 & 0.1407 & 96.8 & 0.406 / 1.200 / 5.437 & 1/1/1 \\
+Transformer & FD002 & Bias 5\% & 30 & CP-norm & 0.0729 / 0.297 & 0.1363 & 98.1 & 0.501 / 1.594 / 7.425 & 2/2/2 \\
+Transformer & FD002 & Drift 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.6909 & 88.4 & 0.691 / 0.691 / 0.691 & 1/1/1 \\
+Transformer & FD002 & Drift 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.7502 & 90.8 & 0.750 / 0.750 / 0.750 & 5/5/5 \\
+Transformer & FD002 & Drift 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.7494 & 90.7 & 0.749 / 0.749 / 0.749 & 4/4/4 \\
+Transformer & FD002 & Drift 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.7154 & 89.4 & 0.715 / 0.715 / 0.715 & 3/3/3 \\
+Transformer & FD002 & Drift 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.7043 & 89.0 & 0.704 / 0.704 / 0.704 & 2/2/2 \\
+Transformer & FD002 & Drift 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.6917 & 95.0 & 0.692 / 0.692 / 0.692 & 1/1/1 \\
+Transformer & FD002 & Drift 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.6988 & 95.3 & 0.699 / 0.699 / 0.699 & 3/3/3 \\
+Transformer & FD002 & Drift 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.6988 & 95.3 & 0.699 / 0.699 / 0.699 & 4/4/4 \\
+Transformer & FD002 & Drift 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.6996 & 95.3 & 0.700 / 0.700 / 0.700 & 5/5/5 \\
+Transformer & FD002 & Drift 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.6925 & 95.0 & 0.692 / 0.692 / 0.692 & 2/2/2 \\
+Transformer & FD002 & Drift 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.6427 & 99.5 & 0.643 / 0.643 / 0.643 & 1/1/1 \\
+Transformer & FD002 & Drift 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.6443 & 99.6 & 0.644 / 0.644 / 0.644 & 3/3/3 \\
+Transformer & FD002 & Drift 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.6443 & 99.6 & 0.644 / 0.644 / 0.644 & 4/4/4 \\
+Transformer & FD002 & Drift 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.6443 & 99.6 & 0.644 / 0.644 / 0.644 & 5/5/5 \\
+Transformer & FD002 & Drift 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.6427 & 99.5 & 0.643 / 0.643 / 0.643 & 2/2/2 \\
+Transformer & FD003 & Clean & 10 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD003 & Clean & 10 & Fixed var. & 0.0000 / 0.000 & 0.0100 & 34.0 & 0.010 / 0.010 / 0.010 & 4/4/4 \\
+Transformer & FD003 & Clean & 10 & MC Drop. & 0.0000 / 0.000 & 0.0100 & 34.0 & 0.010 / 0.010 / 0.010 & 5/5/5 \\
+Transformer & FD003 & Clean & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+Transformer & FD003 & Clean & 10 & CP-norm & 0.0000 / 0.000 & 0.0060 & 51.0 & 0.006 / 0.006 / 0.006 & 3/3/3 \\
+Transformer & FD003 & Clean & 20 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD003 & Clean & 20 & Fixed var. & 0.0000 / 0.000 & 0.0180 & 48.3 & 0.018 / 0.018 / 0.018 & 5/5/5 \\
+Transformer & FD003 & Clean & 20 & MC Drop. & 0.0000 / 0.000 & 0.0140 & 49.0 & 0.014 / 0.014 / 0.014 & 3/3/3 \\
+Transformer & FD003 & Clean & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+Transformer & FD003 & Clean & 20 & CP-norm & 0.0000 / 0.000 & 0.0160 & 68.1 & 0.016 / 0.016 / 0.016 & 4/4/4 \\
+Transformer & FD003 & Clean & 30 & Heterosc. & 0.0000 / 0.000 & 0.0220 & 57.2 & 0.022 / 0.022 / 0.022 & 1/1/1 \\
+Transformer & FD003 & Clean & 30 & Fixed var. & 0.0000 / 0.000 & 0.0320 & 57.4 & 0.032 / 0.032 / 0.032 & 3/3/3 \\
+Transformer & FD003 & Clean & 30 & MC Drop. & 0.0000 / 0.000 & 0.0320 & 57.4 & 0.032 / 0.032 / 0.032 & 4/4/4 \\
+Transformer & FD003 & Clean & 30 & Ensemble & 0.0000 / 0.000 & 0.0300 & 59.3 & 0.030 / 0.030 / 0.030 & 2/2/2 \\
+Transformer & FD003 & Clean & 30 & CP-norm & 0.0000 / 0.000 & 0.0700 & 62.2 & 0.070 / 0.070 / 0.070 & 5/5/5 \\
+Transformer & FD003 & Noise 1\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD003 & Noise 1\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0100 & 34.0 & 0.010 / 0.010 / 0.010 & 4/4/4 \\
+Transformer & FD003 & Noise 1\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0100 & 34.0 & 0.010 / 0.010 / 0.010 & 5/5/5 \\
+Transformer & FD003 & Noise 1\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+Transformer & FD003 & Noise 1\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0060 & 52.7 & 0.006 / 0.006 / 0.006 & 3/3/3 \\
+Transformer & FD003 & Noise 1\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.0004 & 54.0 & 0.000 / 0.000 / 0.000 & 2/2/2 \\
+Transformer & FD003 & Noise 1\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.0156 & 49.0 & 0.016 / 0.016 / 0.016 & 5/5/5 \\
+Transformer & FD003 & Noise 1\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.0128 & 50.5 & 0.013 / 0.013 / 0.013 & 3/3/3 \\
+Transformer & FD003 & Noise 1\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD003 & Noise 1\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0148 & 66.5 & 0.015 / 0.015 / 0.015 & 4/4/4 \\
+Transformer & FD003 & Noise 1\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.0224 & 59.3 & 0.022 / 0.022 / 0.022 & 1/1/1 \\
+Transformer & FD003 & Noise 1\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.0332 & 57.2 & 0.033 / 0.033 / 0.033 & 2/2/2 \\
+Transformer & FD003 & Noise 1\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.0332 & 57.2 & 0.033 / 0.033 / 0.033 & 3/3/3 \\
+Transformer & FD003 & Noise 1\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0340 & 58.7 & 0.034 / 0.034 / 0.034 & 4/4/4 \\
+Transformer & FD003 & Noise 1\% & 30 & CP-norm & 0.0000 / 0.000 & 0.0676 & 62.7 & 0.068 / 0.068 / 0.068 & 5/5/5 \\
+Transformer & FD003 & Bias 5\% & 10 & Heterosc. & 0.0004 / 0.005 & 0.0020 & 34.0 & 0.004 / 0.010 / 0.042 & 2/2/4 \\
+Transformer & FD003 & Bias 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.0132 & 37.3 & 0.013 / 0.013 / 0.013 & 5/4/3 \\
+Transformer & FD003 & Bias 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.0128 & 37.3 & 0.013 / 0.013 / 0.013 & 3/3/2 \\
+Transformer & FD003 & Bias 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0000 & -- & 0.000 / 0.000 / 0.000 & 1/1/1 \\
+Transformer & FD003 & Bias 5\% & 10 & CP-norm & 0.0008 / 0.010 & 0.0088 & 52.6 & 0.013 / 0.025 / 0.089 & 4/5/5 \\
+Transformer & FD003 & Bias 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.0052 & 61.6 & 0.005 / 0.005 / 0.005 & 1/1/1 \\
+Transformer & FD003 & Bias 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.0396 & 49.8 & 0.040 / 0.040 / 0.040 & 5/5/5 \\
+Transformer & FD003 & Bias 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.0348 & 49.7 & 0.035 / 0.035 / 0.035 & 4/4/4 \\
+Transformer & FD003 & Bias 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0060 & 52.0 & 0.006 / 0.006 / 0.006 & 2/2/2 \\
+Transformer & FD003 & Bias 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0172 & 65.3 & 0.017 / 0.017 / 0.017 & 3/3/3 \\
+Transformer & FD003 & Bias 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.0380 & 60.2 & 0.038 / 0.038 / 0.038 & 1/1/1 \\
+Transformer & FD003 & Bias 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.0456 & 58.0 & 0.046 / 0.046 / 0.046 & 3/3/3 \\
+Transformer & FD003 & Bias 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.0444 & 57.8 & 0.044 / 0.044 / 0.044 & 2/2/2 \\
+Transformer & FD003 & Bias 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0600 & 57.9 & 0.060 / 0.060 / 0.060 & 4/4/4 \\
+Transformer & FD003 & Bias 5\% & 30 & CP-norm & 0.0004 / 0.002 & 0.0764 & 65.9 & 0.078 / 0.084 / 0.116 & 5/5/5 \\
+Transformer & FD003 & Drift 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.0460 & 47.3 & 0.046 / 0.046 / 0.046 & 1/1/1 \\
+Transformer & FD003 & Drift 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.2040 & 52.4 & 0.204 / 0.204 / 0.204 & 5/5/5 \\
+Transformer & FD003 & Drift 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.1920 & 51.4 & 0.192 / 0.192 / 0.192 & 4/4/4 \\
+Transformer & FD003 & Drift 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0500 & 46.0 & 0.050 / 0.050 / 0.050 & 2/2/2 \\
+Transformer & FD003 & Drift 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.0820 & 49.2 & 0.082 / 0.082 / 0.082 & 3/3/3 \\
+Transformer & FD003 & Drift 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.1740 & 57.0 & 0.174 / 0.174 / 0.174 & 1/1/1 \\
+Transformer & FD003 & Drift 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.3480 & 69.9 & 0.348 / 0.348 / 0.348 & 5/5/5 \\
+Transformer & FD003 & Drift 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.3260 & 67.6 & 0.326 / 0.326 / 0.326 & 4/4/4 \\
+Transformer & FD003 & Drift 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.2000 & 58.2 & 0.200 / 0.200 / 0.200 & 3/3/3 \\
+Transformer & FD003 & Drift 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.1980 & 60.2 & 0.198 / 0.198 / 0.198 & 2/2/2 \\
+Transformer & FD003 & Drift 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.3060 & 76.0 & 0.306 / 0.306 / 0.306 & 1/1/1 \\
+Transformer & FD003 & Drift 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.4380 & 85.0 & 0.438 / 0.438 / 0.438 & 4/4/4 \\
+Transformer & FD003 & Drift 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.4440 & 84.9 & 0.444 / 0.444 / 0.444 & 5/5/5 \\
+Transformer & FD003 & Drift 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.4100 & 81.7 & 0.410 / 0.410 / 0.410 & 3/3/3 \\
+Transformer & FD003 & Drift 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.3420 & 79.6 & 0.342 / 0.342 / 0.342 & 2/2/2 \\
+Transformer & FD004 & Clean & 10 & Heterosc. & 0.0000 / 0.000 & 0.0304 & 42.7 & 0.030 / 0.030 / 0.030 & 1/1/1 \\
+Transformer & FD004 & Clean & 10 & Fixed var. & 0.0000 / 0.000 & 0.0540 & 40.5 & 0.054 / 0.054 / 0.054 & 4/4/4 \\
+Transformer & FD004 & Clean & 10 & MC Drop. & 0.0000 / 0.000 & 0.0430 & 40.4 & 0.043 / 0.043 / 0.043 & 2/2/2 \\
+Transformer & FD004 & Clean & 10 & Ensemble & 0.0000 / 0.000 & 0.0464 & 44.5 & 0.046 / 0.046 / 0.046 & 3/3/3 \\
+Transformer & FD004 & Clean & 10 & CP-norm & 0.0000 / 0.000 & 0.0557 & 44.1 & 0.056 / 0.056 / 0.056 & 5/5/5 \\
+Transformer & FD004 & Clean & 20 & Heterosc. & 0.0000 / 0.000 & 0.0287 & 64.1 & 0.029 / 0.029 / 0.029 & 1/1/1 \\
+Transformer & FD004 & Clean & 20 & Fixed var. & 0.0000 / 0.000 & 0.0405 & 58.0 & 0.041 / 0.041 / 0.041 & 4/4/4 \\
+Transformer & FD004 & Clean & 20 & MC Drop. & 0.0000 / 0.000 & 0.0312 & 56.7 & 0.031 / 0.031 / 0.031 & 2/2/2 \\
+Transformer & FD004 & Clean & 20 & Ensemble & 0.0000 / 0.000 & 0.0338 & 62.8 & 0.034 / 0.034 / 0.034 & 3/3/3 \\
+Transformer & FD004 & Clean & 20 & CP-norm & 0.0000 / 0.000 & 0.0565 & 66.0 & 0.057 / 0.057 / 0.057 & 5/5/5 \\
+Transformer & FD004 & Clean & 30 & Heterosc. & 0.0000 / 0.000 & 0.0473 & 75.2 & 0.047 / 0.047 / 0.047 & 4/2/2 \\
+Transformer & FD004 & Clean & 30 & Fixed var. & 0.0008 / 0.004 & 0.0422 & 70.5 & 0.046 / 0.059 / 0.127 & 2/4/4 \\
+Transformer & FD004 & Clean & 30 & MC Drop. & 0.0008 / 0.004 & 0.0371 & 70.5 & 0.041 / 0.054 / 0.122 & 1/3/3 \\
+Transformer & FD004 & Clean & 30 & Ensemble & 0.0000 / 0.000 & 0.0464 & 71.3 & 0.046 / 0.046 / 0.046 & 3/1/1 \\
+Transformer & FD004 & Clean & 30 & CP-norm & 0.0008 / 0.004 & 0.0810 & 78.6 & 0.085 / 0.098 / 0.165 & 5/5/5 \\
+Transformer & FD004 & Noise 1\% & 10 & Heterosc. & 0.0008 / 0.011 & 0.0378 & 45.4 & 0.042 / 0.055 / 0.122 & 1/2/5 \\
+Transformer & FD004 & Noise 1\% & 10 & Fixed var. & 0.0003 / 0.004 & 0.0700 & 45.2 & 0.072 / 0.077 / 0.104 & 5/5/4 \\
+Transformer & FD004 & Noise 1\% & 10 & MC Drop. & 0.0003 / 0.004 & 0.0522 & 42.3 & 0.054 / 0.059 / 0.086 & 3/3/2 \\
+Transformer & FD004 & Noise 1\% & 10 & Ensemble & 0.0000 / 0.000 & 0.0489 & 45.1 & 0.049 / 0.049 / 0.049 & 2/1/1 \\
+Transformer & FD004 & Noise 1\% & 10 & CP-norm & 0.0003 / 0.004 & 0.0638 & 50.5 & 0.065 / 0.071 / 0.098 & 4/4/3 \\
+Transformer & FD004 & Noise 1\% & 20 & Heterosc. & 0.0002 / 0.001 & 0.0393 & 69.9 & 0.040 / 0.043 / 0.056 & 1/1/3 \\
+Transformer & FD004 & Noise 1\% & 20 & Fixed var. & 0.0005 / 0.003 & 0.0562 & 64.3 & 0.059 / 0.066 / 0.107 & 4/4/5 \\
+Transformer & FD004 & Noise 1\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.0435 & 61.4 & 0.044 / 0.044 / 0.044 & 2/2/1 \\
+Transformer & FD004 & Noise 1\% & 20 & Ensemble & 0.0000 / 0.000 & 0.0506 & 67.7 & 0.051 / 0.051 / 0.051 & 3/3/2 \\
+Transformer & FD004 & Noise 1\% & 20 & CP-norm & 0.0000 / 0.000 & 0.0704 & 71.8 & 0.070 / 0.070 / 0.070 & 5/5/4 \\
+Transformer & FD004 & Noise 1\% & 30 & Heterosc. & 0.0005 / 0.002 & 0.0707 & 78.6 & 0.073 / 0.081 / 0.121 & 2/2/2 \\
+Transformer & FD004 & Noise 1\% & 30 & Fixed var. & 0.0030 / 0.013 & 0.0646 & 78.0 & 0.080 / 0.125 / 0.368 & 4/5/5 \\
+Transformer & FD004 & Noise 1\% & 30 & MC Drop. & 0.0030 / 0.013 & 0.0542 & 76.4 & 0.069 / 0.115 / 0.358 & 1/3/4 \\
+Transformer & FD004 & Noise 1\% & 30 & Ensemble & 0.0000 / 0.000 & 0.0743 & 77.9 & 0.074 / 0.074 / 0.074 & 3/1/1 \\
+Transformer & FD004 & Noise 1\% & 30 & CP-norm & 0.0008 / 0.004 & 0.1067 & 82.5 & 0.111 / 0.124 / 0.191 & 5/4/3 \\
+Transformer & FD004 & Bias 5\% & 10 & Heterosc. & 0.0093 / 0.122 & 0.3200 & 87.0 & 0.366 / 0.506 / 1.248 & 1/2/4 \\
+Transformer & FD004 & Bias 5\% & 10 & Fixed var. & 0.0076 / 0.100 & 0.3661 & 87.1 & 0.404 / 0.518 / 1.126 & 4/4/2 \\
+Transformer & FD004 & Bias 5\% & 10 & MC Drop. & 0.0103 / 0.136 & 0.3526 & 87.1 & 0.404 / 0.558 / 1.382 & 5/5/5 \\
+Transformer & FD004 & Bias 5\% & 10 & Ensemble & 0.0034 / 0.044 & 0.3612 & 87.5 & 0.378 / 0.429 / 0.699 & 2/1/1 \\
+Transformer & FD004 & Bias 5\% & 10 & CP-norm & 0.0084 / 0.111 & 0.3409 & 86.8 & 0.383 / 0.510 / 1.185 & 3/3/3 \\
+Transformer & FD004 & Bias 5\% & 20 & Heterosc. & 0.0177 / 0.105 & 0.3186 & 95.9 & 0.407 / 0.673 / 2.091 & 2/4/4 \\
+Transformer & FD004 & Bias 5\% & 20 & Fixed var. & 0.0157 / 0.093 & 0.3576 & 95.8 & 0.436 / 0.672 / 1.927 & 4/3/3 \\
+Transformer & FD004 & Bias 5\% & 20 & MC Drop. & 0.0187 / 0.111 & 0.3512 & 96.0 & 0.445 / 0.726 / 2.225 & 5/5/5 \\
+Transformer & FD004 & Bias 5\% & 20 & Ensemble & 0.0059 / 0.035 & 0.3494 & 96.8 & 0.379 / 0.468 / 0.940 & 1/1/1 \\
+Transformer & FD004 & Bias 5\% & 20 & CP-norm & 0.0147 / 0.087 & 0.3377 & 96.2 & 0.411 / 0.631 / 1.806 & 3/2/2 \\
+Transformer & FD004 & Bias 5\% & 30 & Heterosc. & 0.0208 / 0.091 & 0.3328 & 100.4 & 0.437 / 0.748 / 2.409 & 2/3/4 \\
+Transformer & FD004 & Bias 5\% & 30 & Fixed var. & 0.0196 / 0.086 & 0.3642 & 100.0 & 0.462 / 0.756 / 2.322 & 4/4/3 \\
+Transformer & FD004 & Bias 5\% & 30 & MC Drop. & 0.0221 / 0.097 & 0.3624 & 100.3 & 0.473 / 0.805 / 2.573 & 5/5/5 \\
+Transformer & FD004 & Bias 5\% & 30 & Ensemble & 0.0084 / 0.037 & 0.3612 & 100.4 & 0.403 / 0.530 / 1.205 & 1/1/1 \\
+Transformer & FD004 & Bias 5\% & 30 & CP-norm & 0.0181 / 0.079 & 0.3468 & 100.1 & 0.437 / 0.708 / 2.153 & 3/2/2 \\
+Transformer & FD004 & Drift 5\% & 10 & Heterosc. & 0.0000 / 0.000 & 0.4034 & 78.3 & 0.403 / 0.403 / 0.403 & 1/1/1 \\
+Transformer & FD004 & Drift 5\% & 10 & Fixed var. & 0.0000 / 0.000 & 0.6768 & 89.1 & 0.677 / 0.677 / 0.677 & 5/5/5 \\
+Transformer & FD004 & Drift 5\% & 10 & MC Drop. & 0.0000 / 0.000 & 0.6439 & 87.8 & 0.644 / 0.644 / 0.644 & 4/4/4 \\
+Transformer & FD004 & Drift 5\% & 10 & Ensemble & 0.0000 / 0.000 & 0.4557 & 81.3 & 0.456 / 0.456 / 0.456 & 3/3/3 \\
+Transformer & FD004 & Drift 5\% & 10 & CP-norm & 0.0000 / 0.000 & 0.4498 & 81.0 & 0.450 / 0.450 / 0.450 & 2/2/2 \\
+Transformer & FD004 & Drift 5\% & 20 & Heterosc. & 0.0000 / 0.000 & 0.5249 & 93.8 & 0.525 / 0.525 / 0.525 & 1/1/1 \\
+Transformer & FD004 & Drift 5\% & 20 & Fixed var. & 0.0000 / 0.000 & 0.6591 & 98.0 & 0.659 / 0.659 / 0.659 & 5/5/5 \\
+Transformer & FD004 & Drift 5\% & 20 & MC Drop. & 0.0000 / 0.000 & 0.6430 & 97.4 & 0.643 / 0.643 / 0.643 & 4/4/4 \\
+Transformer & FD004 & Drift 5\% & 20 & Ensemble & 0.0000 / 0.000 & 0.5738 & 94.8 & 0.574 / 0.574 / 0.574 & 3/3/3 \\
+Transformer & FD004 & Drift 5\% & 20 & CP-norm & 0.0000 / 0.000 & 0.5603 & 95.2 & 0.560 / 0.560 / 0.560 & 2/2/2 \\
+Transformer & FD004 & Drift 5\% & 30 & Heterosc. & 0.0000 / 0.000 & 0.6059 & 100.8 & 0.606 / 0.606 / 0.606 & 1/1/1 \\
+Transformer & FD004 & Drift 5\% & 30 & Fixed var. & 0.0000 / 0.000 & 0.6354 & 101.6 & 0.635 / 0.635 / 0.635 & 4/4/4 \\
+Transformer & FD004 & Drift 5\% & 30 & MC Drop. & 0.0000 / 0.000 & 0.6329 & 101.5 & 0.633 / 0.633 / 0.633 & 3/3/3 \\
+Transformer & FD004 & Drift 5\% & 30 & Ensemble & 0.0000 / 0.000 & 0.6371 & 101.9 & 0.637 / 0.637 / 0.637 & 5/5/5 \\
+Transformer & FD004 & Drift 5\% & 30 & CP-norm & 0.0000 / 0.000 & 0.6135 & 100.9 & 0.614 / 0.614 / 0.614 & 2/2/2 \\
+\bottomrule
+\end{longtable}
+\end{center}\end{landscape}
+\noindent Per-engine bootstrap of the top-ranked mechanism against the other four (v1.8; the top is chosen from the same data, so these intervals are descriptive): number of the 144 comparisons per backbone and sub-dataset whose 95\% interval excludes zero.
+\begin{center}\footnotesize\begin{tabular}{llc}\toprule Backbone & Data & Excluding zero \\ \midrule
+LSTM & FD001 & 79 / 144 \\
+LSTM & FD002 & 86 / 144 \\
+LSTM & FD003 & 89 / 144 \\
+LSTM & FD004 & 70 / 144 \\
+Transformer & FD001 & 63 / 144 \\
+Transformer & FD002 & 90 / 144 \\
+Transformer & FD003 & 81 / 144 \\
+Transformer & FD004 & 101 / 144 \\
+\bottomrule\end{tabular}\end{center}
+
+\FloatBarrier
+\section*{S5. Output swap, controls and additive-noise attribution (range scale)}
+\begin{landscape}
+\begin{table}[H]\centering\scriptsize
+\caption{Output swap at the decision point, heteroscedastic head, $L=20$ (exploratory). $\Delta\mu$: mean shift in cycles (perturbed minus clean, same model). Premature rates: clean, mean perturbed only, scale perturbed only, both; $\Delta_\sigma$: effect of the perturbed scale given the perturbed mean (points, with engine-bootstrap interval). Unrecognised rates: mean only, scale only, both.}
+\begin{tabular}{llcccccccccc}\toprule
+Cell & Cond. & $\Delta\mu$ & Prem. clean & $\mu$ only & $\sigma$ only & both & $\Delta_\sigma\mid\mu_1$ & Unrec. $\mu$ only & $\sigma$ only & both \\ \midrule
+LSTM FD002 & Drift & -64.5 & 3.7 & 69.4 & 0.2 & 69.3 & -0.1 [-0.6, +0.4] & 0.0 & 0.2 & 0.0 \\
+LSTM FD002 & Bias & +7.3 & 3.7 & 16.0 & 4.1 & 17.0 & +0.9 [+0.7, +1.2] & 10.7 & 0.0 & 7.8 \\
+LSTM FD004 & Drift & -49.2 & 3.9 & 49.5 & 1.1 & 59.0 & +9.5 [+6.8, +12.2] & 0.0 & 0.8 & 0.0 \\
+LSTM FD004 & Bias & -21.1 & 3.9 & 29.8 & 3.2 & 30.2 & +0.3 [-0.6, +1.3] & 4.5 & 0.6 & 2.5 \\
+Transformer FD002 & Drift & -65.7 & 1.5 & 68.2 & 0.5 & 69.2 & +0.9 [+0.3, +1.7] & 0.0 & 0.2 & 0.0 \\
+Transformer FD002 & Bias & +11.5 & 1.5 & 14.2 & 2.8 & 13.8 & -0.4 [-0.6, -0.2] & 11.3 & 0.1 & 10.2 \\
+Transformer FD004 & Drift & -58.9 & 2.9 & 55.2 & 1.3 & 52.5 & -2.7 [-4.3, -1.3] & 0.0 & 0.0 & 0.0 \\
+Transformer FD004 & Bias & -27.9 & 2.9 & 33.1 & 3.7 & 31.9 & -1.2 [-2.2, -0.2] & 2.6 & 0.2 & 1.8 \\
+LSTM FD001 & Drift & -19.5 & 0.0 & 14.0 & 0.0 & 2.6 & -11.4 [-16.6, -6.6] & 0.0 & 0.2 & 0.0 \\
+LSTM FD001 & Bias & +0.0 & 0.0 & 0.9 & 0.2 & 0.1 & -0.8 [-1.4, -0.4] & 0.5 & 0.2 & 0.5 \\
+LSTM FD003 & Drift & -38.6 & 0.0 & 38.0 & 0.0 & 13.8 & -24.2 [-31.2, -17.4] & 0.0 & 0.0 & 0.0 \\
+LSTM FD003 & Bias & -3.2 & 0.0 & 2.9 & 0.3 & 0.6 & -2.3 [-3.6, -1.2] & 0.1 & 0.0 & 0.1 \\
+Transformer FD001 & Drift & -20.0 & 0.0 & 12.8 & 0.0 & 2.4 & -10.4 [-15.6, -5.8] & 0.0 & 0.0 & 0.0 \\
+Transformer FD001 & Bias & +1.3 & 0.0 & 0.1 & 0.2 & 0.0 & -0.1 [-0.2, +0.0] & 0.3 & 0.0 & 0.2 \\
+Transformer FD003 & Drift & -41.8 & 0.0 & 43.2 & 0.0 & 17.4 & -25.8 [-32.6, -19.4] & 0.0 & 0.0 & 0.0 \\
+Transformer FD003 & Bias & -2.9 & 0.0 & 2.4 & 0.5 & 0.5 & -1.8 [-3.1, -0.8] & 0.0 & 0.0 & 0.0 \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[H]\centering\scriptsize
+\caption{Output swap for the sign-pattern variants of the 5\% shift (Section~3.3), heteroscedastic head, $L=20$, exploratory, inference only. $\Delta\mu$: mean shift in cycles; $\sigma$/$\sigma_0$: mean ratio of perturbed to clean scale. Effects are in percentage points with engine-bootstrap 95\% intervals: mean effect = perturbed mean with clean scale minus clean; scale effect = both perturbed minus perturbed mean with clean scale.}\label{tab:cohswap}
+\begin{tabular}{llccccccc}\toprule
+Cell & Shift & $\Delta\mu$ & $\sigma/\sigma_0$ & Prem., mean effect & Prem., scale effect & Unrec., mean effect & Unrec., scale effect \\ \midrule
+LSTM FD001 & Ramp (+) & -19.5 & 1.06 & +14.0 [+8.4, +20.0] & -11.4 [-16.8, -6.6] & -0.2 [-0.6, +0.0] & +0.0 [+0.0, +0.0] \\
+LSTM FD001 & Const.\ $+$ & -11.4 & 1.02 & +9.2 [+5.0, +14.2] & -7.4 [-11.8, -3.4] & -0.2 [-0.6, +0.0] & +0.0 [+0.0, +0.0] \\
+LSTM FD001 & Const.\ $-$ & +7.3 & 0.90 & +0.4 [+0.0, +1.0] & -0.4 [-1.0, +0.0] & +2.8 [+0.6, +5.6] & +0.0 [+0.0, +0.0] \\
+LSTM FD002 & Ramp (+) & -64.5 & 0.53 & +65.7 [+59.9, +71.2] & -0.1 [-0.6, +0.4] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+LSTM FD002 & Const.\ $+$ & -59.9 & 0.59 & +61.3 [+55.1, +66.7] & -1.6 [-2.5, -0.7] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+LSTM FD002 & Const.\ $-$ & +36.6 & 1.21 & -2.1 [-3.8, -0.7] & +0.6 [+0.2, +1.0] & +17.5 [+13.4, +21.9] & -5.4 [-7.3, -3.6] \\
+LSTM FD003 & Ramp (+) & -38.6 & 0.91 & +38.0 [+30.0, +46.4] & -24.2 [-31.2, -18.0] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+LSTM FD003 & Const.\ $+$ & -3.8 & 1.05 & +0.8 [+0.0, +2.0] & -0.8 [-2.0, +0.0] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+LSTM FD003 & Const.\ $-$ & +7.7 & 0.95 & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] & +0.4 [+0.0, +1.2] & +0.0 [+0.0, +0.0] \\
+LSTM FD004 & Ramp (+) & -49.2 & 1.10 & +45.7 [+39.8, +51.2] & +9.5 [+6.8, +12.4] & -0.1 [-0.3, +0.0] & +0.0 [+0.0, +0.0] \\
+LSTM FD004 & Const.\ $+$ & -42.5 & 0.91 & +38.5 [+32.3, +44.1] & -8.9 [-11.5, -6.4] & -0.1 [-0.3, +0.0] & +0.0 [+0.0, +0.0] \\
+LSTM FD004 & Const.\ $-$ & +19.1 & 1.27 & -3.0 [-5.0, -1.3] & +2.4 [+1.2, +3.7] & +10.8 [+7.2, +14.6] & -7.2 [-9.8, -4.6] \\
+\midrule
+Transformer FD001 & Ramp (+) & -20.0 & 1.07 & +12.8 [+7.8, +18.0] & -10.4 [-15.2, -6.0] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+Transformer FD001 & Const.\ $+$ & -10.6 & 1.06 & +1.4 [+0.2, +3.0] & -1.0 [-2.4, +0.0] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+Transformer FD001 & Const.\ $-$ & +8.4 & 0.94 & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] & +1.4 [+0.0, +3.2] & -0.4 [-1.0, +0.0] \\
+Transformer FD002 & Ramp (+) & -65.7 & 0.57 & +66.7 [+61.0, +72.3] & +0.9 [+0.3, +1.7] & -0.1 [-0.2, +0.0] & +0.0 [+0.0, +0.0] \\
+Transformer FD002 & Const.\ $+$ & -65.0 & 0.57 & +65.5 [+59.8, +71.1] & -1.1 [-1.9, -0.4] & -0.1 [-0.2, +0.0] & +0.0 [+0.0, +0.0] \\
+Transformer FD002 & Const.\ $-$ & +42.4 & 0.90 & -1.5 [-2.8, -0.5] & +0.0 [+0.0, +0.0] & +16.0 [+11.8, +20.5] & -1.3 [-2.1, -0.7] \\
+Transformer FD003 & Ramp (+) & -41.8 & 0.80 & +43.2 [+34.8, +52.0] & -25.8 [-32.2, -19.2] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+Transformer FD003 & Const.\ $+$ & -11.0 & 1.02 & +6.6 [+3.6, +10.0] & -5.8 [-9.0, -3.0] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+Transformer FD003 & Const.\ $-$ & +9.1 & 1.02 & +0.0 [+0.0, +0.0] & +0.2 [+0.0, +0.6] & +0.4 [+0.0, +1.2] & +0.0 [+0.0, +0.0] \\
+Transformer FD004 & Ramp (+) & -58.9 & 0.78 & +52.3 [+46.8, +58.1] & -2.7 [-4.3, -1.2] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+Transformer FD004 & Const.\ $+$ & -49.3 & 0.89 & +40.6 [+34.9, +46.2] & -7.5 [-10.5, -4.8] & +0.0 [+0.0, +0.0] & +0.0 [+0.0, +0.0] \\
+Transformer FD004 & Const.\ $-$ & +5.0 & 1.19 & +3.1 [+1.2, +5.2] & -2.8 [-4.4, -1.4] & +8.1 [+5.3, +11.2] & -0.3 [-0.8, +0.1] \\
+\bottomrule\end{tabular}
+\end{table}
+\end{landscape}
+\begin{table}[H]\centering\scriptsize
+\caption{Waveform controls at 5\% of range, heteroscedastic head, terminal-window PICP (released result files except the constant $+$ offset, which is from the sign-coherent control). Ramp: drift family; reversed, shuffled, per-trajectory (continuous), bias with equal end value and single-channel ramp as in the earlier analysis; $k=1,3,5$: fixed-end shuffled ramp (FD002 only; ``--'': not available).}\label{tab:wf}
+\begin{tabular}{lcccccccc|ccc}\toprule
+Cell & Clean & Ramp & Const.\ $+$ & Reversed & Shuffled & Per traj. & Bias eq. & Single ch. & $k=1$ & $k=3$ & $k=5$ \\ \midrule
+LSTM FD001 & 0.864 & 0.644 & 0.750 & 0.684 & 0.859 & 0.752 & 0.678 & 0.868 & -- & -- & -- \\
+LSTM FD002 & 0.913 & 0.048 & 0.043 & 0.679 & 0.285 & 0.042 & 0.486 & 0.629 & 0.288 & 0.197 & 0.127 \\
+Transformer FD001 & 0.880 & 0.642 & 0.852 & 0.764 & 0.882 & 0.826 & 0.883 & 0.900 & -- & -- & -- \\
+Transformer FD002 & 0.892 & 0.025 & 0.024 & 0.691 & 0.123 & 0.024 & 0.230 & 0.538 & 0.071 & 0.034 & 0.027 \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[H]\centering\footnotesize
+\caption{Drift controls at 5\% of range, FD002, heteroscedastic head: excursion and PICP.}
+\begin{tabular}{lccc}\toprule Perturbation & $f_{\mathrm{oob}}$ & LSTM & Transformer \\ \midrule
+Ramp (per window) & 0.114 & 0.048 & 0.025 \\
+Ramp (contin.\ trajectory) & 0.141 & 0.042 & 0.024 \\
+Bias, equal end value & 0.150 & 0.486 & 0.230 \\
+Reversed ramp & 0.111 & 0.679 & 0.691 \\
+Shuffled ramp & 0.112 & 0.285 & 0.123 \\
+Single-channel ramp ($s_9$) & 7.4e-05 & 0.629 & 0.538 \\
+\bottomrule\end{tabular}
+\end{table}
+\noindent\textbf{Additive-noise attribution (v1.8 tables).} Four-way frozen-output decomposition at the point where the heteroscedastic head has lost ten points of coverage. Scale contribution: share of the total ten-point loss (positive: the live scale makes the loss larger), under both decomposition orders.
+\begin{table}[H]\centering\footnotesize
+\caption{Attribution, LSTM.}\begin{tabular}{llcccc}\toprule & & FD001 & FD002 & FD003 & FD004 \\ \midrule
+\multirow{2}{*}{Heteroscedastic} & scale, mean first & $+28.3\%$ & $+8.9\%$ & $+3.6\%$ & $-5.8\%$ \\
+ & scale, scale first & $+37.5\%$ & $+30.4\%$ & $+27.0\%$ & $+36.9\%$ \\
+\multirow{2}{*}{CP-norm} & scale, mean first & $+28.4\%$ & $+14.3\%$ & $+9.8\%$ & $-6.4\%$ \\
+ & scale, scale first & $+35.6\%$ & $+28.8\%$ & $+28.1\%$ & $+33.6\%$ \\
+\midrule
+\multicolumn{2}{l}{Mean dominates (point estimate), both orders} & yes & yes & yes & yes \\
+\multicolumn{2}{l}{CI excludes zero, mean first (het./CP)} & yes/yes & yes/yes & yes/yes & yes/yes \\
+\multicolumn{2}{l}{CI excludes zero, scale first (het./CP)} & yes/yes & yes/yes & yes/yes & yes/yes \\
+\multicolumn{2}{l}{Baseline clamp fraction} & 0.34 & 0.22 & 0.40 & 0.076 \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{table}[H]\centering\footnotesize
+\caption{Attribution, Transformer.}\begin{tabular}{llcccc}\toprule & & FD001 & FD002 & FD003 & FD004 \\ \midrule
+\multirow{2}{*}{Heteroscedastic} & scale, mean first & $+20.0\%$ & $+11.4\%$ & $+0.2\%$ & $+3.2\%$ \\
+ & scale, scale first & $+20.3\%$ & $+31.0\%$ & $+21.0\%$ & $+21.9\%$ \\
+\multirow{2}{*}{CP-norm} & scale, mean first & $+17.7\%$ & $+11.6\%$ & $+6.5\%$ & $+4.3\%$ \\
+ & scale, scale first & $+24.9\%$ & $+32.5\%$ & $+16.8\%$ & $+23.7\%$ \\
+\midrule
+\multicolumn{2}{l}{Mean dominates (point estimate), both orders} & yes & yes & yes & yes \\
+\multicolumn{2}{l}{CI excludes zero, mean first (het./CP)} & yes/yes & yes/yes & yes/yes & yes/yes \\
+\multicolumn{2}{l}{CI excludes zero, scale first (het./CP)} & yes/yes & yes/yes & yes/yes & yes/yes \\
+\bottomrule\end{tabular}
+\end{table}
+\begin{landscape}\begin{center}\scriptsize
+\begin{longtable}{lllccccccccccc}
+\caption{Four-way attribution values; $C_{ij}$: coverage with mean from condition $i$ and scale from condition $j$ (0 clean, 1 perturbed); order A varies the mean first.}\\
+\toprule Backbone & Data & Mech. & $f_{\mathrm{oob}}$ (\%) & $C_{00}$ & $C_{10}$ & $C_{01}$ & $C_{11}$ & $\mu$ (A) & $\sigma$ (A) & $\mu$ (B) & $\sigma$ (B) & Int. & Both \\ \midrule \endfirsthead
+\toprule Backbone & Data & Mech. & $f_{\mathrm{oob}}$ (\%) & $C_{00}$ & $C_{10}$ & $C_{01}$ & $C_{11}$ & $\mu$ (A) & $\sigma$ (A) & $\mu$ (B) & $\sigma$ (B) & Int. & Both \\ \midrule \endhead
+LSTM & FD001 & Heterosc. & 0.55 & 0.864 & 0.792 & 0.826 & 0.764 & -0.0717 & -0.0283 & -0.0625 & -0.0375 & +0.0092 & yes \\
+LSTM & FD001 & CP-norm & 0.85 & 0.878 & 0.806 & 0.842 & 0.778 & -0.0716 & -0.0284 & -0.0644 & -0.0356 & +0.0072 & yes \\
+LSTM & FD002 & Heterosc. & 1.04 & 0.913 & 0.822 & 0.883 & 0.813 & -0.0911 & -0.0089 & -0.0696 & -0.0304 & +0.0215 & yes \\
+LSTM & FD002 & CP-norm & 0.99 & 0.932 & 0.846 & 0.903 & 0.832 & -0.0857 & -0.0143 & -0.0712 & -0.0288 & +0.0145 & yes \\
+LSTM & FD003 & Heterosc. & 0.24 & 0.858 & 0.762 & 0.831 & 0.758 & -0.0964 & -0.0036 & -0.0730 & -0.0270 & +0.0234 & yes \\
+LSTM & FD003 & CP-norm & 0.63 & 0.896 & 0.806 & 0.868 & 0.796 & -0.0902 & -0.0098 & -0.0719 & -0.0281 & +0.0183 & yes \\
+LSTM & FD004 & Heterosc. & 1.40 & 0.885 & 0.779 & 0.848 & 0.785 & -0.1058 & +0.0058 & -0.0631 & -0.0369 & +0.0427 & yes \\
+LSTM & FD004 & CP-norm & 1.42 & 0.877 & 0.771 & 0.843 & 0.777 & -0.1064 & +0.0064 & -0.0664 & -0.0336 & +0.0400 & yes \\
+Transformer & FD001 & Heterosc. & 0.89 & 0.880 & 0.800 & 0.860 & 0.780 & -0.0800 & -0.0200 & -0.0797 & -0.0203 & +0.0002 & yes \\
+Transformer & FD001 & CP-norm & 0.63 & 0.892 & 0.810 & 0.867 & 0.792 & -0.0823 & -0.0177 & -0.0751 & -0.0249 & +0.0071 & yes \\
+Transformer & FD002 & Heterosc. & 0.95 & 0.892 & 0.803 & 0.861 & 0.792 & -0.0886 & -0.0114 & -0.0690 & -0.0310 & +0.0195 & yes \\
+Transformer & FD002 & CP-norm & 0.95 & 0.911 & 0.823 & 0.879 & 0.811 & -0.0884 & -0.0116 & -0.0675 & -0.0325 & +0.0210 & yes \\
+Transformer & FD003 & Heterosc. & 0.11 & 0.870 & 0.770 & 0.849 & 0.770 & -0.0998 & -0.0002 & -0.0790 & -0.0210 & +0.0208 & yes \\
+Transformer & FD003 & CP-norm & 0.26 & 0.876 & 0.783 & 0.859 & 0.776 & -0.0935 & -0.0065 & -0.0832 & -0.0168 & +0.0102 & yes \\
+Transformer & FD004 & Heterosc. & 0.54 & 0.842 & 0.745 & 0.820 & 0.742 & -0.0968 & -0.0032 & -0.0781 & -0.0219 & +0.0187 & yes \\
+Transformer & FD004 & CP-norm & 0.53 & 0.850 & 0.755 & 0.827 & 0.750 & -0.0957 & -0.0043 & -0.0763 & -0.0237 & +0.0194 & yes \\
+\bottomrule
+\end{longtable}
+\end{center}\end{landscape}
+\begin{center}\scriptsize\begin{longtable}{lllcccc}
+\caption{Per-seed paired bootstrap of $|\Delta_\mu|-|\Delta_\sigma|$ (five seeds, 2000 resamples; conditional on the test set, the seeded realisations and the interpolated crossover).}\\
+\toprule Backbone & Data & Mech. & Mean first: mean [95\% CI] & $>0$ & Scale first: mean [95\% CI] & $>0$ \\ \midrule \endhead
+LSTM & FD001 & Heterosc. & +0.043 [+0.029, +0.058] & yes & +0.025 [+0.009, +0.039] & yes \\
+LSTM & FD001 & CP-norm & +0.043 [+0.028, +0.061] & yes & +0.029 [+0.006, +0.051] & yes \\
+LSTM & FD002 & Heterosc. & +0.082 [+0.070, +0.094] & yes & +0.039 [+0.028, +0.051] & yes \\
+LSTM & FD002 & CP-norm & +0.071 [+0.046, +0.096] & yes & +0.042 [+0.028, +0.057] & yes \\
+LSTM & FD003 & Heterosc. & +0.087 [+0.063, +0.113] & yes & +0.043 [+0.032, +0.055] & yes \\
+LSTM & FD003 & CP-norm & +0.078 [+0.039, +0.116] & yes & +0.044 [+0.027, +0.061] & yes \\
+LSTM & FD004 & Heterosc. & +0.096 [+0.086, +0.107] & yes & +0.029 [+0.017, +0.046] & yes \\
+LSTM & FD004 & CP-norm & +0.100 [+0.084, +0.120] & yes & +0.028 [+0.020, +0.037] & yes \\
+Transformer & FD001 & Heterosc. & +0.060 [+0.036, +0.084] & yes & +0.058 [+0.052, +0.062] & yes \\
+Transformer & FD001 & CP-norm & +0.065 [+0.036, +0.095] & yes & +0.048 [+0.030, +0.066] & yes \\
+Transformer & FD002 & Heterosc. & +0.077 [+0.065, +0.092] & yes & +0.038 [+0.031, +0.045] & yes \\
+Transformer & FD002 & CP-norm & +0.077 [+0.060, +0.093] & yes & +0.035 [+0.028, +0.041] & yes \\
+Transformer & FD003 & Heterosc. & +0.087 [+0.049, +0.121] & yes & +0.049 [+0.033, +0.066] & yes \\
+Transformer & FD003 & CP-norm & +0.083 [+0.041, +0.126] & yes & +0.066 [+0.052, +0.081] & yes \\
+Transformer & FD004 & Heterosc. & +0.108 [+0.093, +0.124] & yes & +0.041 [+0.025, +0.055] & yes \\
+Transformer & FD004 & CP-norm & +0.098 [+0.087, +0.111] & yes & +0.046 [+0.029, +0.060] & yes \\
+\bottomrule
+\end{longtable}\end{center}
+
+\FloatBarrier
+\section*{S6. Sensitivity and scope checks}
+\noindent\textbf{Evaluated engines.} FD001--FD004: \JEvalEng{} evaluated against \JFileEng{} in the test files; engines with fewer than 30 recorded cycles cannot form a window. \textbf{Label instant.} Scoring against the current-cycle label (official RUL, clipped) instead of $\min(\mathrm{RUL}-1,125)$ changes any decision rate of any mechanism, condition, lead time or backbone by at most \JLabelMax{} percentage points; for the headline drift and bias cells it changes them by at most \JLabelHeadline{} points. \textbf{Operating settings.} Perturbing the three operating-setting channels as well as the sensors raised the premature rate under drift on FD004 from \NAOneFDfourSens{} to \NAOneFDfourJoint; the settings alone gave \NAOneFDfourSet{}; on FD002 \NAOneFDtwoSens{} against \NAOneFDtwoJoint. \textbf{Agreement with the release.} The per-engine re-derivation reproduced \JAgreeN{} released decision rates with maximum absolute difference \JAgreeMax{}, and the released ramp coverage for all eight backbone--sub-dataset cells (\texttt{coherent\_bias\_control.json}).
+\begin{table}[H]\centering\scriptsize
+\caption{Sign-coherent shift control, heteroscedastic head, 5\% of range: PICP / premature (\%) / unrecognised (\%), $L=20$ (exploratory).}
+\begin{tabular}{lcccc}\toprule & Clean PICP & Ramp (+) & Constant $+5\%$ & Constant $-5\%$ \\ \midrule
+LSTM FD001 & 0.86 & 0.64 / 3 / 0.0 & 0.75 / 2 / 0.0 & 0.65 / 0 / 3.0 \\
+LSTM FD002 & 0.91 & 0.05 / 69 / 0.0 & 0.04 / 63 / 0.0 & 0.31 / 2 / 12.2 \\
+LSTM FD003 & 0.86 & 0.21 / 14 / 0.0 & 0.82 / 0 / 0.0 & 0.67 / 0 / 0.4 \\
+LSTM FD004 & 0.88 & 0.31 / 59 / 0.0 & 0.35 / 33 / 0.0 & 0.66 / 3 / 3.7 \\
+\midrule
+Transformer FD001 & 0.88 & 0.64 / 2 / 0.0 & 0.85 / 0 / 0.0 & 0.74 / 0 / 1.0 \\
+Transformer FD002 & 0.89 & 0.03 / 69 / 0.0 & 0.02 / 66 / 0.0 & 0.28 / 0 / 14.8 \\
+Transformer FD003 & 0.87 & 0.10 / 17 / 0.0 & 0.69 / 1 / 0.0 & 0.74 / 0 / 0.4 \\
+Transformer FD004 & 0.86 & 0.05 / 52 / 0.0 & 0.10 / 36 / 0.0 & 0.57 / 3 / 7.8 \\
+\bottomrule\end{tabular}
+\end{table}
+
+\FloatBarrier
+\section*{S7. Provenance, latency and reference verification}
+\begin{center}\scriptsize
+\begin{longtable}{p{2.0cm}p{3.8cm}p{1.4cm}p{1.4cm}p{0.9cm}p{2.2cm}p{1.2cm}}
+\caption{Provenance of every v1.8 table: script or result file, label version, evaluation unit, engine weighting, aggregation, perturbation-scale reference.}\\
+\toprule Table & Script / result file & Labels & Unit & Eng.-wt. & Aggregation & Noise range \\ \midrule \endhead
+Protocol 2x2 (Table I) & build\_\allowbreak table1\allowbreak .py (re-inference over all four cells' existing checkpoints under this release's protocol); underlying checkpoints from train\_\allowbreak lstm\allowbreak .py (V/F) and protocol\_\allowbreak 2x2\_\allowbreak quadrant4\allowbreak .py (T/F); the T/W' and V/W' cells' checkpoints come from protocol\_\allowbreak 2x2\_\allowbreak controlled\_\allowbreak retrain\allowbreak .py (retrained with the same 60\% canonical fit\_\allowbreak units as V/F/T/F, isolating selection-criterion and scaler-scope as the only remaining variables), shipped under results/checkpoints/lstm\_\allowbreak 2x2\_\allowbreak controlled/; the original, uncontrolled T/W/V/W checkpoints and their training scripts are kept for provenance under results/superseded/ + code/superseded/ and are no longer read by this table & min(official\_\allowbreak RUL-1,125) & terminal & yes & mean of 5 seeds; ECE on pooled seeds & -- \\
+Clean benchmark (Table II) & eval\_\allowbreak nll\_\allowbreak clean\_\allowbreak b1\allowbreak .py, eval\_\allowbreak splitcp\_\allowbreak b1\allowbreak .py, eval\_\allowbreak mcdropout\_\allowbreak b1\allowbreak .py, eval\_\allowbreak fd003\_\allowbreak mechanism\_\allowbreak b1\allowbreak .py (re-evaluate existing checkpoints under this release's test-truth convention, no retraining); fair\_\allowbreak calibration\_\allowbreak main\_\allowbreak table\allowbreak .py (fixed variance, MC Dropout); table2\_\allowbreak clean\_\allowbreak merge\allowbreak .py (others); eval\_\allowbreak *\_\allowbreak per\_\allowbreak engine\_\allowbreak coverage\allowbreak .py (per-engine column); eval\_\allowbreak *\_\allowbreak deep\_\allowbreak ensemble\allowbreak .py (ensemble rows) & min(official\_\allowbreak RUL-1,125) & terminal (per-engine: trajectory) & yes & mean of 5 seeds; ECE per seed & -- \\
+Same-partition ensemble (Table III) & eval\_\allowbreak samesplit\_\allowbreak ensemble\_\allowbreak b1\allowbreak .py & min(official\_\allowbreak RUL-1,125) & terminal & yes & one partition (seed 42), five initialisations & -- \\
+Attribution, LSTM (Table IV) & attribution\_\allowbreak interp\_\allowbreak lstm\allowbreak .py; clamp fraction from clamp\_\allowbreak frac\allowbreak .py & min(official\_\allowbreak RUL-1,125) & terminal & yes & seed-pooled predictions; interpolated crossover & sensor channels only on FD002/FD004 (15 of 18 feature columns; the 3 operating-condition settings are left unperturbed); official training file for FD001/FD003 \\
+Structured degradation (Table V) & run\_\allowbreak sweep\_\allowbreak degradation\_\allowbreak transformer\allowbreak .py with sweep\_\allowbreak engine\allowbreak .py (both backbones), half\_\allowbreak life\_\allowbreak degradation\allowbreak .py & min(official\_\allowbreak RUL-1,125) & terminal & yes & 5 models x 5 realisations, grand mean & sensor channels only on FD002/FD004 (15 of 18 feature columns); official training file for FD001/FD003. The gain arm's sensor-only restriction is now actually enforced -- previously inject\_\allowbreak gain\_\allowbreak fixed\_\allowbreak pct\_\allowbreak raw's (1+/-k) multiplier did not depend on the zeroed full\_\allowbreak scale\_\allowbreak range used by the other arms, so gain kept perturbing the 3 setting columns even after an earlier sensor-only fix; it now takes an explicit sensor\_\allowbreak mask. \\
+Drift controls (Table VI) & drift\_\allowbreak controls\allowbreak .py; drift\_\allowbreak bias\_\allowbreak equal\_\allowbreak magnitude\_\allowbreak control\allowbreak .py; drift\_\allowbreak fixed\_\allowbreak endpoint\_\allowbreak shuffle\_\allowbreak control\allowbreak .py & min(official\_\allowbreak RUL-1,125) & terminal & yes & 5 models; deterministic except shuffled/bias sign draws & sensor channels only on FD002/FD004 (15 of 18 feature columns); official training file for FD001/FD003 \\
+Decision stress test (Table VII) & maintenance\_\allowbreak decision\_\allowbreak one\_\allowbreak sided\allowbreak .py; unclipped RUL from maintenance\_\allowbreak stress\_\allowbreak test\_\allowbreak rul\_\allowbreak correction\_\allowbreak v2\allowbreak .py & min(official\_\allowbreak RUL-1,125) for triggers; unclipped RUL reported as official\_\allowbreak RUL-1 & terminal & yes & 5 models x 5 realisations & sensor channels only on FD002/FD004 (15 of 18 feature columns); official training file for FD001/FD003 \\
+Pre-flight diagnostics (not in main tables) & diagnostic\_\allowbreak perturbation\_\allowbreak target\_\allowbreak a1\allowbreak .py; diagnostic\_\allowbreak target\_\allowbreak alignment\_\allowbreak a2\allowbreak .py (see results/diagnostics/) & both official\_\allowbreak RUL and min(official\_\allowbreak RUL-1,125) compared side by side (A2); sensors-only/settings-only/joint compared side by side (A1) & terminal & yes & 5 seeds & A1 compares sensor-only vs settings-only vs joint on FD002/FD004; A2 does not perturb features \\
+Fair calibration (Appendix B) & fair\_\allowbreak calibration\_\allowbreak sigma\_\allowbreak fixed\allowbreak .py & min(official\_\allowbreak RUL-1,125) & terminal & yes & mean of 5 seeds & -- \\
+Attribution, Transformer (Appendix C) & attribution\_\allowbreak interp\_\allowbreak transformer\allowbreak .py & min(official\_\allowbreak RUL-1,125) & terminal & yes & seed-pooled predictions; interpolated crossover & sensor channels only on FD002/FD004 (15 of 18 feature columns); official training file for FD001/FD003 \\
+Seeds and ensemble size (Appendix D) & eval\_\allowbreak lstm\_\allowbreak ensemble\_\allowbreak n5\_\allowbreak vs\_\allowbreak n15\allowbreak .py; ensemble\_\allowbreak size\_\allowbreak and\_\allowbreak independent\_\allowbreak replication\allowbreak .py & min(official\_\allowbreak RUL-1,125) & terminal & yes & 15 seeds; three disjoint ensembles & -- \\
+Latency (Appendix E) & latency\_\allowbreak lstm\allowbreak .py; latency\_\allowbreak transformer\allowbreak .py & -- & -- & -- & median and IQR over 11 repetitions & -- \\
+\bottomrule
+\end{longtable}
+\end{center}
+{\sloppy \noindent New analyses of this revision: \path{code_jrr/jrr_decision_per_engine.py} (inference only; per-engine lower bounds), \path{code_jrr/jrr_derived_stats.py} (engine bootstrap, output swap, label-instant sensitivity, rank stability, $f_{\mathrm{oob}}$ points), \path{code_jrr/jrr_coherent_bias_control.py} (sign-coherent shift control), \path{code_jrr/jrr_coherent_swap.py} (output swap for the sign-pattern variants), \path{code_jrr/jrr_clean_same_path.py} (clean baseline under the stress-test processing) and \path{code_jrr/jrr_clip_sensitivity.py} (clipping sensitivity). The CSV files \path{decision_engine_bootstrap_all.csv}, \path{rank_stability_all96.csv} and \path{clean_same_path_table.csv} in \path{results_jrr/derived/} enumerate the corresponding tables in full. Scripts of the SD-scale revision (\path{code_rev/} in the released repository; inference from the released checkpoints only, no training; outputs in \path{results_rev/}): \path{rev_generate.py} and \path{rev_generate_sd.py} (range- and SD-scale perturbations, calibration windows, trajectory outputs), \path{rev_analyse.py} and \path{rev_analyse_sd.py} (calibration units, condition tables, decision-sensitivity grid, ranking regret, trajectory first trigger), \path{rev_perchannel.py} (single-channel ramps), \path{rev_traj_sd.py} (first trigger along test trajectories), \path{rev_figs.py} (Figures 2 and 3), \path{make_rev_numbers.py} and \path{make_supp_tables.py} (every number and table of the main text and of S9--S11). Outputs are under \path{results_jrr/derived/}; \path{results/} is unchanged from the original release\ifanon\else{} (tag \path{v1.8-submission})\fi.}
+
+\noindent\textbf{Latency (v1.8 measurement, not re-run).} Per-sample latency in microseconds, median (IQR) over eleven repetitions, one NVIDIA RTX A5000 Laptop GPU, CUDA-event timing; columns: heteroscedastic, fixed variance, CP-norm, MC Dropout ($T=50$), ensemble ($M=5$).
+\begin{center}\scriptsize\begin{longtable}{lllccccc}\toprule Data & Backbone & Batch & Heterosc. & Fixed var. & CP-norm & MC Drop. & Ensemble \\ \midrule \endhead
+FD001 & LSTM & 1 & 553.89 (71.65) & 402.37 (24.66) & 527.46 (29.74) & 13801.47 (1039.97) & 1761.28 (91.54) \\
+FD001 & LSTM & 32 & 10.98 (1.04) & 9.69 (0.32) & 10.56 (0.97) & 436.10 (16.21) & 44.87 (1.34) \\
+FD001 & LSTM & 512 & 1.80 (0.12) & 1.68 (0.08) & 1.72 (0.08) & 89.64 (1.10) & 8.02 (0.22) \\
+FD001 & Transformer & 1 & 802.82 (67.09) & 717.82 (37.25) & 798.66 (43.89) & 48316.42 (1233.41) & 3516.42 (57.34) \\
+FD001 & Transformer & 32 & 21.98 (1.88) & 20.61 (1.22) & 23.20 (1.21) & 1940.29 (64.85) & 113.95 (3.30) \\
+FD001 & Transformer & 512 & 5.22 (0.09) & 5.69 (0.11) & 5.26 (0.05) & 420.23 (0.40) & 35.33 (0.18) \\
+FD002 & LSTM & 1 & 364.54 (46.51) & 324.54 (32.78) & 366.59 (28.05) & 15504.38 (355.22) & 1605.63 (78.40) \\
+FD002 & LSTM & 32 & 12.77 (3.09) & 10.50 (1.09) & 11.93 (0.61) & 498.24 (11.05) & 56.42 (1.86) \\
+FD002 & LSTM & 512 & 2.80 (0.06) & 2.73 (0.04) & 2.78 (0.07) & 140.70 (0.81) & 13.23 (0.07) \\
+FD002 & Transformer & 1 & 827.39 (76.24) & 761.86 (87.02) & 812.03 (98.37) & 58784.77 (1043.97) & 3904.51 (136.19) \\
+FD002 & Transformer & 32 & 25.63 (2.13) & 24.96 (2.18) & 25.38 (1.40) & 2109.92 (82.58) & 127.04 (3.76) \\
+FD002 & Transformer & 512 & 27.94 (1.07) & 25.65 (1.24) & 28.07 (0.54) & 442.88 (40.97) & 36.61 (0.04) \\
+FD003 & LSTM & 1 & 351.23 (13.31) & 318.46 (20.48) & 335.87 (29.70) & 14606.34 (1037.82) & 1685.50 (80.42) \\
+FD003 & LSTM & 32 & 12.13 (1.17) & 9.50 (0.44) & 11.55 (0.58) & 487.29 (10.01) & 55.74 (3.15) \\
+FD003 & LSTM & 512 & 2.81 (0.04) & 2.80 (0.05) & 2.90 (0.06) & 140.14 (0.48) & 13.07 (0.20) \\
+FD003 & Transformer & 1 & 755.71 (126.98) & 681.09 (123.94) & 739.33 (58.82) & 57734.14 (2224.64) & 3513.34 (39.94) \\
+FD003 & Transformer & 32 & 25.32 (1.04) & 22.21 (1.38) & 25.38 (1.14) & 1828.22 (58.99) & 105.38 (3.37) \\
+FD003 & Transformer & 512 & 7.06 (0.05) & 7.04 (0.05) & 7.16 (0.11) & 418.41 (0.56) & 35.34 (0.34) \\
+FD004 & LSTM & 1 & 355.33 (24.03) & 282.62 (9.30) & 347.14 (13.79) & 15542.27 (262.64) & 1697.79 (80.74) \\
+FD004 & LSTM & 32 & 11.07 (1.14) & 8.61 (0.64) & 10.78 (1.15) & 493.25 (17.49) & 51.46 (2.17) \\
+FD004 & LSTM & 512 & 2.82 (0.08) & 2.79 (0.08) & 2.80 (0.08) & 139.76 (0.96) & 12.97 (0.14) \\
+FD004 & Transformer & 1 & 887.81 (86.02) & 786.43 (84.18) & 798.69 (46.51) & 57554.94 (26801.15) & 4062.21 (237.57) \\
+FD004 & Transformer & 32 & 25.25 (2.43) & 20.49 (0.99) & 22.18 (0.42) & 2005.98 (124.10) & 117.09 (3.34) \\
+FD004 & Transformer & 512 & 6.15 (0.11) & 6.34 (0.29) & 6.27 (0.17) & 419.99 (0.38) & 35.56 (0.10) \\
+\bottomrule\end{longtable}\end{center}
+\noindent\textbf{Reference verification.} Each reference of the revised manuscript that carries a DOI was checked against Crossref (title, author order, journal, volume, article number and year) or, for the preprint, the arXiv abstract page, on 30 October 2026. References without DOI were not machine-checked.
+\begin{center}\scriptsize\begin{longtable}{llp{9cm}}\toprule \# & Key & Check \\ \midrule \endhead
+1 & kamariotis2024 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+2 & mitici2023 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+3 & depater2022 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+4 & lee2022 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+5 & basora2025 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+6 & piao2025 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+7 & xu2026 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+8 & javanmardi2022 & arXiv abstract page: title, authors, journal, volume, number and year matched (2026-10-30) \\
+9 & hachem2024 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+10 & xu2023 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+11 & tang2026 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+12 & saxena2008 & no DOI; not machine-checked \\
+13 & nix1994 & Crossref: title, authors, journal, volume, number and year matched (2026-10-30) \\
+14 & gal2016 & no DOI; not machine-checked \\
+15 & kendall2017 & no DOI; not machine-checked \\
+16 & lakshminarayanan2017 & no DOI; not machine-checked \\
+17 & barber2023 & no DOI; not machine-checked \\
+\bottomrule\end{longtable}\end{center}
+
+\FloatBarrier
+\input{S8_neighbours.tex}
+
+\FloatBarrier
+\section*{S9. Calibration unit and one-sided coverage on clean inputs}
+\noindent The conformal quantile and the fixed residual scales are computed from all overlapping windows of the calibration engines, whereas the test unit is one terminal window per engine. Table~\ref{tab:calib} gives the one-sided coverage of the 95\% lower bound on clean inputs for all mechanisms (engine-bootstrap 95\% interval for the heteroscedastic head and CP-norm) and the one-sided coverage of CP-norm when the conformal quantile is recomputed with three alternative calibration units: each calibration engine weighted equally (engine-weighted), calibration windows reweighted to the histogram of clipped test labels (label-matched; it uses the test label distribution and is a diagnostic, not a deployable procedure) and one randomly drawn window per calibration engine (median over 500 draws).
+\begin{table}[H]\centering\scriptsize
+\caption{One-sided coverage on clean inputs by mechanism and calibration unit (mean of five seeds).}\label{tab:calib}
+\resizebox{\textwidth}{!}{\input{rev_table_calib.tex}}
+\end{table}
+
+\FloatBarrier
+\section*{S10. Decision sensitivity, signature alignment, channel subsets and single channels (SD scale)}
+\noindent\textbf{Bound level, tolerance band and lead time.} Table~\ref{tab:sens} repeats the SD-scale analysis for $\alpha\in\{0.10,0.05,0.01\}$, tolerance bands $\tau\in\{10,20,40\}$ cycles and, within each cell, $L\in\{10,20,30\}$. Direction columns count backbone--sub-dataset--lead-time--mechanism combinations (8 cells $\times$ 3 lead times $\times$ 5 mechanisms). Ranking and regret columns count the 96 groups (8 cells $\times$ 3 lead times $\times$ 4 conditions: clean, $+1$ SD ramp, $\pm2$ SD offset, three-channel $+2$ SD ramp) in which the five mechanisms are ranked by $c_{\mathrm{late}}r_{\mathrm{late}}+r_{\mathrm{early}}$ for $c_{\mathrm{late}}\in\{5,20,100\}$; regret is the extra cost of choosing the mechanism that is best under one cost ratio when another is true, relative to the best cost. The full grid is in \path{sd_sensitivity_grid.csv}.
+\begin{table}[H]\centering\scriptsize
+\caption{Stability of the direction pattern and of the cost ranking across bound level and tolerance band (heteroscedastic head for the premature range; all mechanisms for the counts).}\label{tab:sens}
+\resizebox{\textwidth}{!}{\input{rev_table_sens.tex}}
+\end{table}
+\noindent\textbf{Scenarios.} Aligned: every channel ramped by $+k$ SD in the direction of its own degradation trend (sign of the Spearman correlation between condition-centred reading and $-$RUL on the fitting engines). Anti: the opposite signs. Offset: constant $\pm k$ SD with random sign per channel (five realisations). 1 ch./3 ch.: $+2$ SD ramp on one or three randomly chosen sensor channels (ten draws). Rate: drift of 0.02 SD per recorded cycle accumulated from the first cycle of each test trajectory, all channels positive; Rate al.: the same with degradation-aligned signs.
+\begin{table}[H]\centering\scriptsize
+\caption{Heteroscedastic head, $L=20$: premature / unrecognised (\% of evaluated engines) by scenario; numbers after the scenario name are SD.}\label{tab:scen}
+\resizebox{\textwidth}{!}{\input{supp_table_scenarios.tex}}
+\end{table}
+\begin{table}[H]\centering\scriptsize
+\caption{Channel subsets: premature triggers (\%, heteroscedastic head, $L=20$), median [minimum, maximum] over ten random draws of the perturbed channels.}\label{tab:subsets}
+\input{supp_table_subsets.tex}
+\end{table}
+\begin{table}[H]\centering\scriptsize
+\caption{All five mechanisms under degradation-aligned and anti-aligned 2 SD ramps, $L=20$ (\% of evaluated engines). The aligned ramp drives every mechanism to the ceiling set by the share of engines with $y>L+\tau$.}\label{tab:mechall}
+\input{supp_table_mech.tex}
+\end{table}
+\begin{table}[H]\centering\scriptsize
+\caption{Single-channel $\pm2$ SD ramps on the final window, heteroscedastic head, $L=20$: premature / unrecognised (\%). Columns: sub-dataset digit and backbone (L LSTM, T Transformer); $\cdot$: channel constant on that sub-dataset and not used.}\label{tab:chan}
+\input{supp_table_channels.tex}
+\end{table}
+
+\FloatBarrier
+\section*{S11. First trigger along test trajectories}
+\noindent Each test trajectory is evaluated at every window, and the engine is scored by its first trigger ($b\le L$). \emph{Premature first}: the first trigger falls at true RUL $>L+\tau$; \emph{timely first}: at $y\le L+\tau$; \emph{never}: no trigger before the record ends. Engines reaching $L$: test trajectories whose last label is $\le L$, the only ones on which a missed need can be observed; \emph{missed among reaching}: share of those with no trigger by the time $y\le L$. Forgone: mean RUL at a premature first trigger. Drift accumulates at 0.02 SD per cycle from the first recorded cycle (all channels positive, degradation-aligned or anti-aligned); heteroscedastic head, $L=20$, $\tau=20$; rates are means over the five models.
+\begin{center}\scriptsize
+\resizebox{\textwidth}{!}{\input{rev_table_traj.tex}}
+\end{center}
+
+\end{document}
+

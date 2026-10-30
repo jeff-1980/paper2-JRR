@@ -1,0 +1,2090 @@
+[
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_2",
+  "sign": 1,
+  "dmu": -2.264310121536255,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_2",
+  "sign": -1,
+  "dmu": 2.1300525665283203,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_3",
+  "sign": 1,
+  "dmu": 0.08812365680932999,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_3",
+  "sign": -1,
+  "dmu": -0.1543443650007248,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_4",
+  "sign": 1,
+  "dmu": -2.647892951965332,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_4",
+  "sign": -1,
+  "dmu": 2.467221736907959,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_7",
+  "sign": 1,
+  "dmu": 2.525233507156372,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_7",
+  "sign": -1,
+  "dmu": -2.796863317489624,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_8",
+  "sign": 1,
+  "dmu": -3.162754774093628,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_8",
+  "sign": -1,
+  "dmu": 2.7507193088531494,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.4
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_9",
+  "sign": 1,
+  "dmu": -4.900942325592041,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_9",
+  "sign": -1,
+  "dmu": 4.171059608459473,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.4
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_11",
+  "sign": 1,
+  "dmu": -3.8835062980651855,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_11",
+  "sign": -1,
+  "dmu": 3.50416898727417,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_12",
+  "sign": 1,
+  "dmu": 1.7161508798599243,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_12",
+  "sign": -1,
+  "dmu": -1.8722741603851318,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_13",
+  "sign": 1,
+  "dmu": -2.638871192932129,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_13",
+  "sign": -1,
+  "dmu": 2.2813847064971924,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_14",
+  "sign": 1,
+  "dmu": -3.986027717590332,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_14",
+  "sign": -1,
+  "dmu": 3.51119065284729,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_15",
+  "sign": 1,
+  "dmu": -2.8001739978790283,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_15",
+  "sign": -1,
+  "dmu": 2.496481418609619,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_17",
+  "sign": 1,
+  "dmu": -1.6948533058166504,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_17",
+  "sign": -1,
+  "dmu": 1.5380853414535522,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_20",
+  "sign": 1,
+  "dmu": 1.6172946691513062,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_20",
+  "sign": -1,
+  "dmu": -1.7722532749176025,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_21",
+  "sign": 1,
+  "dmu": 1.614457130432129,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD001",
+  "channel": "s_21",
+  "sign": -1,
+  "dmu": -1.7538319826126099,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.2
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_2",
+  "sign": 1,
+  "dmu": 24.295909881591797,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 4.5059288537549405
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_2",
+  "sign": -1,
+  "dmu": -33.41688919067383,
+  "premature_L20": 33.280632411067195,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_3",
+  "sign": 1,
+  "dmu": -17.71221351623535,
+  "premature_L20": 13.438735177865613,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_3",
+  "sign": -1,
+  "dmu": 14.301143646240234,
+  "premature_L20": 0.31620553359683795,
+  "unrecognised_L20": 0.8695652173913043
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_4",
+  "sign": 1,
+  "dmu": -37.664466857910156,
+  "premature_L20": 39.44664031620553,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_4",
+  "sign": -1,
+  "dmu": 26.51189422607422,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 5.533596837944664
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_6",
+  "sign": 1,
+  "dmu": -3.3515169620513916,
+  "premature_L20": 4.743083003952568,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_6",
+  "sign": -1,
+  "dmu": 3.0867953300476074,
+  "premature_L20": 3.0039525691699605,
+  "unrecognised_L20": 0.23715415019762848
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_7",
+  "sign": 1,
+  "dmu": -2.6043267250061035,
+  "premature_L20": 5.691699604743083,
+  "unrecognised_L20": 0.07905138339920949
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_7",
+  "sign": -1,
+  "dmu": 2.125774383544922,
+  "premature_L20": 3.241106719367589,
+  "unrecognised_L20": 0.07905138339920949
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_8",
+  "sign": 1,
+  "dmu": 12.961377143859863,
+  "premature_L20": 0.3952569169960474,
+  "unrecognised_L20": 0.8695652173913043
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_8",
+  "sign": -1,
+  "dmu": -15.380071640014648,
+  "premature_L20": 12.885375494071146,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_9",
+  "sign": 1,
+  "dmu": 18.157812118530273,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 2.0553359683794468
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_9",
+  "sign": -1,
+  "dmu": -25.313493728637695,
+  "premature_L20": 25.92885375494071,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_11",
+  "sign": 1,
+  "dmu": -48.57797622680664,
+  "premature_L20": 54.9407114624506,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_11",
+  "sign": -1,
+  "dmu": 33.00333023071289,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 12.648221343873518
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_12",
+  "sign": 1,
+  "dmu": -0.6596804857254028,
+  "premature_L20": 4.426877470355731,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_12",
+  "sign": -1,
+  "dmu": 0.5607970952987671,
+  "premature_L20": 3.7154150197628457,
+  "unrecognised_L20": 0.15810276679841898
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_13",
+  "sign": 1,
+  "dmu": -0.24551045894622803,
+  "premature_L20": 4.189723320158103,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_13",
+  "sign": -1,
+  "dmu": -0.0013822894543409348,
+  "premature_L20": 2.8458498023715415,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_14",
+  "sign": 1,
+  "dmu": -14.182500839233398,
+  "premature_L20": 7.351778656126482,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_14",
+  "sign": -1,
+  "dmu": 7.684606552124023,
+  "premature_L20": 4.189723320158103,
+  "unrecognised_L20": 0.6324110671936759
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_15",
+  "sign": 1,
+  "dmu": -41.71803665161133,
+  "premature_L20": 43.794466403162055,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_15",
+  "sign": -1,
+  "dmu": 30.19379234313965,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 8.774703557312254
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_17",
+  "sign": 1,
+  "dmu": -21.32506561279297,
+  "premature_L20": 17.94466403162055,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_17",
+  "sign": -1,
+  "dmu": 16.462448120117188,
+  "premature_L20": 0.15810276679841898,
+  "unrecognised_L20": 1.185770750988142
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_20",
+  "sign": 1,
+  "dmu": 6.763354778289795,
+  "premature_L20": 1.4229249011857708,
+  "unrecognised_L20": 0.31620553359683795
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_20",
+  "sign": -1,
+  "dmu": -7.764815807342529,
+  "premature_L20": 8.537549407114625,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_21",
+  "sign": 1,
+  "dmu": 7.386285781860352,
+  "premature_L20": 1.5810276679841897,
+  "unrecognised_L20": 0.15810276679841898
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD002",
+  "channel": "s_21",
+  "sign": -1,
+  "dmu": -8.427684783935547,
+  "premature_L20": 7.747035573122529,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_2",
+  "sign": 1,
+  "dmu": -1.8268388509750366,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_2",
+  "sign": -1,
+  "dmu": 1.7855188846588135,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_3",
+  "sign": 1,
+  "dmu": -2.199395179748535,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_3",
+  "sign": -1,
+  "dmu": 2.087689161300659,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_4",
+  "sign": 1,
+  "dmu": -1.5265398025512695,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_4",
+  "sign": -1,
+  "dmu": 1.377779483795166,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_7",
+  "sign": 1,
+  "dmu": -1.3810070753097534,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_7",
+  "sign": -1,
+  "dmu": 0.8423246145248413,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_8",
+  "sign": 1,
+  "dmu": -6.491601467132568,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_8",
+  "sign": -1,
+  "dmu": 5.570588111877441,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_9",
+  "sign": 1,
+  "dmu": -5.073322772979736,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_9",
+  "sign": -1,
+  "dmu": 4.62652063369751,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_11",
+  "sign": 1,
+  "dmu": -2.0559873580932617,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_11",
+  "sign": -1,
+  "dmu": 1.8352160453796387,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_12",
+  "sign": 1,
+  "dmu": -4.454583168029785,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_12",
+  "sign": -1,
+  "dmu": 3.690878391265869,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_13",
+  "sign": 1,
+  "dmu": -7.7111077308654785,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_13",
+  "sign": -1,
+  "dmu": 6.414812088012695,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_14",
+  "sign": 1,
+  "dmu": -6.254434585571289,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_14",
+  "sign": -1,
+  "dmu": 5.653129577636719,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_15",
+  "sign": 1,
+  "dmu": -1.6357792615890503,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_15",
+  "sign": -1,
+  "dmu": 1.3230979442596436,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_17",
+  "sign": 1,
+  "dmu": -1.0030338764190674,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_17",
+  "sign": -1,
+  "dmu": 0.9396708607673645,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_20",
+  "sign": 1,
+  "dmu": 1.8730932474136353,
+  "premature_L20": 0.4,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_20",
+  "sign": -1,
+  "dmu": -1.892197847366333,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_21",
+  "sign": 1,
+  "dmu": 0.8391706943511963,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD003",
+  "channel": "s_21",
+  "sign": -1,
+  "dmu": -0.9829049110412598,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_2",
+  "sign": 1,
+  "dmu": 23.82211685180664,
+  "premature_L20": 0.25316455696202533,
+  "unrecognised_L20": 6.919831223628692
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_2",
+  "sign": -1,
+  "dmu": -33.2787971496582,
+  "premature_L20": 44.47257383966245,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_3",
+  "sign": 1,
+  "dmu": -14.286063194274902,
+  "premature_L20": 13.755274261603375,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_3",
+  "sign": -1,
+  "dmu": 11.84778881072998,
+  "premature_L20": 1.2658227848101267,
+  "unrecognised_L20": 0.6751054852320675
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_4",
+  "sign": 1,
+  "dmu": -32.86037063598633,
+  "premature_L20": 41.77215189873418,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_4",
+  "sign": -1,
+  "dmu": 23.381893157958984,
+  "premature_L20": 0.33755274261603374,
+  "unrecognised_L20": 7.510548523206751
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_6",
+  "sign": 1,
+  "dmu": 1.5600159168243408,
+  "premature_L20": 3.1223628691983123,
+  "unrecognised_L20": 0.16877637130801687
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_6",
+  "sign": -1,
+  "dmu": -1.77545964717865,
+  "premature_L20": 5.485232067510549,
+  "unrecognised_L20": 0.08438818565400844
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_7",
+  "sign": 1,
+  "dmu": -5.333402633666992,
+  "premature_L20": 7.510548523206751,
+  "unrecognised_L20": 0.08438818565400844
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_7",
+  "sign": -1,
+  "dmu": 4.715780258178711,
+  "premature_L20": 2.5316455696202533,
+  "unrecognised_L20": 0.16877637130801687
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_8",
+  "sign": 1,
+  "dmu": 17.512039184570312,
+  "premature_L20": 0.5907172995780591,
+  "unrecognised_L20": 1.6033755274261603
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_8",
+  "sign": -1,
+  "dmu": -23.28371238708496,
+  "premature_L20": 27.257383966244724,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_9",
+  "sign": 1,
+  "dmu": 9.990951538085938,
+  "premature_L20": 0.9282700421940928,
+  "unrecognised_L20": 1.1814345991561181
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_9",
+  "sign": -1,
+  "dmu": -12.374776840209961,
+  "premature_L20": 15.527426160337555,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_11",
+  "sign": 1,
+  "dmu": -43.80906677246094,
+  "premature_L20": 57.13080168776371,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_11",
+  "sign": -1,
+  "dmu": 29.48702621459961,
+  "premature_L20": 0.08438818565400844,
+  "unrecognised_L20": 11.054852320675106
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_12",
+  "sign": 1,
+  "dmu": -5.560781002044678,
+  "premature_L20": 7.257383966244725,
+  "unrecognised_L20": 0.08438818565400844
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_12",
+  "sign": -1,
+  "dmu": 4.985410213470459,
+  "premature_L20": 2.278481012658228,
+  "unrecognised_L20": 0.33755274261603374
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_13",
+  "sign": 1,
+  "dmu": 7.468788146972656,
+  "premature_L20": 2.109704641350211,
+  "unrecognised_L20": 0.33755274261603374
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_13",
+  "sign": -1,
+  "dmu": -8.754426956176758,
+  "premature_L20": 8.438818565400844,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_14",
+  "sign": 1,
+  "dmu": -24.89235496520996,
+  "premature_L20": 24.135021097046412,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_14",
+  "sign": -1,
+  "dmu": 16.32835578918457,
+  "premature_L20": 1.0126582278481013,
+  "unrecognised_L20": 0.9282700421940928
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_15",
+  "sign": 1,
+  "dmu": 5.982241630554199,
+  "premature_L20": 2.109704641350211,
+  "unrecognised_L20": 0.16877637130801687
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_15",
+  "sign": -1,
+  "dmu": -8.35770320892334,
+  "premature_L20": 10.126582278481013,
+  "unrecognised_L20": 0.08438818565400844
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_17",
+  "sign": 1,
+  "dmu": -19.00397300720215,
+  "premature_L20": 21.012658227848103,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_17",
+  "sign": -1,
+  "dmu": 15.067398071289062,
+  "premature_L20": 0.8438818565400843,
+  "unrecognised_L20": 2.0253164556962027
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_20",
+  "sign": 1,
+  "dmu": 1.2722045183181763,
+  "premature_L20": 3.7130801687763713,
+  "unrecognised_L20": 0.16877637130801687
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_20",
+  "sign": -1,
+  "dmu": -1.357438087463379,
+  "premature_L20": 4.388185654008439,
+  "unrecognised_L20": 0.08438818565400844
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_21",
+  "sign": 1,
+  "dmu": 1.2711321115493774,
+  "premature_L20": 3.5443037974683547,
+  "unrecognised_L20": 0.16877637130801687
+ },
+ {
+  "backbone": "LSTM",
+  "dataset": "FD004",
+  "channel": "s_21",
+  "sign": -1,
+  "dmu": -1.6188791990280151,
+  "premature_L20": 5.232067510548523,
+  "unrecognised_L20": 0.08438818565400844
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_2",
+  "sign": 1,
+  "dmu": -2.5807032585144043,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_2",
+  "sign": -1,
+  "dmu": 2.4310576915740967,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_3",
+  "sign": 1,
+  "dmu": -0.7153441309928894,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_3",
+  "sign": -1,
+  "dmu": 0.6898456811904907,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_4",
+  "sign": 1,
+  "dmu": -2.781402826309204,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_4",
+  "sign": -1,
+  "dmu": 2.6457788944244385,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_7",
+  "sign": 1,
+  "dmu": 2.758805274963379,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_7",
+  "sign": -1,
+  "dmu": -2.9363174438476562,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_8",
+  "sign": 1,
+  "dmu": -3.42842698097229,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_8",
+  "sign": -1,
+  "dmu": 3.2037134170532227,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_9",
+  "sign": 1,
+  "dmu": -4.360557556152344,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_9",
+  "sign": -1,
+  "dmu": 3.939298152923584,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_11",
+  "sign": 1,
+  "dmu": -4.512010097503662,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_11",
+  "sign": -1,
+  "dmu": 4.135838985443115,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_12",
+  "sign": 1,
+  "dmu": 2.537642478942871,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_12",
+  "sign": -1,
+  "dmu": -2.6690468788146973,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_13",
+  "sign": 1,
+  "dmu": -2.625169038772583,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_13",
+  "sign": -1,
+  "dmu": 2.4230575561523438,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_14",
+  "sign": 1,
+  "dmu": -3.122818946838379,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_14",
+  "sign": -1,
+  "dmu": 2.8377041816711426,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_15",
+  "sign": 1,
+  "dmu": -2.7295072078704834,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_15",
+  "sign": -1,
+  "dmu": 2.5852465629577637,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_17",
+  "sign": 1,
+  "dmu": -1.920641303062439,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_17",
+  "sign": -1,
+  "dmu": 1.8118126392364502,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_20",
+  "sign": 1,
+  "dmu": 2.1403913497924805,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_20",
+  "sign": -1,
+  "dmu": -2.2665703296661377,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_21",
+  "sign": 1,
+  "dmu": 1.7379616498947144,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD001",
+  "channel": "s_21",
+  "sign": -1,
+  "dmu": -1.808394193649292,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_2",
+  "sign": 1,
+  "dmu": 27.66045570373535,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 10.355731225296443
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_2",
+  "sign": -1,
+  "dmu": -44.8952751159668,
+  "premature_L20": 41.34387351778656,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_3",
+  "sign": 1,
+  "dmu": -17.234140396118164,
+  "premature_L20": 10.67193675889328,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_3",
+  "sign": -1,
+  "dmu": 12.550495147705078,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.7114624505928854
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_4",
+  "sign": 1,
+  "dmu": -40.252532958984375,
+  "premature_L20": 34.466403162055336,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_4",
+  "sign": -1,
+  "dmu": 22.888505935668945,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 7.035573122529644
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_6",
+  "sign": 1,
+  "dmu": -8.313754081726074,
+  "premature_L20": 4.3478260869565215,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_6",
+  "sign": -1,
+  "dmu": 7.208525657653809,
+  "premature_L20": 0.5533596837944664,
+  "unrecognised_L20": 0.47430830039525695
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_7",
+  "sign": 1,
+  "dmu": -8.988946914672852,
+  "premature_L20": 4.743083003952568,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_7",
+  "sign": -1,
+  "dmu": 7.973935604095459,
+  "premature_L20": 0.6324110671936759,
+  "unrecognised_L20": 0.3952569169960474
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_8",
+  "sign": 1,
+  "dmu": 16.75044059753418,
+  "premature_L20": 0.07905138339920949,
+  "unrecognised_L20": 2.450592885375494
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_8",
+  "sign": -1,
+  "dmu": -21.41541290283203,
+  "premature_L20": 13.596837944664031,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_9",
+  "sign": 1,
+  "dmu": 20.047060012817383,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 6.403162055335969
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_9",
+  "sign": -1,
+  "dmu": -41.459800720214844,
+  "premature_L20": 37.15415019762846,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_11",
+  "sign": 1,
+  "dmu": -53.111488342285156,
+  "premature_L20": 55.41501976284585,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_11",
+  "sign": -1,
+  "dmu": 29.97856903076172,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 13.201581027667983
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_12",
+  "sign": 1,
+  "dmu": -5.402672290802002,
+  "premature_L20": 2.450592885375494,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_12",
+  "sign": -1,
+  "dmu": 4.721368789672852,
+  "premature_L20": 0.8695652173913043,
+  "unrecognised_L20": 0.23715415019762848
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_13",
+  "sign": 1,
+  "dmu": -6.244386672973633,
+  "premature_L20": 3.7944664031620556,
+  "unrecognised_L20": 0.07905138339920949
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_13",
+  "sign": -1,
+  "dmu": 4.394706726074219,
+  "premature_L20": 0.47430830039525695,
+  "unrecognised_L20": 0.07905138339920949
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_14",
+  "sign": 1,
+  "dmu": -20.47270965576172,
+  "premature_L20": 5.770750988142293,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_14",
+  "sign": -1,
+  "dmu": -5.374754905700684,
+  "premature_L20": 5.770750988142293,
+  "unrecognised_L20": 1.0276679841897234
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_15",
+  "sign": 1,
+  "dmu": -43.52808380126953,
+  "premature_L20": 39.76284584980237,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_15",
+  "sign": -1,
+  "dmu": 29.557910919189453,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 10.039525691699605
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_17",
+  "sign": 1,
+  "dmu": -20.979055404663086,
+  "premature_L20": 12.964426877470355,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_17",
+  "sign": -1,
+  "dmu": 15.767443656921387,
+  "premature_L20": 0.07905138339920949,
+  "unrecognised_L20": 1.8181818181818181
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_20",
+  "sign": 1,
+  "dmu": 3.489576578140259,
+  "premature_L20": 0.9486166007905139,
+  "unrecognised_L20": 0.07905138339920949
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_20",
+  "sign": -1,
+  "dmu": -4.593448162078857,
+  "premature_L20": 2.766798418972332,
+  "unrecognised_L20": 0.15810276679841898
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_21",
+  "sign": 1,
+  "dmu": 5.479286193847656,
+  "premature_L20": 0.7114624505928854,
+  "unrecognised_L20": 0.31620553359683795
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD002",
+  "channel": "s_21",
+  "sign": -1,
+  "dmu": -6.544129848480225,
+  "premature_L20": 3.1620553359683794,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_2",
+  "sign": 1,
+  "dmu": -2.021759510040283,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_2",
+  "sign": -1,
+  "dmu": 1.9179614782333374,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_3",
+  "sign": 1,
+  "dmu": -1.5971870422363281,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_3",
+  "sign": -1,
+  "dmu": 1.545940637588501,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_4",
+  "sign": 1,
+  "dmu": -1.9566813707351685,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_4",
+  "sign": -1,
+  "dmu": 1.75119948387146,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_7",
+  "sign": 1,
+  "dmu": -3.1830966472625732,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_7",
+  "sign": -1,
+  "dmu": 2.3978466987609863,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_8",
+  "sign": 1,
+  "dmu": -8.336627006530762,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_8",
+  "sign": -1,
+  "dmu": 7.152009963989258,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_9",
+  "sign": 1,
+  "dmu": -5.509433746337891,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_9",
+  "sign": -1,
+  "dmu": 5.004985809326172,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_11",
+  "sign": 1,
+  "dmu": -2.575087308883667,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_11",
+  "sign": -1,
+  "dmu": 2.2572081089019775,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_12",
+  "sign": 1,
+  "dmu": -5.156255722045898,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_12",
+  "sign": -1,
+  "dmu": 3.9771018028259277,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_13",
+  "sign": 1,
+  "dmu": -8.920062065124512,
+  "premature_L20": 0.2,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_13",
+  "sign": -1,
+  "dmu": 7.409148216247559,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_14",
+  "sign": 1,
+  "dmu": -5.597435474395752,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_14",
+  "sign": -1,
+  "dmu": 4.961548328399658,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_15",
+  "sign": 1,
+  "dmu": -2.528319835662842,
+  "premature_L20": 0.4,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_15",
+  "sign": -1,
+  "dmu": 2.01698637008667,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_17",
+  "sign": 1,
+  "dmu": -1.300155758857727,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_17",
+  "sign": -1,
+  "dmu": 1.2342699766159058,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_20",
+  "sign": 1,
+  "dmu": 2.0680019855499268,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_20",
+  "sign": -1,
+  "dmu": -2.2322709560394287,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_21",
+  "sign": 1,
+  "dmu": 1.6537548303604126,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD003",
+  "channel": "s_21",
+  "sign": -1,
+  "dmu": -1.9368715286254883,
+  "premature_L20": 0.4,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_2",
+  "sign": 1,
+  "dmu": 25.953153610229492,
+  "premature_L20": 0.0,
+  "unrecognised_L20": 6.919831223628692
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_2",
+  "sign": -1,
+  "dmu": -38.6214599609375,
+  "premature_L20": 31.476793248945146,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_3",
+  "sign": 1,
+  "dmu": -12.09885311126709,
+  "premature_L20": 8.60759493670886,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_3",
+  "sign": -1,
+  "dmu": 9.899514198303223,
+  "premature_L20": 1.1814345991561181,
+  "unrecognised_L20": 0.08438818565400844
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_4",
+  "sign": 1,
+  "dmu": -28.34576416015625,
+  "premature_L20": 21.518987341772153,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_4",
+  "sign": -1,
+  "dmu": 19.083715438842773,
+  "premature_L20": 0.5907172995780591,
+  "unrecognised_L20": 3.7130801687763713
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_6",
+  "sign": 1,
+  "dmu": 0.30622202157974243,
+  "premature_L20": 3.2067510548523206,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_6",
+  "sign": -1,
+  "dmu": -1.006575107574463,
+  "premature_L20": 3.0379746835443036,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_7",
+  "sign": 1,
+  "dmu": -13.927345275878906,
+  "premature_L20": 7.7637130801687775,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_7",
+  "sign": -1,
+  "dmu": 10.272271156311035,
+  "premature_L20": 1.4345991561181435,
+  "unrecognised_L20": 0.16877637130801687
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_8",
+  "sign": 1,
+  "dmu": 21.403446197509766,
+  "premature_L20": 1.0126582278481013,
+  "unrecognised_L20": 2.9535864978902953
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_8",
+  "sign": -1,
+  "dmu": -37.79571533203125,
+  "premature_L20": 25.485232067510548,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_9",
+  "sign": 1,
+  "dmu": -2.210341453552246,
+  "premature_L20": 2.1940928270042197,
+  "unrecognised_L20": 1.350210970464135
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_9",
+  "sign": -1,
+  "dmu": -11.251622200012207,
+  "premature_L20": 15.021097046413502,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_11",
+  "sign": 1,
+  "dmu": -44.62052917480469,
+  "premature_L20": 37.9746835443038,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_11",
+  "sign": -1,
+  "dmu": 28.30851173400879,
+  "premature_L20": 0.08438818565400844,
+  "unrecognised_L20": 8.438818565400844
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_12",
+  "sign": 1,
+  "dmu": -9.265694618225098,
+  "premature_L20": 5.5696202531645564,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_12",
+  "sign": -1,
+  "dmu": 7.830082893371582,
+  "premature_L20": 1.6033755274261603,
+  "unrecognised_L20": 0.16877637130801687
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_13",
+  "sign": 1,
+  "dmu": 8.972515106201172,
+  "premature_L20": 3.1223628691983123,
+  "unrecognised_L20": 0.08438818565400844
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_13",
+  "sign": -1,
+  "dmu": -17.845211029052734,
+  "premature_L20": 8.270042194092827,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_14",
+  "sign": 1,
+  "dmu": -47.11544418334961,
+  "premature_L20": 34.68354430379747,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_14",
+  "sign": -1,
+  "dmu": 6.954589366912842,
+  "premature_L20": 10.80168776371308,
+  "unrecognised_L20": 1.9409282700421944
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_15",
+  "sign": 1,
+  "dmu": -7.275446891784668,
+  "premature_L20": 13.248945147679326,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_15",
+  "sign": -1,
+  "dmu": -9.174633979797363,
+  "premature_L20": 5.822784810126582,
+  "unrecognised_L20": 0.8438818565400843
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_17",
+  "sign": 1,
+  "dmu": -16.178503036499023,
+  "premature_L20": 10.126582278481013,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_17",
+  "sign": -1,
+  "dmu": 12.69193172454834,
+  "premature_L20": 1.0970464135021099,
+  "unrecognised_L20": 0.8438818565400843
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_20",
+  "sign": 1,
+  "dmu": -1.859619379043579,
+  "premature_L20": 2.869198312236287,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_20",
+  "sign": -1,
+  "dmu": 0.9785423874855042,
+  "premature_L20": 3.2067510548523206,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_21",
+  "sign": 1,
+  "dmu": -1.5394622087478638,
+  "premature_L20": 3.2067510548523206,
+  "unrecognised_L20": 0.0
+ },
+ {
+  "backbone": "Transformer",
+  "dataset": "FD004",
+  "channel": "s_21",
+  "sign": -1,
+  "dmu": 1.09142005443573,
+  "premature_L20": 2.6160337552742616,
+  "unrecognised_L20": 0.0
+ }
+]

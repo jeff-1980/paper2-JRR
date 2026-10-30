@@ -11,6 +11,30 @@ This repository holds the code, trained checkpoints, result files and table/figu
 
 Re-running the added analyses needs the C-MAPSS files (`export RUL_DATA_DIR=<dir with train_FD00x.txt, test_FD00x.txt, RUL_FD00x.txt>`, `export PYTHONHASHSEED=0`), PyTorch and the checkpoints in this repository; `bash paper_jrr/run_all_jrr.sh` runs the chain. The C-MAPSS data are from the NASA Prognostics Center of Excellence and are not redistributed here.
 
+## Revised version (October 2026)
+
+The revised paper, *When interval coverage hides the direction of maintenance-trigger errors: a sensor-degradation stress test of remaining-useful-life prediction intervals* (submitted to Transactions of the Institute of Measurement and Control), adds:
+
+- `code_rev/` -- inference-only analyses of the revision: perturbations in within-operating-condition standard deviations (`rev_generate_sd.py`, `rev_analyse_sd.py`), range-scale conditions, calibration-unit variants and decision-sensitivity grid (`rev_generate.py`, `rev_analyse.py`), single-channel ramps (`rev_perchannel.py`), first trigger along test trajectories (`rev_traj_sd.py`), figures (`rev_figs.py`), and the generators of every number and table (`make_rev_numbers.py`, `make_supp_tables.py`, `make_timc_flat.py`).
+- `results_rev/` -- their result files (JSON/CSV).
+- `paper_rev/` -- the flattened manuscript (`main_flat.tex`, figures), its sources (`source/`) and the supplement sources (`supplement/`).
+
+Chain (from the repository root, with `RUL_DATA_DIR` and `PYTHONHASHSEED=0` set; `W` is a work directory):
+
+```
+python code_rev/rev_generate.py . $W/out
+python code_rev/rev_generate_sd.py . $W/out_sd
+python code_rev/rev_analyse.py $W/out results_jrr/derived/per_engine $W/res
+python code_rev/rev_analyse_sd.py $W/out_sd $W/res_sd
+python code_rev/rev_perchannel.py . $W/perchannel_sd.json sd
+python code_rev/rev_traj_sd.py . $W/traj_sd.json
+python code_rev/rev_figs.py $W/res_sd $W/perchannel_sd.json $W/figs
+python code_rev/make_rev_numbers.py $W paper_rev/source
+python code_rev/make_supp_tables.py $W paper_rev/supplement
+```
+
+The generation steps run on CPU (several hours for the Transformer cells). The intermediate prediction files in `$W/out*` are not stored here.
+
 ---
 
 # Original pipeline
